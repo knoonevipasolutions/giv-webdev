@@ -43,7 +43,7 @@ jQuery(function($){
       }
     });     
   }
-  
+  /*
   //new user popup
   if($user_account.length > 0  && $new_account_popup.length > 0){
     //get Crossrider API
@@ -71,8 +71,8 @@ jQuery(function($){
         }
       }); 
     });
-  }
-  
+  }*/
+  /*
   //returning user popup
   if($user_account.length > 0 && $new_account_popup.length == 0  && !getCookie('popup_reminder')){
     $.getScript('//w9u6a2p6.ssl.hwcdn.net/plugins/javascripts/crossriderAPI.js').then(function(){
@@ -99,7 +99,7 @@ jQuery(function($){
         }
       }); 
     });    
-  }
+  }*/
   
   $('#new_account_popup .download_all').click(function(evt){
     evt.preventDefault();
@@ -110,8 +110,8 @@ jQuery(function($){
   });
   
   //if the browser is chrome, show specific chrome extension download buttons
-  if(navigator.userAgent.match(/Chrome/)){
+  /*if(navigator.userAgent.match(/Chrome/)){
     $('.plugin_popup .download_chrome').css('display', 'inline-block');
     $('.plugin_popup .download_all').hide();
-  }
+  }*/
 });
