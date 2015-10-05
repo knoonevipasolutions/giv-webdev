@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Giv Live">
+    <serverData>
+      <paths name="Giv Live">
+        <serverdata>
+          <mappings>
+            <mapping deploy="giv-release.venturetech.net\Web\Design" local="$PROJECT_DIR$/web/build/design" web="/" />
+            <mapping deploy="giv-release.venturetech.net\Web\FavIcons" local="$PROJECT_DIR$/web/build/favicons" web="/" />
+            <mapping deploy="giv-release.venturetech.net\Web\Javascript" local="$PROJECT_DIR$/web/build/javascript" web="/" />
+            <mapping deploy="giv-release.venturetech.net\Web\Stylesheets" local="$PROJECT_DIR$/web/build/stylesheets" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Styleshack Live">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping local="" />
+            <mapping local="" />
+            <mapping local="" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
