@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Basic Styles for Property Editor/Viewer
+   baiken@vipasolutions.com, sbenes@vipasolutions.com
+   Updated July 10, 2012
+   ========================================================================== */
+
+/* Form Elements
+   ========================================================================== */
+input,
+select,
+textarea {
+  border: 1px solid #B7B7B5;
+  padding: 2px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  background-color: #feffdd;
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+.constraints a[data-features~="submit"] {
+  font-family: Arial, Verdana, sans-serif;
+  text-decoration: none;
+  background: none;
+  color: #333;
+  display: inline-block;
+  zoom: 1;
+  text-transform: uppercase;
+  *display: inline;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  background-color: #e5e5e3;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
+  -moz-box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8) inset, inset -1px -1px 0 rgba(0,0,0,0.05);
+  -webkit-box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8) inset, inset -1px -1px 0 rgba(0,0,0,0.05);
+  box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8) inset, inset -1px -1px 0 rgba(0,0,0,0.05);
+  border: 1px solid #B7B7B5;
+  white-space: nowrap;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+button:hover,
+input:hover[type="submit"],
+input:hover[type="reset"] {
+  background-color: #DDDAAA;
+}
+
+/* Messages
+   ========================================================================== */
+.message-container {
+  margin: 15px 0;
+}
+
+.message-container .message {
+  text-align: center;
+  background-color: #FFF7C2;
+  border: 2px solid #FFE180;
+  padding: 10px 15px;
+  color: #D74300;
+  font-weight: bold;
+  
+}
+
+.message-container .message.error {
+  background-color: #FFD9DA;
+  border-color: #FFABAD;
+  color: #9E0013;
+}
+
+/* Content
+   ========================================================================== */
+.property_wrapper label {
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+  width: 100px;
+  text-align: right;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.actions {
+  margin: 10px 0;
+}
+
+.prop {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.user_entry_required label:after {
+  content: "*";
+  color: #ff0000;
+}
+
+.validation_error input[type="text"]{
+  border: 1px solid red;
+}
+
+.actions {
+  text-align: right;
+}
+
+.actions.top {
+  display: none;
+}
+
+.property_viewer,
+.property_editor {
+  padding: 5px;
+}
+
+/*===Check========================================================================*
+*=================================================================================*
+*                                                                                 *
+*                          Clients must not see the unicorn.                      *
+*            Please delete everything past this point once CSS is verified!       *
+*                                                                                 *
+*=================================================================================*
+*=================================================================================*
+*                                                                                 *
+*                    .     .       \                                              *
+*             *        .            \                                             *
+*                *                   \\         +                   .             *
+*                                     \\                          .  .   +        *
+*       +         .        .           >\/7               *                       *
+*                                  _.-(6'  \          +        .     *    .       *
+*                .             +  (=___._/` \    .               .      .         *
+*             .   . .                  )  \ |                                     *
+*     .     .   .       .             /   / |       + .       .   *               *
+*                  .                 /    > /            .                        *
+*            *   +        .         j    < _\         *    .    . .  .   .        *
+*               .     .         _.-' :      ``.          .   .  .                 *
+*          . .   .   .         \ r=._\        `.   +                              *
+*             +             .  <`\\_  \         .`-.      .      .    .       *   *
+*                               \ r-7  `-. ._  ' .  `\                            *
+*      *            +    . .    .\`,      `-.`7  7)   )     .    *                *
+*              +                  \/         \|  \'  / `-._         .   .         *
+*                              *             ||    .'                             *
+*                    *                        \\  (                      +        *
+*          .    .                *             >\  >               .              *
+*                                          ,.-' >.'        *    .                 *
+*                                         <.'_.''                                 *
+*             *                             <'                                    *
+*                                                                                 *
+*=================================================================================*
+*================================================================================*/
+
+.property_wrapper {
+  border: 1px dashed springgreen;
+  padding: 10px;
+}
+
+.property_editor {
+  background-color: seashell;
+}
+
+.property_viewer {
+  background-color: #E8F6FF;
+}
+
+.prop_group {
+  border: 1px dashed blueviolet;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.6);
+}
+
+.prop {
+  border: 1px dashed magenta;
+}
+
+.actions.top {
+  display: block;
+}
+
+.actions {
+  border: 1px dashed #CC0033;
+  padding: 10px;
+}
+
+.save button {
+  background-color: #7AC957;
+}

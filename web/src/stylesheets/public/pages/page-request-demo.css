@@ -1,0 +1,11 @@
+#demo .name .part {
+  margin: 0 0 10px;
+}
+
+#demo .name .part.last {
+  margin-bottom: 0;
+}
+
+#demo .phone table.phone_number_form {
+  display: inline-block;
+}

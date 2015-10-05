@@ -1,0 +1,20 @@
+.search_box .term_menu {
+  display: inline-block;
+}
+
+.store_tile {
+  margin-bottom: 15px; 
+}
+
+.feat_store_tile {
+  margin-left: 18px;
+}
+
+.paging {
+  clear: both; 
+}
+
+.large_tile_set .pager {
+  margin: 0; 
+}
+

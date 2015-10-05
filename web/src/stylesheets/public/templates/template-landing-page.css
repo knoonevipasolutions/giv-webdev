@@ -1,0 +1,197 @@
+.page {
+  background: url(/resources/dyn/files/182088z2d82ef21/_fn/awesome_dark.jpg) no-repeat center top fixed #999;
+  min-height: 680px;
+}
+
+#faith.page {
+  background-image: url(/resources/dyn/files/185326zaf44ac4c/_fn/landing-faith.jpg);
+}
+
+#individual.page {
+  background-image: url(/resources/dyn/files/185327zd8439cda/_fn/landing-individual.jpg);
+}
+
+#nonprofit.page {
+  background-image: url(/resources/dyn/files/185328z48fc814b/_fn/landing-nonprofits.jpg);
+}
+
+#schools.page {
+  background-image: url(/resources/dyn/files/185329z3ffbb1dd/_fn/landing-schools.jpg);
+}
+
+#sports.page {
+  background-image: url(/resources/dyn/files/185330z5f3c3838/_fn/landing-sports.jpg);
+}
+
+#content_blocks_wc_0,
+#content_blocks2_wc_0,
+#intro_wc_0 {
+  margin: 0 auto;
+  width: 980px;
+}
+
+#intro {
+  position: relative;
+}
+
+#intro_wc_0 {
+  padding: 1px 0 100px;
+  color: #fff;
+  min-height: 500px;
+}
+
+#intro .phone {
+  font-family: 'Lobster13Regular',arial,helvetica,sans-serif;
+  font-size: 18px;
+}
+
+#intro .menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#intro .menu li {
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+}
+
+#intro #create_links {
+  margin-top: 90px;
+  text-align: center;
+}
+
+#intro #create_links {
+  margin-top: 90px;
+  text-align: center;
+}
+
+
+#intro #create_links li {
+  margin: 0 10px;
+}
+
+#intro #contact li {
+  margin-left: 10px;
+}
+
+#intro #contact {
+  margin-top: 18px;
+  left: 50%;
+  margin-left: 330px;
+  position: absolute;
+  top: 0;
+}
+
+#intro #quote {
+  width: 600px;
+  margin: 0 auto;
+}
+
+#intro h1 {
+  color: #fff;
+  font-size: 48px;
+  text-align: center;
+}
+
+#intro #quote p:before,
+#intro #quote p:after {
+  content: "";
+  background: left top transparent url(/resources/dyn/files/185358z7bd178c/_fn/quote.png) no-repeat;
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+}
+
+#intro #quote p {
+  font-style: italic;
+}
+
+#intro #quote p:before {
+  margin-bottom: 5px;
+  margin-right: 2px;
+}
+
+#intro #quote p:after {
+  margin-left: 2px;
+  margin-bottom: 5px;
+}
+
+#content_blocks {
+  background: #fff;
+}
+
+#content_blocks2 {
+  background: #2896d3;
+  padding-bottom: 406px;
+  color: #fff;
+}
+
+.more_link {
+  text-align: center;
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  right: 0;
+}
+
+.more_link a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'BebasNeueRegular';
+  font-size: 29px;
+  font-weight: normal;
+  width: 180px;
+  height: 65px;
+  line-height: 65px;
+  display: block;
+  margin: 0 auto;
+}
+
+.more_link a:before, 
+.more_link a:after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  height: 65px;
+}
+
+.more_link a:before {
+  left: 0;
+  right: 50%;
+  margin-right: 90px;
+}
+
+.more_link a:after {
+  left: 50%;
+  right: 0;
+  margin-left: 90px;
+}
+
+.features table td {
+  vertical-align: top; 
+  width: 300px; 
+  padding: 0 10px;
+  text-align: center;
+}
+
+.features td h2 {
+  font-size: 24px;
+  margin: 20px 0 5px 0;
+}
+
+.features td p {
+  font-size: 14px;
+  margin: 0 40px;
+  margin-top: 0;
+  line-height: 18px;
+}
+
+.features {
+  padding: 40px 0;
+}

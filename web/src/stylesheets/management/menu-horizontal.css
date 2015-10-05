@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Standard CSS for Horizontal Menus
+   baiken@vipasolutions.com
+   Updated September 14, 2012
+   ========================================================================== */
+
+ul.menubeanh {
+  display: block;
+  background-color: #FAF9E2;
+  border: 1px solid #C4C197;
+}
+
+div.menu > ul.menubeanh {
+  margin: 20px 0;
+}
+
+ul.menubeanh > li {
+  float: none!important;
+  display: inline-block;
+  border-right: 1px solid #C4C197;
+  font-weight: bold;
+}
+
+ul.menubeanh a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
+ul.menubeanh .mil {
+  cursor: pointer;
+  padding: 8px 20px;
+  display: block;
+}
+
+ul.menubeanh > li.mi_active {
+  background: #DDDAAA;
+}
+
+ul.menubeanh li.mi_parent > .menuitemlabel:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #918E71;
+  position: absolute;
+  right: 11px;
+  top: 15px;
+}
+
+ul.menubeanh li.mi_parent > .menuitemlabel .mil {
+  padding-right: 30px;
+}
+
+ul.menubeanh li li {
+  display: block;
+  margin: 0;
+  border-bottom:  1px solid #dddaaa;
+  border-right: 0;
+}
+
+ul.menubeanh li li.last {
+  border-bottom: 0;
+}
+
+ul.menubeanh > li > ul {
+  top: 34px;
+  left: -1px!important;
+  width: 250px;
+  border-left: 1px solid #dddaaa;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+ul.menubeanh li ul li {
+  font-weight: normal;
+}
+
+ul.menubeanh li ul li {
+  background: #FFFFF0;
+}
+
+.mil:hover {
+  opacity: 0.55;
+}
+

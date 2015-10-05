@@ -1,0 +1,91 @@
+#column1, 
+#column2 {
+  float: none; 
+  display: block;
+  margin: 0 auto; 
+  padding: 0 30px;
+}
+
+.search_bar .constraints, 
+.search_bar .result_limit, 
+.constraint,
+span.actions,
+div.actions,
+.miwt_table tbody td,
+.prop {
+  border: none !important; 
+}
+
+th.action_column,
+th.actions {
+  border-right: none !important;
+  border-left: none !important;
+}
+
+.property_wrapper label {
+  width: auto; 
+  display: block;
+  text-align: left; 
+  max-width: 95%;
+}
+
+.val p {
+  margin: 0;
+}
+
+.instructions {
+  font-weight: bold; 
+}
+
+.property_wrapper .ctb input, 
+.property_wrapper .ctb label,
+.property_wrapper input.selector, 
+.property_wrapper div.row {
+  display: inline-block;
+  zoom: 1; 
+  *display: inline; 
+  vertical-align: top; 
+  font-weight: normal;
+  wdith: auto;
+}
+
+.miwt_table,
+table.pager {
+  width: 100%;
+}
+
+.miwt_table tbody td {
+  padding: 3px 20px 3px 3px; 
+}
+
+.prop.user_entry_required label{
+  background: none; 
+  padding-left: 0px;
+}
+
+.prop.link label,
+.prop.commission label,
+.prop.title label{
+  display: block;
+  width: auto; 
+  text-align: left; 
+}
+
+.image_gallery .richlist .dnd_target input,
+.image_gallery .richlist .dnd_target div {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+.photos label, 
+.youtube_links label {
+  font-weight: bold; 
+  font-size: 20px;
+}
+
+.message-container .message {
+  border: none; 
+  text-align: left; 
+  padding: 0 0 0 20px;
+}

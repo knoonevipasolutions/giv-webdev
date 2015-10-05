@@ -1,0 +1,26 @@
+.kambit-search-logo {
+  display: inline-block;
+  background: #fff;
+  margin-right: 5px;
+  border: 1px solid #2896D3;
+  border-radius: 3px;
+}
+
+.kambit-search-logo img {
+  display: inline-block;
+  margin: 3px 2px;
+  vertical-align: top;
+}
+
+.kambit-search-percent {
+  color: #2896D3;
+  font-size: 14px;
+  font-weight: bold;
+  background: #2896D3;
+  color: #fff;
+  padding: 1px 6px;
+  display: inline-block;
+  height: 20px;
+  vertical-align: top;
+  line-height: 20px;
+}

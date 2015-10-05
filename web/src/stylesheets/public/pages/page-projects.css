@@ -1,0 +1,32 @@
+#project_aside h2 {
+  color: #010101;
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-family: MuseoSlabRegular, "Times New Roman", serif;
+}
+
+.search_listing .paging {
+  margin: 10px 0 20px; 
+}
+
+#search .search_box {
+  float: right; 
+  margin-top: 15px;
+}
+
+#search .search_box .question input {
+  width: 200px; 
+}
+
+#aside {
+  display: none;
+}
+
+#main {
+  width: 100%; 
+  padding-left: 30px;
+}
+
+.featured_banners {
+  margin: 0 auto 30px;  
+}

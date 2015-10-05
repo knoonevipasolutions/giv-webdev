@@ -1,0 +1,47 @@
+#body {
+  padding: 100px 0 0;
+}
+
+#login {
+  margin: 0 auto;
+  width: 290px;
+  background: #fff;
+  border: 6px solid #20AFCF;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  padding: 2px;
+  -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+#login .message-container {
+  margin: 0 0 2px;
+}
+
+#login p.title {
+  margin: 0;
+  color: #fff;
+  text-align: left;
+  background: #2A96D4;
+  padding: 10px;
+  font-size: 18px;
+  font-family: MuseoSansRegular, Arial, Verdana, sans-serif;
+}
+
+#login .username_con {
+  padding: 20px 20px 10px;
+}
+
+#login .password_con {
+  padding: 0 20px 10px;
+}
+
+#login span.label {
+  display: block;
+}
+
+#login .actions_con {
+  text-align: center;
+  padding: 0 20px 20px;
+}

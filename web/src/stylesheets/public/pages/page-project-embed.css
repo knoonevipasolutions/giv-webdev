@@ -1,0 +1,10 @@
+body {
+  width: 230px;
+  min-width: 0;
+}
+
+.large_tile {
+  margin-left: 10px; 
+  margin-bottom: 0;
+  margin-top: 10px;
+}

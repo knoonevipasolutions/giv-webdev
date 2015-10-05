@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Standard CSS for Vertical Menus
+   baiken@vipasolutions.com
+   Updated September 14, 2012
+   ========================================================================== */
+
+ul.menubeanv {
+  display: block;
+  background-color: #FAF9E2;
+  border: 1px solid #C4C197;
+  border-bottom: 0;
+  padding: 0;
+  list-style-type: none;
+  max-width: 200px;
+}
+
+ul.menubeanv ul {
+  border: 0;
+}
+
+div.menu > ul.menubeanv {
+  margin: 20px 20px 20px 0;
+}
+
+ul.menubeanv > li {
+  display: block;
+  font-weight: bold;
+}
+
+ul.menubeanv a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
+ul.menubeanv .menuitemlabel {
+  cursor: pointer;
+  padding: 8px 20px;
+  display: block;
+  border-bottom: 1px solid #C4C197;
+}
+
+ul.menubeanv > li.mi_active {
+  background: #DDDAAA;
+}
+
+ul.menubeanv li.mi_parent > .menuitemlabel:after {
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #918E71;
+  position: absolute;
+  right: 11px;
+  top: 15px;
+}
+
+ul.menubeanv li.mi_parent > .menuitemlabel {
+  padding-right: 10px;
+}
+
+ul.menubeanv li li {
+  display: block;
+  margin: 0;
+  border-right: 0;
+}
+
+ul.menubeanv li li.last {
+  border-bottom: 0;
+}
+
+ul.menubeanv > li > ul {
+  top: 34px;
+  left: -1px!important;
+  width: 250px;
+}
+
+ul.menubeanv li ul li {
+  font-weight: normal;
+}
+
+ul.menubeanv .mil {
+  display: block;
+}
+
+ul.menubeanv li ul li .mil {
+  font-size: .9em;
+}
+
+ul.menubeanv li ul li li .mil {
+  padding: 5px 5px 5px 60px;
+}
+
+ul.menubeanv li ul li {
+  background: #FFFFF0;
+}
+
+ul.menubeanv li ul {
+  display: block!important;
+  position: static!important;
+}
+
+.mil:hover {
+  opacity: 0.55;
+}
+
+ul.menubeanv li li.mi_active {
+  background-color: #FFFFF0;
+}
+
+ul.menubeanv li li.mi_active .mil {
+  color: #006EBD;
+}
+

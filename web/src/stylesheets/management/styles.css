@@ -1,0 +1,156 @@
+/* HTML5 fix for IE because of shim'ed elements being inline */
+article, aside, canvas, details,
+figcaption, figure, footer, header,
+hgroup, nav, section, summary, video {
+  display: block;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: left top #ededed url(/resources/dyn/files/182179zdcdfa94f/_fn/debut-light.png) repeat;
+  color: #666666;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+div.page {
+  min-width: 980px; 
+}
+
+a img {
+  border: none; 
+}
+
+a {
+  color: #2896d3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #21C25E;
+}
+
+a.transition {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s; 
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  margin-top: 0; 
+  color: #2896d3;
+}
+
+
+/* message containers */
+.message-container {
+  margin: 0 0 10px;
+  border: 1px solid #1c9633;
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  background-color: #32b14a;
+  font-size: 13px;
+  text-align: left;
+
+}
+
+.message-container .message {
+  color: #fff;
+  margin: 10px;
+}
+
+.message-container .error,
+.login .message-container .important {
+  padding-left: 24px;
+  background: 0 0 transparent url(/resources/dyn/files/182937z511810f4/_fn/message-error.png) no-repeat;
+}
+
+.message-container .warning {
+  padding-left: 24px;
+  background: 0 0 transparent url(/resources/dyn/files/182685z57beef2e/_fn/message-warning.png) no-repeat;
+}
+
+#header {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+#header h1 {
+  margin: 0;
+}
+
+#logout {
+  float: right;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#logout .user {
+  font-size: 12px;
+  border: 1px solid #EAD65C;
+  background-color: #FCEFA1;
+  padding: 5px 10px;
+}
+
+#logout .action {
+  margin-left: 10px;
+}
+
+#nav {
+  padding: 10px 20px 0;
+  background: #f5f5f5;
+  border-top: 1px dotted #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+#nav ul.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav .mi {
+  display: inline-block;  
+  vertical-align: bottom;
+}
+
+#nav .menuitemlabel {
+  font-size: 14px;
+  font-family: MuseoSansRegular, Arial, sans-serif;
+  padding: 2px 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 8px solid transparent;
+  display: block;
+}
+
+#nav .menuitemlabel:hover {
+  border-bottom: 8px solid #21C25E;
+}
+
+#nav .mi_active .menuitemlabel {
+  border-bottom: 8px solid #2896d3;
+  font-size: 18px;
+}
+
+#nav .menuitemlabel {
+  color: #666; 
+}
+
+#body {
+  padding: 20px;
+}

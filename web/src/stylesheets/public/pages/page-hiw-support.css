@@ -1,0 +1,9 @@
+#hiw_banner .draw_arrow {
+  position: absolute;
+  top: 35px;
+  left: 260px;
+}
+
+#hiw_banner h1 {
+  padding-left: 50px;
+}

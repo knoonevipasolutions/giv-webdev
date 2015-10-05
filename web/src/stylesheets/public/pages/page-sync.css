@@ -1,0 +1,75 @@
+#sync {
+  background-color: #fff;
+  margin: 30px auto;
+  padding: 20px;
+  width: 400px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  -moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 50px 0 20px;
+  text-align: center;
+}
+
+#sync .content {
+  text-align: center;
+  background: #2896D3;
+  color: #fff;
+  padding: 1px 20px;
+  font-size: 18px;
+  height: 66px;
+}
+
+#sync .content .message {
+  display: inline-block; 
+}
+
+#sync .status {
+  background:  #333;
+  height: 30px;
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+#sync .loading {
+  background: center center transparent url(/resources/dyn/files/182363z2695a57e/_fn/loading.gif) no-repeat;
+  height: 30px;
+}
+
+#sync .confirmed {
+  display: none; 
+  background: 15px center #333 url(/resources/dyn/files/186592z5de562c2/_fn/successful-icon.png) no-repeat;
+  padding-left: 50px;
+  height: 30px;
+}
+
+#sync .error {
+  display: none; 
+  background: 15px center #333 url(/resources/dyn/files/182937z511810f4/_fn/message-error.png) no-repeat;
+  padding-left: 45px;
+  height: 30px;
+}
+
+#search {
+  display: block;
+  text-align: center;
+  margin: 0 auto 50px;
+  position: relative;
+  top: -30px;
+  opacity: 0;
+}
+
+.ieonly #search {
+  filter: alpha(opacity=0); 
+}
+
+#search .question input {
+  width: 300px;
+}

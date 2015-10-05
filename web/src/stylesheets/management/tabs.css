@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Basic Styles for Tabs
+   baiken@vipasolutions.com, sbenes@vipasolutions.com
+   Updated June 14, 2012
+   ========================================================================== */
+
+/* Tab Container
+   ========================================================================== */
+ul.tab-items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-items li {
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+}
+
+.tab-items a {
+  text-decoration: none;
+  background-color: #F9F9F7;
+  display: block;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #DDDAAA;
+  border-bottom: 0 none
+}
+
+.tab-items .tab-selected a {
+  background-color: #FAF9E2;
+}
+
+.tab-content {
+  border: 1px solid #dddaaa;
+  border-radius: 0 8px 8px 8px;
+  padding: 20px;
+  background-color: #FAF9E2;
+}
+
+/*===Check========================================================================*
+*=================================================================================*
+*                                                                                 *
+*                          Clients must not see the unicorn.                      *
+*            Please delete everything past this point once CSS is verified!       *
+*                                                                                 *
+*=================================================================================*
+*=================================================================================*
+*                                                                                 *
+*                    .     .       \                                              *
+*             *        .            \                                             *
+*                *                   \\         +                   .             *
+*                                     \\                          .  .   +        *
+*       +         .        .           >\/7               *                       *
+*                                  _.-(6'  \          +        .     *    .       *
+*                .             +  (=___._/` \    .               .      .         *
+*             .   . .                  )  \ |                                     *
+*     .     .   .       .             /   / |       + .       .   *               *
+*                  .                 /    > /            .                        *
+*            *   +        .         j    < _\         *    .    . .  .   .        *
+*               .     .         _.-' :      ``.          .   .  .                 *
+*          . .   .   .         \ r=._\        `.   +                              *
+*             +             .  <`\\_  \         .`-.      .      .    .       *   *
+*                               \ r-7  `-. ._  ' .  `\                            *
+*      *            +    . .    .\`,      `-.`7  7)   )     .    *                *
+*              +                  \/         \|  \'  / `-._         .   .         *
+*                              *             ||    .'                             *
+*                    *                        \\  (                      +        *
+*          .    .                *             >\  >               .              *
+*                                          ,.-' >.'        *    .                 *
+*                                         <.'_.''                                 *
+*             *                             <'                                    *
+*                                                                                 *
+*=================================================================================*
+*================================================================================*/
+
+
+.tab-items .first a {
+  background-color: #FFB74C;
+}
+
+.tab-items .last a {
+  background-color: #A6E06B;
+}
+
+.tab-items .dealers a {
+  border: 2px solid blue;
+}
+
+.tab-content.dealers {
+  border: 2px solid blue;
+}
+
+.tab-items .hosts a {
+  border: 2px solid pink;
+}
+
+.tab-items .suppliers a {
+  border: 2px solid teal;
+}
+
+.tab-items .workers a {
+  border: 2px solid purple;
+}
+

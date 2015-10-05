@@ -1,0 +1,20 @@
+
+.contributions {
+  margin: 0 0 30px;
+  background: white;
+  padding: 20px;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contributions .instructions {
+  font-size: 12px;
+  border-top: 1px dotted #d0d0d0;
+  margin: 20px 0 0;
+  padding: 20px 0 0;
+}
+
+.contributions .instructions p {
+  margin-top: 0;
+}

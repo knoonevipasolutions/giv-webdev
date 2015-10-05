@@ -1,0 +1,15 @@
+.basic_account .instructions {
+  margin: 20px 0 15px;
+}
+
+.my_accounts .purl .val input[type=text] {
+  width: 330px;
+}
+
+.my_accounts_con .entity_actions {
+  margin: 20px 0;
+}
+
+.my_accounts_con .premium_account {
+  margin: 20px 0;
+}
