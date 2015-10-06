@@ -1,0 +1,33 @@
+/* message containers */
+.message-container {
+	margin: 0 0 10px;
+	border: 1px solid #1c9633;
+	box-shadow: 1px 1px 3px rgba($color-black, 0.2);
+	background-color: #32b14a;
+	font-size: 13px;
+	text-align: left;
+
+	&.empty {
+		display: none;
+	}
+
+	.message {
+		color: #fff;
+		margin: 10px;
+	}
+
+	.error {
+		padding-left: 24px;
+		background: 0 0 transparent url(/resources/dyn/files/182937z511810f4/_fn/message-error.png) no-repeat;
+	}
+
+	.warning {
+		padding-left: 24px;
+		background: 0 0 transparent url(/resources/dyn/files/182685z57beef2e/_fn/message-warning.png) no-repeat;
+	}
+}
+
+.login .message-container .important {
+	padding-left: 24px;
+	background: 0 0 transparent url(/resources/dyn/files/182937z511810f4/_fn/message-error.png) no-repeat;
+}

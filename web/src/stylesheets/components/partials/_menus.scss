@@ -1,0 +1,67 @@
+
+/* generic page menus */
+.page_menu {
+	.menu {
+		margin: 0 0 20px;
+		padding: 0;
+		list-style: none;
+		font-family: $font-museo-regular;
+		font-size: 15px;
+	}
+
+	.mi {
+		margin: 0 0 10px;
+	}
+
+	.mi-active {
+		a.menuitemlabel {
+			color: $color-blue;
+			border-left: 8px solid $color-blue;
+		}
+	}
+
+	.menuitemlabel {
+		text-decoration: none;
+		color: $color-grey-66;
+		border-left: 1px solid transparent;
+		padding-left: 5px;
+		transition: all 0.5s;
+
+		&:hover {
+			color: $color-green;
+			border-left: 8px solid $color-green;
+		}
+	}
+}
+
+/* horizontal term menu */
+.term_menu {
+	.menu {
+		@include resetMenu;
+	}
+
+	.mi {
+		display: inline-block;
+	}
+
+	.mi-active {
+		.menuitemlabel {
+			border-bottom: 8px solid $color-blue;
+		}
+	}
+
+	.menuitemlabel {
+		font-size: 13px;
+		font-family: $font-museo-regular;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 2px 4px;
+		transition: all 0.5s;
+		border-bottom: 8px solid transparent;
+		color: $color-grey-66;
+
+		&:hover {
+			border-bottom: 8px solid $color-green;
+		}
+	}
+}

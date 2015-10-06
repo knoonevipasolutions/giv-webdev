@@ -1,5 +1,9 @@
 @import "../../config/base-import";
 
+@import "../../libs/normalize";
+
+@import "../../components/partials/base-elements";
+
 @import "../../components/partials/menus";
 @import "../../components/partials/progress-bar";
 @import "../../components/partials/tooltips";
@@ -7,3 +11,7 @@
 @import "../../components/partials/messages";
 @import "../../components/partials/paging";
 @import "../../components/partials/money-tickers";
+
+@import "template--base/structure";
+@import "template--base/menus";
+@import "template--base/plugin";

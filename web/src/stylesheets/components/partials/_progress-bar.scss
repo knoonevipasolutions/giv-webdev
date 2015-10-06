@@ -1,0 +1,20 @@
+/* progress bar */
+.progress_bar {
+	border: 1px solid rgba($color-grey-33, 0.2);
+	background: rgba($color-grey-33, 0.25);
+	border-radius: 4px;
+	position: relative;
+	box-shadow: 1px 1px 2px rgba($color-black, 0.2) inset;
+
+	.progress_con {
+		border-radius: 5px;
+		display: block;
+		overflow: hidden;
+	}
+
+	.progress {
+		height: 11px;
+		display: block;
+		background-color: $color-green;
+	}
+}

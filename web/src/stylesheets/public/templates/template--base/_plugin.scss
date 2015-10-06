@@ -1,0 +1,102 @@
+
+/* plugin popups */
+#header #new_account_popup,
+#body_heading #getting_started_popup,
+#plugin_reminder_popup {
+	display: none;
+}
+
+.plugin_popup {
+	padding: 20px;
+	text-align: center;
+	color: #666;
+
+	.intro {
+		margin: 0 0 20px;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	.explain {
+		background-color: $color-grey-e7;
+		padding: 10px;
+		font-size: 13px;
+		border-radius: 4px;
+		margin: 20px 0;
+
+		.step {
+			display: inline-block;
+			vertical-align: top;
+			width: 150px;
+			padding-right: 10px;
+			margin-right: 10px;
+			border-right: 1px dotted $color-grey-d0;
+
+			.image {
+				display: block;
+			}
+		}
+
+		.step3 {
+			border-right: none;
+			margin-right: 0;
+			padding-left: 0;
+		}
+	}
+
+	.supported {
+		margin: 5px 0 0;
+
+		.instructions {
+			font-size: 11px;
+			vertical-align: top;
+			padding-top: 5px;
+			display: inline-block;
+		}
+	}
+
+	.disclaimer {
+		font-size: 11px;
+		margin: 10px 0 0;
+	}
+
+	.download_chrome {
+		display: none;
+	}
+}
+
+#plugin_reminder_popup {
+	position: fixed;
+	bottom: 20px;
+	right: -350px;
+	z-index: 2000000;
+	width: 300px;
+	background: $color-white;
+	border: 6px solid $color-blue;
+	border-radius: 4px;
+	padding: 2px;
+	box-shadow: 0 0 10px rgba($color-black, 0.4);
+
+	.title {
+		color: $color-white;
+		text-align: left;
+		background-color: $color-blue;
+		padding: 10px;
+		font-size: 18px;
+		font-family: $font-museo-regular;
+
+		.close {
+			background: center center transparent url(/resources/dyn/files/182627z435f6688/_fn/popup-close.png) no-repeat;
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			width: 28px;
+			height: 28px;
+			cursor: pointer;
+		}
+	}
+
+	.content {
+		padding: 15px;
+	}
+}

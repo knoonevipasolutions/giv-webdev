@@ -1,0 +1,35 @@
+a {
+	color: $color-blue;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-green;
+	}
+
+	&.transition {
+		transition: all 0.5s;
+	}
+
+	img {
+		border: 0 none;
+	}
+}
+
+h1 {
+	font-family: $font-museo-regular;
+	font-size: 24px;
+	font-weight: normal;
+	color: $color-grey-66;
+}
+
+h2 {
+	font-family: $font-museo-regular;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+h3 {
+	font-family: $font-museo-regular;
+	font-size: 18px;
+	font-weight: normal;
+}

@@ -1,0 +1,269 @@
+body {
+	background: left top $color-grey-e7 url(/resources/dyn/files/182179zdcdfa94f/_fn/debut-light.png) repeat;
+	color: $color-grey-66;
+	font-family: $font-arial;
+}
+
+div.page {
+	min-width: $constraint-max-width;
+}
+
+#header-wc-0,
+#e_content_wrapper-wc-0,
+#body_heading-wc-0,
+#body-wc-0,
+#search-wc-0,
+#footer-wc-2,
+#project_heading-wc-0  {
+	width: $constraint-max-width;
+	position: relative;
+	margin: 0 auto;
+}
+
+#header {
+	background-color: $color-white;
+	border-bottom: 1px solid $color-grey-e0;
+	border-top: 5px solid $color-grey-f2;
+	box-shadow: 0 0 1px 1px transparentize($color-grey-bb, 0.8),
+	0 0 6px 1px transparentize($color-grey-bb, 0.8);
+	position: fixed;
+	z-index: 7000;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+#header-wc-0 {
+	text-align: right;
+	padding: 0 10px;
+	zoom: 1;
+	z-index: 10;
+	margin-top: -5px;
+	@include clearfix();
+}
+
+#logo,
+#main_nav,
+#total_raised,
+#account_menu,
+#guest_menu {
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	*display: inline;
+}
+
+#logo {
+	position: absolute;
+	top: -25px;
+	left: 10px;
+
+	img {
+		display: block;
+	}
+
+	a {
+		display: block;
+		position:relative;
+		transform-origin: 50% 50%;
+	}
+}
+
+#guest_menu {
+	.menu {
+		margin: -1px 0 0 20px;
+		padding: 5px 0 0;
+		font-size: 13px;
+		list-style: none;
+	}
+
+	.mi {
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+		margin-left: 20px;
+	}
+}
+
+#account_menu {
+	margin-left: 50px;
+	font-size: 13px;
+	position: relative;
+	padding: 5px 0 0;
+}
+
+#account_trigger {
+	margin-top: -5px;
+	cursor: pointer;
+	padding: 4px 10px;
+	height: 47px;
+	border-top: 5px solid $color-grey-f2;
+	color: $color-grey-33;
+	transition: border-top 0.25s, background 0.5s;
+
+	&:hover {
+		border-top-color: #21c25e;
+		background-color: #f5f5f5;
+	}
+
+	.photo {
+		display: inline-block;
+		vertical-align: middle;
+		border: 1px solid #ccc;
+		background: #c0c0c0;
+		width: 45px;
+		height: 45px;
+
+		img {
+			display: block;
+		}
+	}
+
+	.label {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-right: 5px;
+		font-weight: bold;
+	}
+
+	.arrow {
+		display: inline-block;
+		vertical-align: middle;
+		border: 5px solid #fff;
+		border-top: 5px solid #333;
+		border-bottom: none;
+		margin-top: 4px;
+		height: 0;
+	}
+
+	.account_popup {
+		position: absolute;
+		margin-top: 1px;
+		top: 100%;
+		right: 0;
+		background-color: #E9E9E9;
+		border: 1px solid #D7D7D7;
+		border-top: none;
+		padding: 15px;
+		text-align: left;
+		min-width: 200px;
+		box-shadow: 2px 2px 2px 0 rgba(130,130,130,0.2);
+	}
+
+	.shown & {
+		border-top-color: #2896d3;
+		background-color: #E9E9E9;
+		border-bottom: 1px solid #E9E9E9;
+		margin-bottom: -1px;
+
+		.arrow {
+			border: 5px solid #E9E9E9;
+			border-bottom: 5px solid #333;
+			border-top: none;
+			margin-top: 4px;
+		}
+	}
+}
+
+#account_menu {
+	.find_more {
+		clear: both;
+		text-align: center;
+		padding: 10px 0 0;
+	}
+}
+
+.account_popup {
+	.name {
+		font-family: $font-museo-regular;
+		font-size: 18px;
+		white-space: nowrap;
+	}
+
+	.raised .val {
+		margin-left: 5px;
+	}
+
+	.favorites {
+		margin: 10px -15px -15px;
+		background: #fff;
+		padding: 15px;
+	}
+
+	.actions {
+		margin: 10px 0 0;
+	}
+
+	.micro_tiles {
+		width: 210px;
+	}
+}
+
+#total_raised {
+	line-height: 24px;
+	font-size: 24px;
+	text-align: center;
+	width: 180px;
+
+	.total {
+		color: #55c569;
+		display: block;
+	}
+}
+
+#body-wc-0,
+#e_content_wrapper {
+	padding: 1px 0 356px;
+}
+
+#e_content_wrapper-wc-0 {
+	@include clearfix();
+}
+
+#body-wc-0,
+#e_body-wc-0,
+#body_heading {
+	padding-top: 60px;
+}
+
+#footer {
+	margin-top: -356px;
+	background-color: #2896d3;
+	border-top: 3px solid #e8eced;
+	padding: 3px 0 0;
+	z-index: 10;
+}
+
+#footer-wc-0 {
+	background: 0 0 #272727 url(/resources/dyn/files/181370zb4326a6b/_fn/footer-bg-tile.png) repeat;
+	height: 350px;
+}
+
+#footer-wc-1 {
+	background: #272727;
+}
+
+#footer-wc-2 {
+	min-height: 275px;
+}
+
+
+#footer .social {
+	position: absolute;
+	right: 10px;
+	top: 15px;
+}
+
+#copyright {
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+
+	p {
+		margin: 0;
+		font-size: 12px;
+		color: $color-grey-bb;
+		padding: 8px 0;
+	}
+}

@@ -1,0 +1,47 @@
+/* paging */
+.paging {
+	text-align: center;
+	padding: 0 20px;
+
+	.pager {
+		display: inline-block;
+		padding: 5px;
+	}
+
+	.pages {
+		.page {
+			display: inline-block;
+		}
+
+		.cur {
+			border-bottom: 8px solid $color-blue;
+		}
+	}
+
+	.control {
+		display: inline-block;
+
+		a {
+			font-size: 13px;
+			font-family: $font-museo-regular;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 2px 4px;
+			transition: all 0.5s;
+			border-bottom: 8px solid transparent;
+			color: $color-grey-66;
+
+			&:hover {
+				border-bottom: 8px solid $color-green;
+			}
+		}
+	}
+
+	.control,
+	.page {
+		.val {
+			padding: 0 7px;
+			display: block;
+		}
+	}
+}

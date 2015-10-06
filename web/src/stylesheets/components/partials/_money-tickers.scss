@@ -1,0 +1,46 @@
+/* money tickers */
+.money_ticker {
+	white-space: nowrap;
+}
+
+.large_money_ticker .tile {
+	width: 54px;
+	height: 81px;
+	background: 0 0 transparent url(/resources/dyn/files/181165zdec77bcb/_fn/ticker-large.png) no-repeat;
+	display: inline-block;
+	margin: 0 -5px;
+}
+
+.large_money_ticker .tdollar { background-position: -540px 0; }
+.large_money_ticker .tk { background-position: -594px 0; }
+.large_money_ticker .t0 { background-position: 0 0; }
+.large_money_ticker .t1 { background-position: -54px 0; }
+.large_money_ticker .t2 { background-position: -108px 0; }
+.large_money_ticker .t3 { background-position: -162px 0; }
+.large_money_ticker .t4 { background-position: -216px 0; }
+.large_money_ticker .t5 { background-position: -270px 0; }
+.large_money_ticker .t6 { background-position: -324px 0; }
+.large_money_ticker .t7 { background-position: -378px 0; }
+.large_money_ticker .t8 { background-position: -432px 0; }
+.large_money_ticker .t9 { background-position: -486px 0; }
+
+.small_money_ticker .tile {
+	width: 39px;
+	height: 55px;
+	background: 0 0 transparent url(/resources/dyn/files/181166z47ce2a71/_fn/ticker-small.png) no-repeat;
+	display: inline-block;
+	margin: 0 -7px;
+}
+
+.small_money_ticker .tdollar { background-position: -390px 0; }
+.small_money_ticker .tk { background-position: -429px 0; }
+.small_money_ticker .t0 { background-position: 0 0; }
+.small_money_ticker .t1 { background-position: -39px 0; }
+.small_money_ticker .t2 { background-position: -78px 0; }
+.small_money_ticker .t3 { background-position: -117px 0; }
+.small_money_ticker .t4 { background-position: -156px 0; }
+.small_money_ticker .t5 { background-position: -195px 0; }
+.small_money_ticker .t6 { background-position: -234px 0; }
+.small_money_ticker .t7 { background-position: -273px 0; }
+.small_money_ticker .t8 { background-position: -312px 0; }
+.small_money_ticker .t9 { background-position: -351px 0; }
