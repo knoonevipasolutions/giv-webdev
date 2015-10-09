@@ -18,8 +18,8 @@ form label.access503 {
 		border: 1px solid #d9d9d9;
 		border-radius: 2px;
 		font-size: 13px;
-		box-shadow: 1px 1px 1px rgba(255,255,255,0.5),
-			0 0 2px rgba(0,0,0,0.1) inset;
+		box-shadow: 1px 1px 1px rgba($color-white,0.5),
+			0 0 2px rgba($color-black,0.1) inset;
 		outline: none;
 		transition: all 0.25s;
 
@@ -28,13 +28,13 @@ form label.access503 {
 
 		&:focus {
 			border: 1px solid #2896d3;
-			background: #fff;
+			background: $color-white;
 			box-shadow: 0 0 3px rgba(32,175,207,0.5);
 		}
 	}
 
 	input[disabled] {
-		color: #999;
+		color: $color-grey-99;
 	}
 
 	textarea {
@@ -47,8 +47,8 @@ form label.access503 {
 		padding: 3px;
 		border: 1px solid #d9d9d9;
 		border-radius: 2px;
-		box-shadow: 1px 1px 1px rgba(255,255,255,0.5),
-			0 0 2px rgba(0,0,0,0.1) inset;
+		box-shadow: 1px 1px 1px rgba($color-white,0.5),
+			0 0 2px rgba($color-black,0.1) inset;
 		outline: none;
 		transition: all 0.25s;
 
@@ -81,12 +81,12 @@ form label.access503 {
 			font-weight: bold;
 			font-size: 13px;
 			padding: 5px 0 4px 10px;
-			color: #333;
+			color: $color-grey-33;
 		}
 
 		.question {
 			margin: 0 0 10px;
-			padding: 0px 3px;
+			padding: 0 3px;
 		}
 
 		span.submit_registration_button {
@@ -112,7 +112,7 @@ form label.access503 {
 		font-family: $font-museo-regular;
 		font-size: 14px;
 		text-decoration: none;
-		color: #666;
+		color: $color-grey-66;
 		display: inline-block;
 		padding: 5px 8px;
 		cursor: pointer;
@@ -124,11 +124,11 @@ form label.access503 {
 		background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(248,248,248,1) 25%,rgba(222,222,222,1) 86%,rgba(216,216,216,1) 93%,rgba(210,210,210,1) 96%,rgba(207,207,207,1) 100%); /* W3C */
 
 		&:hover {
-			box-shadow: 0px 0px 3px rgba(0,0,0,0.9);
+			box-shadow: 0 0 3px rgba($color-black,0.9);
 		}
 
 		&:active {
-			box-shadow: 0px 0px 3px rgba(0,0,0,0.9) inset;
+			box-shadow: 0 0 3px rgba($color-black,0.9) inset;
 
 			background: rgb(182,182,182); /* Old browsers */
 			background: linear-gradient(to bottom,  rgba(182,182,182,1) 0%,rgba(185,185,185,1) 4%,rgba(190,190,190,1) 7%,rgba(195,195,195,1) 14%,rgba(218,218,218,1) 75%,rgba(224,224,224,1) 100%); /* W3C */
@@ -138,7 +138,7 @@ form label.access503 {
 
 .miwt {
 	.dialog {
-		background: #fff;
+		background: $color-white;
 		border: 6px solid #20afcf;
 		border-radius: 4px;
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -148,9 +148,9 @@ form label.access503 {
 			background: #2A96D4;
 
 			td.activewindowtitle {
-				color: #fff;
+				color: $color-white;
 				text-align: left;
-				font-family: MuseoSansRegular, Arial, Verdana, sans-serif;
+				font-family: $font-museo-regular;
 				font-size: 18px;
 				padding: 10px;
 			}
@@ -213,13 +213,13 @@ form label.access503 {
 	}
 
 	.photo img {
-		box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+		box-shadow: 1px 1px 3px rgba($color-black,0.3);
 	}
 
 	.prop {
 		span.val,
 		div.val  {
-			color: #999;
+			color: $color-grey-99;
 			font-size: 13px;
 			display: inline-block;
 			width: 470px;
@@ -246,7 +246,7 @@ form label.access503 {
 		}
 
 		.help {
-			color: #777;
+			color: $color-grey-77;
 			font-size: 12px;
 			border: 1px dashed #d0d0d0;
 			margin-top: 10px;
@@ -295,7 +295,7 @@ form label.access503 {
 .it_form.genform .question {
   margin: 0 0 10px;
   background: #eaeaea;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 3px rgba($color-black,0.2);
   padding: 10px 3px;
 }
 
@@ -317,7 +317,7 @@ form label.access503 {
   font-weight: bold;
   font-size: 13px;
   padding: 5px 0 4px 10px;
-  color: #333;
+  color: $color-grey-33;
 }
 
 .property_wrapper .property_viewer .prop span.val,
@@ -427,7 +427,7 @@ form label.access503 {
 			position: absolute;
 			top: 1px;
 			left: 20px;
-			color: #aaa;
+			color: $color-grey-aa;
 			font-family: $font-georgia;
 			font-style: italic;
 			font-size: 16px;
