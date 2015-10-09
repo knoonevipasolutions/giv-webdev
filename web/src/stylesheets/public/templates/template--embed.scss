@@ -1,0 +1,11 @@
+@import "../../config/base-import";
+@import "../../libs/normalize";
+
+
+body {
+  background: transparent;
+  color: #666666;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+@import "../../components/partials/base-elements";
