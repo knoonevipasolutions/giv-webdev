@@ -1,0 +1,14 @@
+@import "../../config/base-import";
+
+html, body {
+  margin: 0;
+  padding: 10px;
+}
+
+body {
+  background: left top #ededed url(/resources/dyn/files/182179zdcdfa94f/_fn/debut-light.png) repeat;
+  color: #666666;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+@import "../../components/partials/base-elements";
