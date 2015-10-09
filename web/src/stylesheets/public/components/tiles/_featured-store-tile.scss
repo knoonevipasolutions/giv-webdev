@@ -1,0 +1,61 @@
+.feat_stores {
+	@include clearfix();
+}
+
+.feat_store_tile {
+	background: $color-white;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 4px rgba($color-black, 0.2);
+	position: relative;
+	overflow: hidden;
+	border-radius: 4px;
+
+	.tile_link {
+		display: block;
+		width: 100px;
+		height: 100px;
+
+		&:hover {
+			.info {
+				top: 0;
+				opacity: 1;
+			}
+		}
+	}
+
+	.info {
+		opacity: 0;
+		transition: all 0.5s;
+		background: #2896d3;
+		color: $color-white;
+		position: absolute;
+		top: 20px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		font-size: 12px;
+		border-radius: 4px;
+		text-align: center;
+
+		.percent {
+			.label {
+				margin-top: 25px;
+				display: block;
+				color: #AEE1FF;
+			}
+
+			.val {
+				display: block;
+				font-size: 20px;
+			}
+		}
+	}
+
+	.name {
+		display: none;
+	}
+}

@@ -1,0 +1,116 @@
+.store_chooser {
+	@include clearfix();
+
+	h2 {
+		margin: 0;
+	}
+
+	.choose_store {
+		@include clearfix();
+	}
+
+	.details {
+		float: left;
+		width: 270px;
+		padding-right: 20px;
+		margin-right: 20px;
+		border-right: 1px dotted #d0d0d0;
+
+		.name {
+			color: $color-grey-66;
+			font-weight: bold;
+			font-size: 14px;
+		}
+
+		.percent {
+			width: 100px;
+			margin-right: 10px;
+			margin-bottom: 20px;
+			background-color: #f0f0f0;
+			color: $color-grey-77;
+			padding: 10px 0;
+			text-align: center;
+			font-size: 12px;
+			font-family: $font-arial;
+			text-transform: uppercase;
+			font-weight: bold;
+
+			.label {
+				display: block;
+			}
+
+			.val {
+				font-size: 18px;
+				color: #2896D3;
+			}
+		}
+
+		.photo {
+			float: right;
+			height: 120px;
+		}
+
+		.info .description {
+			font-size: 12px;
+		}
+	}
+
+	.inner {
+		margin-left: 310px;
+	}
+
+	.project {
+		float: left;
+		width: 215px;
+		margin: 5px 1px;
+		padding: 3px;
+		transition: all 0.5s;
+
+		&:hover {
+			color: #21C25E;
+		}
+
+		&.active {
+			background: #2896D3;
+			color: $color-white;
+			font-weight: normal;
+		}
+
+		input {
+			display: none;
+		}
+
+		label {
+			display: block;
+			cursor: pointer;
+			@include clearfix();
+		}
+
+		.photo {
+			float: left;
+			margin-right: 10px;
+
+			img {
+				display: block;
+			}
+		}
+
+		.name {
+			display: block; height: 60px;
+			overflow: hidden;
+			font-family: $font-museo-regular;
+			font-size: 13px;
+		}
+	}
+
+	.actions {
+		display: inline-block;
+		margin: 20px 0 0;
+		text-align: center;
+	}
+
+	.step2 {
+		display: inline-block;
+		margin-right: 10px;
+	}
+}

@@ -1,0 +1,63 @@
+.team_tile {
+	font-family: $font-museo-regular;
+	background-color: #fff;
+	position: relative;
+	box-shadow: 1px 1px 4px rgba($color-black,0.2);
+	transition: all 0.5s;
+	margin: 0 0 10px;
+	border-radius: 4px;
+	padding: 5px;
+
+	&:hover {
+		box-shadow: 1px 1px 9px rgba($color-black,0.3);
+	}
+
+	.photo {
+		width: 100px;
+		height: 100px;
+		background: #d0d0d0;
+		float: left;
+		margin-right: 20px;
+	}
+
+	.name {
+		&,
+		a {
+			transition: all 0.5s;
+			color: #0f8ed5;
+			text-decoration: none;
+			display: block;
+			font-weight: bold;
+			font-size: 16px;
+		}
+
+		a:hover {
+			color: #21C25E;
+		}
+	}
+
+	.description {
+		font-size: 12px;
+		line-height: 16px;
+		max-height: 48px;
+		overflow-y: hidden;
+		margin: 0 0 5px;
+	}
+
+	.meta {
+		margin: 0 0 5px;
+		font-size: 13px;
+		color: $color-grey-99;
+
+		.mi {
+			display: inline-block;
+			margin-right: 20px;
+
+			.val {
+				font-size: 13px;
+				font-weight: bold;
+				color: $color-grey-33;
+			}
+		}
+	}
+}

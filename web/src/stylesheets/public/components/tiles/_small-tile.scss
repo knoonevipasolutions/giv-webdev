@@ -1,0 +1,49 @@
+.small_tile_set {
+	display: table;
+	margin: 0 auto;
+	width: 100%;
+
+	.small_tile {
+		text-align: left;
+		display: table-row;
+	}
+}
+
+.small_tile {
+	font-family: $font-museo-regular;
+	font-size: 12px;
+	font-weight: bold;
+
+	.photo {
+		display: table-cell;
+		vertical-align: middle;
+		width: 60px;
+		height: 60px;
+		background: #7b7c7c;
+		padding: 0 0 10px;
+		background: none;
+
+		a {
+			display: block;
+		}
+
+		img {
+			display: block;
+		}
+	}
+
+	.details {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 0 10px 10px;
+		color: #010101;
+	}
+
+	.title {
+		&,
+		a {
+			color: $color-grey-66;
+			text-decoration: none;
+		}
+	}
+}

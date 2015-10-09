@@ -1,0 +1,35 @@
+
+.micro_tiles {
+	@include clearfix();
+}
+
+.micro_tile {
+	float: left;
+	position: relative;
+
+	&:hover {
+		.photo {
+			img {
+				opacity: 1;
+			}
+		}
+	}
+
+	.photo {
+		width: 70px;
+		height: 60px;
+		background: $color-grey-33;
+
+		a {
+			display: block;
+			width: 70px;
+			height: 60px;
+		}
+
+		img {
+			display: block;
+			opacity: 0.5;
+			transition: all 0.5s;
+		}
+	}
+}

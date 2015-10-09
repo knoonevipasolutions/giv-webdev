@@ -1,0 +1,214 @@
+.large_tile_set {
+	zoom: 1;
+	@include clearfix();
+
+	.paging {
+		margin: 0 0 20px;
+		clear: both;
+	}
+}
+
+.large_tile {
+	font-family: $font-museo-regular;
+	background-color: $color-white;
+	position: relative;
+	box-shadow: 1px 1px 4px rgba($color-black,0.2);
+	transition: all 0.5s;
+	width: 210px;
+	float: left;
+	margin: 0 0 25px 20px;
+	border-radius: 6px;
+
+	&:hover {
+		box-shadow: 1px 1px 9px rgba($color-black,0.3);
+	}
+
+	.favorite {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+	}
+
+	.fav_action_button {
+		transition: all 0.5s;
+		opacity: 0.6;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.fav_remove {
+			opacity: 1;
+		}
+
+		.sbutton {
+			padding: 2px 4px;
+		}
+
+		.icon {
+			margin-right: 0;
+		}
+	}
+
+	.photo {
+		overflow: hidden;
+		background-color: $color-white;
+		width: 210px;
+		height: 180px;
+		text-align: center;
+		border-radius: 6px 6px 0 0;
+
+		a,
+		img {
+			display: block;
+		}
+	}
+
+	.category {
+		background-color: #aeaeae;
+		padding: 5px 10px;
+		color: $color-white;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+
+	.info {
+		padding: 7px 10px;
+		height: 120px;
+		position: relative;
+		transition: all 0.5s;
+	}
+
+	.name {
+		&,
+		a {
+			transition: all 0.5s;
+			color: #0f8ed5;
+			text-decoration: none;
+			display: block;
+			font-weight: bold;
+			font-size: 14px;
+		}
+
+		a {
+			&:hover {
+				color: #21C25E;
+			}
+		}
+	}
+
+	.parent {
+		font-size: 11px;
+		color: $color-grey-99;
+		margin: 5px 0;
+
+		.val {
+			transition: all 0.5s;
+		}
+	}
+
+	.description {
+		font-size: 12px;
+		line-height: 16px;
+		max-height: 48px;
+		overflow: hidden;
+	}
+
+	.location {
+		display: none;
+		font-size: 11px;
+		position: absolute;
+		bottom: 3px;
+		left: 0;
+		right: 0;
+		padding: 3px 10px;
+
+		.icon {
+			display: inline-block;
+			width: 10px;
+			height: 15px;
+			vertical-align: middle;
+			background: 0 0 transparent url(/resources/dyn/files/181281z456f2c05/_fn/location-marker.png) no-repeat;
+			margin-right: 5px;
+		}
+
+		.val {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+
+	.meta {
+		padding: 10px;
+		text-align: center;
+		background-color: $color-grey-f9;
+		border-radius: 0 0 6px 6px;
+
+		.stats {
+			.stat {
+				display: inline-block;
+			}
+
+			.progress {
+				font-weight: bold;
+				font-size: 20px;
+			}
+
+			.goal {
+				display: block;
+				margin: 0 0 5px;
+				color: #888;
+				font-size: 12px;
+			}
+		}
+	}
+
+	.message_popup {
+		position: absolute;
+		bottom: 100%;
+		left: -10px;
+		width: 180px;
+		margin-bottom: 5px;
+		text-align: center;
+		background: $color-grey-33;
+		color: $color-white;
+		font-size: 11px;
+		padding: 5px;
+		box-shadow: 0 0 4px rgba($color-black,1);
+
+		.arrow {
+			border: 5px solid transparent;
+			width: 0;
+			height: 0;
+			border-top: 5px solid $color-grey-33;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -3px;
+		}
+	}
+}
+
+.fav_action_button {
+	display: inline-block;
+	position: relative;
+
+	&.fav_remove {
+		.icon {
+			background-position: 0 -32px;
+		}
+	}
+
+	&.fav_add:hover {
+		.icon {
+			background-position: 0 -64px;
+		}
+	}
+
+	.icon {
+		cursor: pointer;
+		width: 32px;
+		height: 32px;
+		background: 0 0 transparent url(/resources/dyn/files/181306z12105999/_fn/favorite-icon-sprite.png) no-repeat;
+	}
+}

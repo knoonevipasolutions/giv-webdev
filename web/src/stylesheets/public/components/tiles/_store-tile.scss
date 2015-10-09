@@ -1,0 +1,56 @@
+.store_tile {
+	padding: 10px;
+	width: 190px;
+
+	.info {
+		height: 78px;
+		padding: 0;
+	}
+
+	.name {
+		max-height: 30px;
+		overflow: hidden;
+		color: $color-grey-66;
+	}
+
+	.description {
+		height: 48px;
+
+		p {
+			margin-top: 0;
+		}
+	}
+
+	.photo {
+		width: 100px;
+		height: 70px;
+	}
+
+	.percent {
+		float: left;
+		width: 80px;
+		margin-right: 10px;
+		background-color: #f0f0f0;
+		color: $color-grey-77;
+		padding: 10px 0;
+		text-align: center;
+		font-size: 12px;
+		font-family: $font-arial;
+		text-transform: uppercase;
+		font-weight: bold;
+
+		.label {
+			display: block;
+		}
+
+		.val {
+			font-size: 18px;
+			color: #2896D3;
+		}
+	}
+
+	.action {
+		text-align: center;
+		margin: 10px 0 0;
+	}
+}
