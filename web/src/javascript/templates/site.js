@@ -1,6 +1,6 @@
 jQuery(function($){
   
-  if($('.ieonly').length) $('body').addClass('ieonly');
+  /*if($('.ieonly').length) $('body').addClass('ieonly');
 
   var $user_account = $('#user-account');
   
@@ -24,9 +24,10 @@ jQuery(function($){
   var $new_account_popup = $('#new_account_popup');
   var $getting_started_popup = $('#getting_started_popup');
   var $plugin_reminder_popup = $('#plugin_reminder_popup');
-  var crossrider_id = '14292';
+  var crossrider_id = '14292';*/
   
   //user not logged in
+  /*
   if($user_account.length == 0 && $getting_started_popup.length > 0){
     $.fancybox($getting_started_popup, {
       autoSize: false,
@@ -43,6 +44,7 @@ jQuery(function($){
       }
     });     
   }
+  */
   /*
   //new user popup
   if($user_account.length > 0  && $new_account_popup.length > 0){
@@ -99,7 +101,7 @@ jQuery(function($){
         }
       }); 
     });    
-  }*/
+  }
   
   $('#new_account_popup .download_all').click(function(evt){
     evt.preventDefault();
@@ -108,7 +110,8 @@ jQuery(function($){
   $('#new_account_popup .skip').click(function(evt){
     $.fancybox.close();
   });
-  
+   */
+
   //if the browser is chrome, show specific chrome extension download buttons
   /*if(navigator.userAgent.match(/Chrome/)){
     $('.plugin_popup .download_chrome').css('display', 'inline-block');
