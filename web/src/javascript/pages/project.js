@@ -13,7 +13,6 @@ jQuery(function($){
   $('#shop .more a').fancybox({
     type: 'iframe',
     autoSize: false,
-    height: 'auto',
     width: 765,
     height: 585,
     padding: 6,
