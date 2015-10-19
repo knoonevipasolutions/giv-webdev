@@ -1,3 +1,5 @@
+$sizing-footer-height: 230px;
+
 body {
 	background: left top $color-grey-e7 url(/resources/dyn/files/182179zdcdfa94f/_fn/debut-light.png) repeat;
 	color: $color-grey-66;
@@ -13,7 +15,7 @@ div.page {
 #body_heading-wc-0,
 #body-wc-0,
 #search-wc-0,
-#footer-wc-2,
+#footer-wc-0,
 #project_heading-wc-0  {
 	width: $constraint-max-width;
 	position: relative;
@@ -206,7 +208,7 @@ div.page {
 
 #body-wc-0,
 #e_content_wrapper {
-	padding: 1px 0 356px;
+	padding: 1px 0 $sizing-footer-height;
 }
 
 #e_content_wrapper-wc-0 {
@@ -220,26 +222,16 @@ div.page {
 }
 
 #footer {
-	margin-top: -356px;
-	background-color: #2896d3;
-	border-top: 3px solid #e8eced;
+	margin-top: -$sizing-footer-height - 3px;
+	border-top: 3px solid #2896d3;
+	background-color: $color-grey-33;
 	padding: 3px 0 0;
 	z-index: 10;
 }
 
 #footer-wc-0 {
-	background: 0 0 #272727 url(/resources/dyn/files/181370zb4326a6b/_fn/footer-bg-tile.png) repeat;
-	height: 350px;
+	height: $sizing-footer-height;
 }
-
-#footer-wc-1 {
-	background: #272727;
-}
-
-#footer-wc-2 {
-	min-height: 275px;
-}
-
 
 #footer .social {
 	position: absolute;
@@ -247,15 +239,8 @@ div.page {
 	top: 15px;
 }
 
-#copyright {
-	position: absolute;
-	bottom: -30px;
-	left: 0;
-
-	p {
-		margin: 0;
-		font-size: 12px;
-		color: $color-grey-bb;
-		padding: 8px 0;
-	}
+.site-copyright {
+	font-size: 12px;
+	color: $color-grey-bb;
+	padding: 8px 0;
 }
