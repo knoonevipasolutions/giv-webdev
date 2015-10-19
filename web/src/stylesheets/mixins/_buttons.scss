@@ -1,0 +1,57 @@
+@mixin style-button-base($font-size: 14px, $padding: 8px 15px) {
+	display: inline-block;
+	border: 0 none;
+	color: $color-white;
+	background-color: $color-primary-accent;
+	font-family: $font-museo-regular;
+	font-size: $font-size;
+	text-decoration: none;
+	padding: $padding;
+	cursor: pointer;
+	transition: all 0.25s;
+	border-radius: 15px;
+
+	&:hover {
+		background-color: darken($color-primary-accent, 12%);
+	}
+
+	&:active {
+		background-color: darken($color-primary-accent, 15%);
+		box-shadow: 0 0 5px rgba($color-black, 0.5) inset;
+		color: $color-grey-e7;
+	}
+}
+
+@mixin style-button-override($color-bg: "", $color-text: "", $font-size: "", $padding: "", $hover: true, $active: true) {
+	@if ($color-bg != "") {
+		background-color: $color-bg;
+
+		&:hover {
+			@if ($hover) {
+				background-color: darken($color-bg, 12%);
+			} @else {
+				background-color: $color-bg;
+			}
+		}
+
+		&:active {
+			@if ($active) {
+				background-color: darken($color-bg, 15%);
+			} @else {
+				color: $color-text;
+				background-color: $color-bg;
+				box-shadow: none;
+			}
+		}
+	}
+	@if ($color-text != "") {
+		color: $color-text;
+	}
+	@if ($font-size != "") {
+		font-size: $font-size;
+	}
+	@if ($padding != "") {
+		padding: $padding;
+	}
+}
+
