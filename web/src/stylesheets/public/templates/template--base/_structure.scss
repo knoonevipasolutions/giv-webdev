@@ -42,30 +42,22 @@ div.page {
 	@include clearfix();
 }
 
-#logo,
 #main_nav,
 #total_raised,
 #account_menu,
 #guest_menu {
 	display: inline-block;
 	vertical-align: middle;
-	zoom: 1;
-	*display: inline;
 }
 
-#logo {
+.site-logo {
 	position: absolute;
-	top: -25px;
+	top: 50%;
 	left: 10px;
-
-	img {
-		display: block;
-	}
+	transform: translateY(-50%);
 
 	a {
 		display: block;
-		position:relative;
-		transform-origin: 50% 50%;
 	}
 }
 
