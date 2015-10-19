@@ -17,10 +17,6 @@ $color-grey-33: #333;
 $color-grey-1b: #1b1b1b;
 $color-black: #000;
 
-$color-youtube-black: $color-grey-1b;
-$color-facebook-blue: #3b579d;
-
-
 $color-tan: #e7e1dc;
 $color-grey-tan: #ac9b8f;
 $color-dark-tan: #baa188;
@@ -29,12 +25,16 @@ $color-brown: #603913;
 
 $color-red: #bf1e2e;
 $color-dark-red: #7a0000;
-$color-yellow: #f5e800;
+$color-yellow: #FCC331;
 $color-light-blue: #20AFCF;
 $color-blue: #2896d3;
 $color-dark-blue: #043665;
 $color-green: #21C25E;
 $color-dark-green: #145432;
+
+$color-primary-accent: $color-yellow;
+$color-youtube-black: $color-grey-1b;
+$color-facebook-blue: #3b579d;
 
 $font-arial: Arial, Verdana, sans-serif;
 $font-georgia: Georgia, "Times New Roman", serif;
