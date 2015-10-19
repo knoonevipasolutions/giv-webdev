@@ -1,3 +1,4 @@
+@import "../../config/base-import";
 
 #e_content_wrapper_wc_0 {
   position: static; /* boooooo MIWT */
@@ -40,9 +41,7 @@
 #user {
   margin: 0 0 30px;
   background: #fff;
-  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 5px rgba($color-black,0.3);
   text-align: center;
 }
 
@@ -65,9 +64,9 @@
 #user .info .raised {
   margin: 0;
   background-color: #2896d3;
-  color: #fff;
+  color: $color-white;
   padding: 10px;
-  font-family: MuseoSansRegular, Arial, sans-serif;
+  font-family: $font-museo-regular;
   font-size: 14px;
 }
 
@@ -116,10 +115,6 @@ table.search_results tbody td {
   padding: 3px;
   border-bottom: 1px dotted #ddd;
   font-size: 12px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -158,15 +153,11 @@ ul.tab-items {
 
 .tab-items li {
   font-size: 14px;
-  font-family: MuseoSansRegular, Arial, sans-serif;
+  font-family: $font-museo-regular;
   text-transform: uppercase;
   display: inline-block;
   padding: 2px 12px;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
   border-bottom: 8px solid transparent;
 }
@@ -214,10 +205,6 @@ ul.tab-items {
   text-transform: uppercase;
   text-decoration: none;  
   padding: 2px 4px;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
   border-bottom: 8px solid transparent;
   color: #666;
@@ -264,14 +251,10 @@ ul.tab-items {
 .search_bar .constraints,
 .search_bar .result_limit {
   display: inline-block;
-  zoom: 1;
-  *display: inline;
 }
 
 .search_bar .constraint {
   display: inline-block;
-  zoom: 1;
-  *display: inline;
   white-space: nowrap;
   padding: 0 10px 5px 0;
 }
