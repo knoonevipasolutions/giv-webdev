@@ -15,6 +15,12 @@ input {
 		@include style-button-override($color-grey-e0, $color-grey-aa, $hover: false, $active: false);
 		cursor: default;
 	}
+
+	&.xlbutton {
+		@include style-button-override($font-size: 16px, $padding: 10px 35px);
+		text-transform: uppercase;
+		border-radius: 20px;
+	}
 }
 
 .sbutton {
