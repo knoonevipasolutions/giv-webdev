@@ -6,10 +6,6 @@ body {
 	font-family: $font-arial;
 }
 
-div.page {
-	min-width: $constraint-max-width;
-}
-
 #header-wc-0,
 #e_content_wrapper-wc-0,
 #body_heading-wc-0,
@@ -17,7 +13,7 @@ div.page {
 #search-wc-0,
 #footer-wc-0,
 #project_heading-wc-0  {
-	width: $constraint-max-width;
+	max-width: $constraint-max-width;
 	position: relative;
 	margin: 0 auto;
 }
@@ -38,9 +34,7 @@ div.page {
 #header-wc-0 {
 	text-align: right;
 	padding: 0 10px;
-	zoom: 1;
 	z-index: 10;
-	margin-top: -5px;
 	@include clearfix();
 }
 
@@ -170,7 +164,7 @@ div.page {
 
 .account_popup {
 	.name {
-		font-family: $font-museo-regular;
+		font-family: $font-roboto-medium;
 		font-size: 18px;
 		white-space: nowrap;
 	}

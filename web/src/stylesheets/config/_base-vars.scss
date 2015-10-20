@@ -40,7 +40,7 @@ $color-facebook-blue: #3b579d;
 
 $font-arial: Arial, Verdana, sans-serif;
 $font-georgia: Georgia, "Times New Roman", serif;
-$font-museo-regular: 'MuseoSansRegular', $font-arial;
+$font-roboto-medium: RobotoMedium, $font-arial;
 $font-monospace: monospace;
 
 $font-default-color: $color-black;
@@ -53,7 +53,7 @@ $bp-mobile-landscape: (min-width 480px);
 $bp-tablets-portrait: (min-width 768px);
 $bp-tablets-landscape: (min-width 1024px);
 $bp-desktop: (min-width 1280px);
-$bp-desktop-wide: (min-width: 1400px);
+$bp-desktop-wide: (min-width 1400px);
 
 $constraint-max-width: 980px;
 
