@@ -13,6 +13,7 @@ $color-grey-99: #999;
 $color-grey-77: #777;
 $color-grey-66: #666;
 $color-grey-55: #555;
+$color-grey-4e: #4e4e4e;
 $color-grey-33: #333;
 $color-grey-1b: #1b1b1b;
 $color-black: #000;
@@ -40,7 +41,11 @@ $color-facebook-blue: #3b579d;
 
 $font-arial: Arial, Verdana, sans-serif;
 $font-georgia: Georgia, "Times New Roman", serif;
+$font-roboto-regular: RobotoRegular, $font-arial;
 $font-roboto-medium: RobotoMedium, $font-arial;
+$font-roboto-bold: RobotoBold, $font-arial;
+$font-robotoslab-regular: RobotoSlabRegular, $font-arial;
+$font-robotoslab-bold: RobotoSlabBold, $font-arial;
 $font-monospace: monospace;
 
 $font-default-color: $color-black;
