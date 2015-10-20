@@ -1,9 +1,9 @@
-$sizing-footer-height: 230px;
+$sizing-footer-height: 130px;
 
 body {
 	background: left top $color-grey-e7 url(/resources/dyn/files/182179zdcdfa94f/_fn/debut-light.png) repeat;
 	color: $color-grey-66;
-	font-family: $font-arial;
+	font-family: $font-roboto-regular;
 }
 
 #header-wc-0,
@@ -21,9 +21,8 @@ body {
 #header {
 	background-color: $color-white;
 	border-bottom: 1px solid $color-grey-e0;
-	border-top: 5px solid $color-grey-f2;
 	box-shadow: 0 0 1px 1px transparentize($color-grey-bb, 0.8),
-	0 0 6px 1px transparentize($color-grey-bb, 0.8);
+		0 0 6px 1px transparentize($color-grey-bb, 0.8);
 	position: fixed;
 	z-index: 7000;
 	top: 0;
@@ -212,29 +211,21 @@ body {
 #body-wc-0,
 #e_body-wc-0,
 #body_heading {
-	padding-top: 60px;
+	padding-top: 55px;
 }
 
 #footer {
 	margin-top: -$sizing-footer-height - 3px;
-	border-top: 3px solid #2896d3;
-	background-color: $color-grey-33;
-	padding: 3px 0 0;
-	z-index: 10;
+	background-color: $color-grey-4e;
+	text-align: center;
 }
 
 #footer-wc-0 {
 	height: $sizing-footer-height;
 }
 
-#footer .social {
-	position: absolute;
-	right: 10px;
-	top: 15px;
-}
-
 .site-copyright {
-	font-size: 12px;
-	color: $color-grey-bb;
-	padding: 8px 0;
+	font-family: $font-roboto-regular;
+	font-size: 11px;
+	color: $color-grey-aa;
 }

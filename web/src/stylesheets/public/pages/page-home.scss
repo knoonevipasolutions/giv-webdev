@@ -39,3 +39,26 @@
 .intro-text-link {
 	margin-top: 20px;
 }
+
+.intro-ctas {
+	padding: 40px 0;
+	text-align: center;
+
+	.cta {
+		width: 33%;
+		max-width: 160px;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 75px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.cta-text {
+		font-size: 16px;
+		font-family: $font-robotoslab-regular;
+		color: $color-grey-4e;
+	}
+}
