@@ -88,12 +88,7 @@
 		}
 
 		a {
-			text-decoration: none;
-			color: $color-blue;
-
-			&:hover {
-				text-decoration: underline;
-			}
+			@include style-content-link;
 		}
 	}
 }
@@ -166,12 +161,7 @@
 		}
 
 		a {
-			text-decoration: none;
-			color: $color-blue;
-
-			&:hover {
-				text-decoration: underline;
-			}
+			@include style-content-link;
 		}
 	}
 

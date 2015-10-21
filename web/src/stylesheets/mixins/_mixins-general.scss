@@ -33,3 +33,12 @@
 	padding: 0;
 	list-style: none;
 }
+
+@mixin style-content-link {
+	text-decoration: none;
+	color: $color-blue;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
