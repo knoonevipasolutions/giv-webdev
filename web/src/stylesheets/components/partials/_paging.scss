@@ -14,7 +14,7 @@
 		}
 
 		.cur {
-			border-bottom: 8px solid $color-blue;
+			border-bottom: 8px solid $color-primary-accent;
 		}
 	}
 
@@ -32,7 +32,7 @@
 			color: $color-grey-66;
 
 			&:hover {
-				border-bottom: 8px solid $color-green;
+				border-bottom: 8px solid $color-grey-cc;
 			}
 		}
 	}

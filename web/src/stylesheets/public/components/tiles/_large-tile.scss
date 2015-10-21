@@ -82,28 +82,20 @@
 	.name {
 		&,
 		a {
-			transition: all 0.5s;
-			color: #0f8ed5;
-			text-decoration: none;
-			display: block;
-			font-weight: bold;
+			@include style-content-link;
+			display: inline-block;
+			font-family: $font-roboto-bold;
 			font-size: 14px;
-		}
-
-		a {
-			&:hover {
-				color: #21C25E;
-			}
 		}
 	}
 
 	.parent {
 		font-size: 11px;
 		color: $color-grey-99;
-		margin: 5px 0;
+		margin-bottom: 5px;
 
 		.val {
-			transition: all 0.5s;
+			@include style-content-link;
 		}
 	}
 

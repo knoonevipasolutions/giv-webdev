@@ -30,7 +30,7 @@
 	.info {
 		opacity: 0;
 		transition: all 0.5s;
-		background: #2896d3;
+		background: $color-primary-accent;
 		color: $color-white;
 		position: absolute;
 		top: 20px;
@@ -45,7 +45,7 @@
 			.label {
 				margin-top: 25px;
 				display: block;
-				color: #AEE1FF;
+				color: change_color($color-primary-accent, $lightness: 90%);
 			}
 
 			.val {

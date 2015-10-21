@@ -17,6 +17,7 @@
   border-radius: 4px;
   transition: all 0.25s;
 	text-align: left;
+	box-shadow: 1px 1px 4px rgba($color-black, 0.2);
 
 	&.active {
 		border: 4px solid $color-primary-accent;
