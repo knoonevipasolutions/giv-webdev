@@ -55,6 +55,7 @@ $font-default-content-line-height: 1.4;
 $html-entity-nbsp: "\a0";
 
 $bp-mobile-landscape: (min-width 480px);
+$bp-mobile-only: (max-width 480px);
 $bp-tablets-portrait: (min-width 768px);
 $bp-tablets-landscape: (min-width 1024px);
 $bp-desktop: (min-width 1280px);
@@ -63,6 +64,7 @@ $bp-desktop-wide: (min-width 1400px);
 $constraint-max-width: 980px;
 
 $spacing-mobile-horizontal: 20px;
+$spacing-desktop-horizontal: 30px;
 $spacing-between-boxes: 20px;
 
 $font--web-root-path: "/_fonts";

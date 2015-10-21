@@ -5,7 +5,11 @@
 }
 
 .banner-slide {
-	height: 430px;
+	height: 260px;
+
+	@include breakpoint($bp-tablets-portrait) {
+		height: 430px;
+	}
 }
 
 .banner-slide-content {
@@ -36,6 +40,15 @@
 	width: 416px;
 }
 
+.intro-text-image {
+	@include breakpoint($bp-mobile-only) {
+		width: 200px;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
 .intro-text-link {
 	margin-top: 20px;
 }
@@ -45,14 +58,11 @@
 	text-align: center;
 
 	.cta {
-		width: 33%;
 		max-width: 160px;
-		display: inline-block;
-		vertical-align: top;
-		margin-right: 75px;
+		margin: 0 auto 45px;
 
 		&:last-child {
-			margin-right: 0;
+			margin-bottom: 0;
 		}
 	}
 
@@ -64,5 +74,19 @@
 
 	.cta-link {
 		text-decoration: none;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		.cta {
+			display: inline-block;
+			vertical-align: top;
+			width: 33%;
+			margin-right: 75px;
+			margin-bottom: 0;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
 	}
 }

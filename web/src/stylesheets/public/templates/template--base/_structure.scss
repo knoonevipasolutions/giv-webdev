@@ -6,6 +6,14 @@ body {
 	font-family: $font-roboto-regular;
 }
 
+#e_content {
+	min-height: 0;
+
+	@include breakpoint($bp-tablets-portrait) {
+		min-height: 100.0%;
+	}
+}
+
 #header-wc-0,
 #e_content_wrapper-wc-0,
 #body_heading-wc-0,
@@ -185,7 +193,9 @@ body {
 
 #body-wc-0,
 #e_content_wrapper {
-	padding: 1px 0 $sizing-footer-height;
+	@include breakpoint($bp-tablets-portrait) {
+		padding-bottom: $sizing-footer-height;
+	}
 }
 
 #e_content_wrapper-wc-0 {
@@ -199,17 +209,25 @@ body {
 }
 
 #footer {
-	margin-top: -$sizing-footer-height - 3px;
 	background-color: $color-grey-4e;
-	text-align: center;
+
+	@include breakpoint($bp-tablets-portrait) {
+		margin-top: -$sizing-footer-height - 3px;
+		text-align: center;
+	}
 }
 
 #footer-wc-0 {
-	height: $sizing-footer-height;
+	padding: 30px $spacing-mobile-horizontal;
+
+	@include breakpoint($bp-tablets-portrait) {
+		height: $sizing-footer-height;
+	}
 }
 
 .site-copyright {
 	font-family: $font-roboto-regular;
 	font-size: 11px;
 	color: $color-grey-aa;
+	margin-top: 20px;
 }
