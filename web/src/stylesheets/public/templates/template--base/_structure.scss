@@ -40,7 +40,7 @@ body {
 #main_nav,
 #total_raised,
 #account_menu,
-#guest_menu {
+.guest-nav {
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -53,22 +53,6 @@ body {
 
 	a {
 		display: block;
-	}
-}
-
-#guest_menu {
-	.menu {
-		margin: -1px 0 0 20px;
-		padding: 5px 0 0;
-		font-size: 13px;
-		list-style: none;
-	}
-
-	.mi {
-		display: inline-block;
-		zoom: 1;
-		*display: inline;
-		margin-left: 20px;
 	}
 }
 

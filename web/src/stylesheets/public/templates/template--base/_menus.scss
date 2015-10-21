@@ -41,6 +41,29 @@
 	}
 }
 
+.guest-nav {
+	.menu {
+		@include resetMenu;
+	}
+
+	.mi {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 20px;
+	}
+
+	.menuitemlabel {
+		display: block;
+		font-size: 13px;
+		color: $color-secondary-accent;
+		text-decoration: none;
+
+		&:hover {
+			color: $color-primary-accent;
+		}
+	}
+}
+
 .footer-nav {
 	padding: 30px 0;
 
