@@ -1,60 +1,52 @@
 @import "../../config/base-import";
 
 #main {
-  float: left;
-  padding-top: 15px;
-  width: 690px;
+  @include breakpoint($bp-tablets-landscape) {
+    float: left;
+    padding-top: 15px;
+    width: 690px;
+  }
 }
 
 #aside {
-  float: left;
-  width: 260px;
-  padding: 15px;
-  padding-right: 10px;
+  .search_box {
+    padding: 0 0 10px;
+    border-bottom: 1px dotted #c0c0c0;
+  }
+
+  @include breakpoint($bp-tablets-landscape) {
+    float: left;
+    width: 260px;
+    padding: 15px;
+    padding-right: 10px;
+  }
 }
 
 #search {
   background-color: #eaeaea;
   border-bottom: 1px dotted #e0e0e0;
+
+  h1 {
+    color: #333;
+    margin: 0;
+    padding: 20px 20px 20px;
+    font-size: 24px;
+  }
 }
 
-#search h1 {
-  color: #333; 
-  margin: 0;
-  padding: 20px 20px 20px;
-  font-size: 24px;
-}
+.search_listing {
+  .noresults {
+    margin: 15px 0 15px 20px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  }
 
-#aside .search_box {
-  padding: 0 0 10px;
-  border-bottom: 1px dotted #c0c0c0; 
-}
-
-.search_listing .noresults {
-  margin: 15px 0 15px 20px;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-}
-
-.search_listing .search_criteria {
-  margin: 15px 15px 0;
-  background: #fff;
-  padding: 10px;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-  color: #20AFCF;
-}
-
-.featured_banners {
-  margin: 0 0 20px 20px;
-  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-  display: block;
-}
-
-.featured_banners p {
-  margin: 0;
-}
-
-.featured_banners img {
-  display: block;
+  .search_criteria {
+    margin: 15px 15px 0;
+    background: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    color: #20AFCF;
+  }
 }

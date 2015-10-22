@@ -1,8 +1,11 @@
+$feature-banner-aspect-ratio: 670 / 200;
+
 /* featured banners */
 .featured_banners {
 	position: relative;
-	height: 200px;
-	width: 670px;
+	width: 210px;
+	height: 210px / $feature-banner-aspect-ratio;
+	margin: 0 auto;
 
 	div.tab-items {
 		position: absolute;
@@ -39,6 +42,10 @@
 		position: absolute;
 		left: 0;
 		top: 0;
+
+		p {
+			margin: 0;
+		}
 	}
 
 	.progress {
@@ -47,5 +54,25 @@
 		position: absolute;
 		bottom: 0;
 		left: 0;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	@include breakpoint($bp-mobile-landscape) {
+		width: 380px;
+		height: 380px / $feature-banner-aspect-ratio;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		width: 670px;
+		height: 670px / $feature-banner-aspect-ratio;
+
+		img {
+			max-width: none;
+		}
 	}
 }

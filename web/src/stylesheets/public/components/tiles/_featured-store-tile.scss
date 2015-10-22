@@ -1,14 +1,28 @@
+$sizing-feature-store-tile: 100px;
+$spacing-feature-store-tile-side: 6px;
+$feature-store-tile-total-width: $sizing-feature-store-tile + ($spacing-feature-store-tile-side * 2);
+
 .feat_stores {
+	width: 2 * $feature-store-tile-total-width;
+	margin: 0 auto;
 	@include clearfix();
+
+	@include breakpoint($bp-mobile-landscape) {
+		width: 4 * $feature-store-tile-total-width;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		width: 6 * $feature-store-tile-total-width;
+	}
 }
 
 .feat_store_tile {
 	background: $color-white;
-	width: 100px;
-	height: 100px;
-	float: left;
-	margin-left: 10px;
-	margin-bottom: 10px;
+	width: $sizing-feature-store-tile;
+	height: $sizing-feature-store-tile;
+	display: inline-block;
+	vertical-align: top;
+	margin: $spacing-feature-store-tile-side;
 	box-shadow: 1px 1px 4px rgba($color-black, 0.2);
 	position: relative;
 	overflow: hidden;
@@ -16,8 +30,6 @@
 
 	.tile_link {
 		display: block;
-		width: 100px;
-		height: 100px;
 
 		&:hover {
 			.info {
@@ -29,7 +41,7 @@
 
 	.info {
 		opacity: 0;
-		transition: all 0.5s;
+		transition: all 400ms;
 		background: $color-primary-accent;
 		color: $color-white;
 		position: absolute;

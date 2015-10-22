@@ -1,10 +1,28 @@
+$sizing-large-tile: 210px;
+$spacing-large-tile-side: 10px;
+$large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
+
 .large_tile_set {
-	zoom: 1;
-	@include clearfix();
+	@include clearfix;
+	width: $large-tile-total-width;
+	margin: 0 auto;
 
 	.paging {
 		margin: 0 0 20px;
-		clear: both;
+	}
+
+	@include breakpoint($bp-mobile-landscape) {
+		width: 2 * $large-tile-total-width;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		width: 3 * $large-tile-total-width;
+	}
+
+	&.full-tile-set {
+		@include breakpoint($bp-tablets-landscape) {
+			width: 4 * $large-tile-total-width;
+		}
 	}
 }
 
@@ -14,10 +32,11 @@
 	position: relative;
 	box-shadow: 1px 1px 4px rgba($color-black,0.2);
 	transition: all 0.5s;
-	width: 210px;
-	float: left;
-	margin: 0 0 25px 20px;
+	width: $sizing-large-tile;
+	margin: 0 $spacing-large-tile-side 25px;
 	border-radius: 6px;
+	display: inline-block;
+	vertical-align: top;
 
 	&:hover {
 		box-shadow: 1px 1px 9px rgba($color-black,0.3);

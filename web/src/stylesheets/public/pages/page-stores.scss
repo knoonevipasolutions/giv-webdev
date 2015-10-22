@@ -1,43 +1,16 @@
+@import "../../config/base-import";
+
 #featured_stores .stores {
-  margin: 15px 0;
-  margin-left: 20px;
-  zoom: 1;
+  margin-top: 15px;
+	margin-bottom: 15px;
+  @include clearfix();
 }
-
-#featured_stores .stores:before,
-#featured_stores .stores:after {
-  content: "";
-  display: table;
-}
-
-#featured_stores .stores:after {
-  clear: both;
-} 
 
 .term_menu {
   text-align: center;
   margin: 10px 0 20px;
 }
 
-.ieonly .store_tile {
-  margin-left: 18px; 
-}
-
 .search_listing .results {
-  zoom: 1;
+  @include clearfix();
 }
-
-#ie7only .search_listing .results {
-  margin: 0 0 20px;
-}
-
-.search_listing .results:before,
-.search_listing .results:after {
-  content: "";
-  display: table;
-}
-
-.search_listing .results:after {
-  clear: both;
-} 
-

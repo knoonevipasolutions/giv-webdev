@@ -1,8 +1,5 @@
-#project_aside h2 {
-  color: #010101;
-  margin: 0 0 10px;
-  font-size: 24px;
-  font-family: MuseoSlabRegular, "Times New Roman", serif;
+.featured_banners {
+	margin-bottom: 15px;
 }
 
 .search_listing .paging {
@@ -23,10 +20,6 @@
 }
 
 #main {
-  width: 100%; 
-  padding-left: 30px;
-}
-
-.featured_banners {
-  margin: 0 auto 30px;  
+	float: none;
+  width: auto;
 }

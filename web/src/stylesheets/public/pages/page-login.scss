@@ -7,9 +7,6 @@
 .fbox {
 	position: relative;
 	background: $color-white;
-  display: inline-block;
-	vertical-align: top;
-  width: 33%;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 20px;
@@ -21,10 +18,6 @@
 
 	&.active {
 		border: 4px solid $color-primary-accent;
-	}
-
-	& + & {
-		margin-left: 20px;
 	}
 
 	.intro {
@@ -42,6 +35,16 @@
 
 	h2 {
 		margin: 0;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		display: inline-block;
+		vertical-align: top;
+		width: 33%;
+
+		& + & {
+			margin-left: 20px;
+		}
 	}
 }
 

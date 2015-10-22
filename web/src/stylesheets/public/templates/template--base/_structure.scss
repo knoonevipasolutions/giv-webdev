@@ -1,9 +1,14 @@
+$sizing-header-height: 55px;
 $sizing-footer-height: 130px;
 
 body {
 	background: left top $color-grey-e7 url(/resources/dyn/files/182179zdcdfa94f/_fn/debut-light.png) repeat;
 	color: $color-grey-66;
 	font-family: $font-roboto-regular;
+
+	.menu-opened & {
+		overflow: hidden;
+	}
 }
 
 #e_content {
@@ -39,8 +44,9 @@ body {
 }
 
 #header-wc-0 {
+	height: $sizing-header-height;
 	text-align: right;
-	padding: 0 10px;
+	padding: 0 $spacing-mobile-horizontal;
 	z-index: 10;
 	@include clearfix();
 }
@@ -49,8 +55,10 @@ body {
 #total_raised,
 #account_menu,
 .guest-nav {
-	display: inline-block;
-	vertical-align: middle;
+	@include breakpoint($bp-tablets-portrait) {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 
 .site-logo {
@@ -64,24 +72,71 @@ body {
 	}
 }
 
+.primary-menu {
+	display: none;
+
+	@include breakpoint($bp-tablets-portrait) {
+		display: inline-block;
+	}
+}
+
+.menu-control {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	right: $spacing-mobile-horizontal;
+	margin-top: -10px;
+
+	@include breakpoint($bp-tablets-portrait) {
+		display: none;
+	}
+
+	.menu-control-line {
+		background-color: $color-primary-accent;
+		height: 4px;
+		display: block;
+
+		+ .menu-control-line {
+			margin-top: 4px;
+		}
+	}
+}
+
 #account_menu {
 	margin-left: 50px;
 	font-size: 13px;
 	position: relative;
-	padding: 5px 0 0;
+
+	&.shown {
+		border-top-color: #2896d3;
+		background-color: #E9E9E9;
+		border-bottom: 1px solid #E9E9E9;
+		margin-bottom: -1px;
+
+		.arrow {
+			border: 5px solid #E9E9E9;
+			border-bottom: 5px solid #333;
+			border-top: none;
+			margin-top: 4px;
+		}
+	}
+
+	.find_more {
+		clear: both;
+		text-align: center;
+		padding: 10px 0 0;
+	}
 }
 
 #account_trigger {
-	margin-top: -5px;
 	cursor: pointer;
 	padding: 4px 10px;
-	height: 47px;
-	border-top: 5px solid $color-grey-f2;
+	height: $sizing-header-height;
 	color: $color-grey-33;
-	transition: border-top 0.25s, background 0.5s;
+	transition: background 0.5s;
 
 	&:hover {
-		border-top-color: #21c25e;
 		background-color: #f5f5f5;
 	}
 
@@ -92,6 +147,7 @@ body {
 		background: #c0c0c0;
 		width: 45px;
 		height: 45px;
+		overflow: hidden;
 
 		img {
 			display: block;
@@ -115,45 +171,21 @@ body {
 		margin-top: 4px;
 		height: 0;
 	}
-
-	.account_popup {
-		position: absolute;
-		margin-top: 1px;
-		top: 100%;
-		right: 0;
-		background-color: #E9E9E9;
-		border: 1px solid #D7D7D7;
-		border-top: none;
-		padding: 15px;
-		text-align: left;
-		min-width: 200px;
-		box-shadow: 2px 2px 2px 0 rgba(130,130,130,0.2);
-	}
-
-	.shown & {
-		border-top-color: #2896d3;
-		background-color: #E9E9E9;
-		border-bottom: 1px solid #E9E9E9;
-		margin-bottom: -1px;
-
-		.arrow {
-			border: 5px solid #E9E9E9;
-			border-bottom: 5px solid #333;
-			border-top: none;
-			margin-top: 4px;
-		}
-	}
-}
-
-#account_menu {
-	.find_more {
-		clear: both;
-		text-align: center;
-		padding: 10px 0 0;
-	}
 }
 
 .account_popup {
+	position: absolute;
+	margin-top: 1px;
+	top: 100%;
+	right: 0;
+	background-color: #E9E9E9;
+	border: 1px solid #D7D7D7;
+	border-top: none;
+	padding: 15px;
+	text-align: left;
+	min-width: 200px;
+	box-shadow: 2px 2px 2px 0 rgba(130,130,130,0.2);
+
 	.name {
 		font-family: $font-roboto-medium;
 		font-size: 18px;
@@ -193,6 +225,8 @@ body {
 
 #body-wc-0,
 #e_content_wrapper {
+	padding: 0 $spacing-mobile-horizontal;
+
 	@include breakpoint($bp-tablets-portrait) {
 		padding-bottom: $sizing-footer-height;
 	}
@@ -205,14 +239,14 @@ body {
 #body-wc-0,
 #e_body-wc-0,
 #body_heading {
-	padding-top: 55px;
+	padding-top: $sizing-header-height;
 }
 
 #footer {
 	background-color: $color-grey-4e;
 
 	@include breakpoint($bp-tablets-portrait) {
-		margin-top: -$sizing-footer-height - 3px;
+		margin-top: -$sizing-footer-height;
 		text-align: center;
 	}
 }

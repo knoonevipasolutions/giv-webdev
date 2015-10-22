@@ -4,33 +4,19 @@
 		@include resetMenu;
 	}
 
-	.mi {
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	.mi-active {
-		.mil {
-			border-bottom-color: $color-primary-accent;
-		}
-	}
-
 	.menuitemlabel {
 		position: relative;
 		display: block;
-		padding: 0 15px;
-		line-height: 55px;
-		text-align: center;
+		padding: 15px;
 		font-family: $font-roboto-medium;
 		font-size: 14px;
 		color: $color-grey-1b;
 		text-decoration: none;
 		text-transform: uppercase;
-		transition: border 0.25s, background 0.5s;
+		border-bottom: 1px solid $color-grey-e7;
 
 		&:hover {
 			.mil {
-				border-bottom-color: $color-grey-cc;
 			}
 		}
 	}
@@ -39,6 +25,70 @@
 		padding: 0 5px;
 		border-bottom: 2px solid transparent;
 	}
+
+	@include breakpoint($bp-mobile-only) {
+		.menuitemlabel {
+			&:hover {
+				border-left: 10px solid $color-primary-accent;
+			}
+		}
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		.mi {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.mi-active {
+			.mil {
+				border-bottom-color: $color-primary-accent;
+			}
+		}
+
+		.menuitemlabel {
+			line-height: 55px;
+			padding: 0 15px;
+			text-align: center;
+			transition: border 0.25s, background 0.5s;
+
+			&:hover {
+				.mil {
+					border-bottom-color: $color-grey-cc;
+				}
+			}
+		}
+
+		.mil {
+			border-bottom: 2px solid transparent;
+		}
+	}
+}
+
+.mobile-menu {
+	transition: all 200ms;
+	left: 100%;
+	right: 0;
+	top: $sizing-header-height;
+	bottom: 0;
+	display: block;
+	background: $color-white;
+	position: fixed;
+	z-index: 6000;
+	overflow: hidden;
+
+	.menu-opened & {
+		left: 30px;
+		box-shadow: 0 0 4px rgba($color-black, 0.3);
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		display: none;
+	}
+}
+
+.mobile-menu-content {
+	min-width: 200px;
 }
 
 .guest-nav {
@@ -46,20 +96,28 @@
 		@include resetMenu;
 	}
 
-	.mi {
-		display: inline-block;
-		vertical-align: top;
-		margin-left: 20px;
-	}
-
 	.menuitemlabel {
 		display: block;
 		font-size: 13px;
+		padding: 15px;
 		color: $color-secondary-accent;
 		text-decoration: none;
 
 		&:hover {
 			color: $color-primary-accent;
+		}
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		.mi {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 20px;
+		}
+
+
+		.menuitemlabel {
+			padding: 0;
 		}
 	}
 }
