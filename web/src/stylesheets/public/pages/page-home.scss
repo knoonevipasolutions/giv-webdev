@@ -40,10 +40,11 @@
 }
 
 .intro-text-image {
+	display: block;
+
 	@include breakpoint($bp-mobile-only) {
 		width: 200px;
 		height: auto;
-		display: block;
 		margin: 0 auto;
 	}
 }
