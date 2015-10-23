@@ -2,7 +2,7 @@ $sizing-feature-store-tile: 100px;
 $spacing-feature-store-tile-side: 6px;
 $feature-store-tile-total-width: $sizing-feature-store-tile + ($spacing-feature-store-tile-side * 2);
 
-.feat_stores {
+.store-tile-featured-set {
 	width: 2 * $feature-store-tile-total-width;
 	margin: 0 auto;
 	@include clearfix();
@@ -16,17 +16,12 @@ $feature-store-tile-total-width: $sizing-feature-store-tile + ($spacing-feature-
 	}
 }
 
-.feat_store_tile {
-	background: $color-white;
+.store-tile-featured {
+	@include style-tile-base($radius: 4px);
 	width: $sizing-feature-store-tile;
 	height: $sizing-feature-store-tile;
-	display: inline-block;
-	vertical-align: top;
 	margin: $spacing-feature-store-tile-side;
 	box-shadow: 1px 1px 4px rgba($color-black, 0.2);
-	position: relative;
-	overflow: hidden;
-	border-radius: 4px;
 
 	.tile_link {
 		display: block;

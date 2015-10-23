@@ -1,20 +1,42 @@
-.store_tile {
+$sizing-large-tile: 210px;
+$spacing-large-tile-side: 10px;
+$large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
+
+.store-tile {
+	@include style-tile-base;
 	padding: 10px;
 	width: 210px;
+	margin: 0 $spacing-large-tile-side 25px;
 
 	.info {
+		position: relative;
 		height: 78px;
-		padding: 0;
+		overflow: hidden;
+
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 25px;
+			right: 0;
+			background: linear-gradient(to top, $color-white 20%, transparent);
+		}
 	}
 
 	.name {
-		max-height: 30px;
+		font-family: $font-roboto-bold;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 		overflow: hidden;
 		color: $color-grey-66;
+		margin-bottom: 5px;
 	}
 
 	.description {
 		height: 48px;
+		font-size: 12px;
+		line-height: 1.3;
 
 		p {
 			margin-top: 0;
@@ -24,6 +46,7 @@
 	.photo {
 		width: 100px;
 		height: 70px;
+		margin-left: auto;
 	}
 
 	.percent {

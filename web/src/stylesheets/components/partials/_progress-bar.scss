@@ -1,17 +1,17 @@
 /* progress bar */
 .progress_bar {
 	background: $color-secondary-accent;
-	border-radius: 4px;
+	border-radius: 2px;
 	position: relative;
 
 	.progress_con {
-		border-radius: 3px;
+		border-radius: 1px;
 		display: block;
 		overflow: hidden;
 	}
 
 	.progress {
-		height: 11px;
+		height: 5px;
 		display: block;
 		background-color: $color-primary-accent;
 	}

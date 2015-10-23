@@ -1,0 +1,13 @@
+@mixin style-tile-base($radius: 6px) {
+	background-color: $color-white;
+	position: relative;
+	box-shadow: 1px 1px 4px rgba($color-black,0.2);
+	transition: all 0.5s;
+	border-radius: $radius;
+	display: inline-block;
+	vertical-align: top;
+
+	&:hover {
+		box-shadow: 1px 1px 9px rgba($color-black,0.3);
+	}
+}

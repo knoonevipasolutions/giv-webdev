@@ -2,7 +2,7 @@ $sizing-large-tile: 210px;
 $spacing-large-tile-side: 10px;
 $large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
 
-.large_tile_set {
+.project-tile-set {
 	@include clearfix;
 	width: $large-tile-total-width;
 	margin: 0 auto;
@@ -24,50 +24,36 @@ $large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
 			width: 4 * $large-tile-total-width;
 		}
 	}
+
+	.project-tile {
+		.info {
+			height: auto;
+		}
+
+		.description {
+			display: none;
+		}
+
+		@include breakpoint($bp-tablets-portrait) {
+			.info {
+				height: 120px;
+
+				&:after {
+					display: block;
+				}
+			}
+
+			.description {
+				display: block;
+			}
+		}
+	}
 }
 
-.large_tile {
-	font-family: $font-roboto-medium;
-	background-color: $color-white;
-	position: relative;
-	box-shadow: 1px 1px 4px rgba($color-black,0.2);
-	transition: all 0.5s;
+.project-tile {
+	@include style-tile-base;
 	width: $sizing-large-tile;
 	margin: 0 $spacing-large-tile-side 25px;
-	border-radius: 6px;
-	display: inline-block;
-	vertical-align: top;
-
-	&:hover {
-		box-shadow: 1px 1px 9px rgba($color-black,0.3);
-	}
-
-	.favorite {
-		position: absolute;
-		top: 5px;
-		left: 5px;
-	}
-
-	.fav_action_button {
-		transition: all 0.5s;
-		opacity: 0.6;
-
-		&:hover {
-			opacity: 1;
-		}
-
-		&.fav_remove {
-			opacity: 1;
-		}
-
-		.sbutton {
-			padding: 2px 4px;
-		}
-
-		.icon {
-			margin-right: 0;
-		}
-	}
 
 	.photo {
 		overflow: hidden;
@@ -92,17 +78,28 @@ $large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
 	}
 
 	.info {
-		padding: 7px 10px;
 		height: 120px;
+		padding: 7px 10px;
 		position: relative;
-		transition: all 0.5s;
+
+		&:after {
+			content: "";
+			display: none;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			height: 25px;
+			right: 0;
+			background: linear-gradient(to top, $color-white 20%, transparent);
+		}
 	}
 
 	.name {
-		&,
+		display: inline-block;
+
 		a {
 			@include style-content-link;
-			display: inline-block;
+			display: block;
 			font-family: $font-roboto-bold;
 			font-size: 14px;
 		}
@@ -113,40 +110,28 @@ $large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
 		color: $color-grey-99;
 		margin-bottom: 5px;
 
+		.label {
+			float: left;
+			margin-right: 3px;
+		}
+
 		.val {
-			@include style-content-link;
+			color: $font-default-color;
+			text-decoration: none;
+			display: block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
 	.description {
 		font-size: 12px;
-		line-height: 16px;
-		max-height: 48px;
-		overflow: hidden;
-	}
-
-	.location {
-		display: none;
-		font-size: 11px;
-		position: absolute;
-		bottom: 3px;
-		left: 0;
-		right: 0;
-		padding: 3px 10px;
-
-		.icon {
-			display: inline-block;
-			width: 10px;
-			height: 15px;
-			vertical-align: middle;
-			background: 0 0 transparent url(/resources/dyn/files/181281z456f2c05/_fn/location-marker.png) no-repeat;
-			margin-right: 5px;
-		}
-
-		.val {
-			display: inline-block;
-			vertical-align: middle;
-		}
+		line-height: 1.3;
 	}
 
 	.meta {
@@ -174,28 +159,17 @@ $large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
 		}
 	}
 
-	.message_popup {
-		position: absolute;
-		bottom: 100%;
-		left: -10px;
-		width: 180px;
-		margin-bottom: 5px;
-		text-align: center;
-		background: $color-grey-33;
-		color: $color-white;
-		font-size: 11px;
-		padding: 5px;
-		box-shadow: 0 0 4px rgba($color-black,1);
+	@include breakpoint($bp-tablets-portrait) {
+		.info {
+			overflow: hidden;
 
-		.arrow {
-			border: 5px solid transparent;
-			width: 0;
-			height: 0;
-			border-top: 5px solid $color-grey-33;
-			position: absolute;
-			top: 100%;
-			left: 50%;
-			margin-left: -3px;
+			&:after {
+				display: block;
+			}
+		}
+
+		.description {
+			display: block;
 		}
 	}
 }
