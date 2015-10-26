@@ -173,27 +173,3 @@ $large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
 		}
 	}
 }
-
-.fav_action_button {
-	display: inline-block;
-	position: relative;
-
-	&.fav_remove {
-		.icon {
-			background-position: 0 -32px;
-		}
-	}
-
-	&.fav_add:hover {
-		.icon {
-			background-position: 0 -64px;
-		}
-	}
-
-	.icon {
-		cursor: pointer;
-		width: 32px;
-		height: 32px;
-		background: 0 0 transparent url(/resources/dyn/files/181306z12105999/_fn/favorite-icon-sprite.png) no-repeat;
-	}
-}

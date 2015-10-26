@@ -29,3 +29,27 @@ input {
 	font-size: 12px;
 	margin-top: -3px;
 }
+
+.fav_action_button {
+	display: inline-block;
+	position: relative;
+
+	&.fav_remove .icon {
+		background-position: 0 -20px;
+	}
+
+	&.fav_add:hover .icon {
+		background-position: 0 -40px;
+	}
+
+	.icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 5px;
+		cursor: pointer;
+		width: 20px;
+		height: 20px;
+		background: 0 0 transparent url(/resources/dyn/files/181306z12105999/_fn/favorite-icon-sprite.png) no-repeat;
+		background-size: 20px;
+	}
+}
