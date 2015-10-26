@@ -1,6 +1,20 @@
 @import "../../config/base-import";
 
+#body_heading {
+	background-color: #eaeaea;
+	border-bottom: 1px dotted #e0e0e0;
+}
+
+#body {
+	float: left;
+	width: 650px;
+	margin-bottom: 30px;
+}
+
 #aside {
+	float: left;
+	width: 270px;
+	margin-left: 20px;
 	margin-top: 50px;
 }
 
@@ -163,8 +177,8 @@
 	}
 
 	.contribute-methods {
-		background: $color-white;
 		border: 1px solid darken($color-primary-accent, 10%);
+		background-color: $color-primary-accent;
 	}
 
 	.contribute-method {
@@ -175,7 +189,7 @@
 		border-left: 1px solid darken($color-primary-accent, 10%);
 		font-size: 13px;
 		font-family: $font-roboto-bold;
-		background: $color-primary-accent;
+		background-color: $color-primary-accent;
 		color: $color-white;
 		text-decoration: none;
 

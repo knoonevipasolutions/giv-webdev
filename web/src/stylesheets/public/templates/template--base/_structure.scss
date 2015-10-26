@@ -64,7 +64,7 @@ body {
 .site-logo {
 	position: absolute;
 	top: 50%;
-	left: 10px;
+	left: $spacing-mobile-horizontal;
 	transform: translateY(-50%);
 
 	a {
@@ -224,9 +224,13 @@ body {
 }
 
 #body-wc-0,
-#e_content_wrapper {
+#body_heading-wc-0,
+#e_content_wrapper-wc-0 {
 	padding: 0 $spacing-mobile-horizontal;
+}
 
+#body-wc-0,
+#e_content_wrapper-wc-0 {
 	@include breakpoint($bp-tablets-portrait) {
 		padding-bottom: $sizing-footer-height;
 	}
