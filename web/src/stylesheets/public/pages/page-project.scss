@@ -262,6 +262,8 @@
     .toggle_preview {
       float: right;
       font-size: 12px;
+	    margin-top: 2px;
+	    @include style-content-link;
     }
 
     .preview {
@@ -274,33 +276,28 @@
   }
 }
 
-#contribution_form {
-  display: none;
-}
+.journal {
+	border-bottom: 1px dotted $color-grey-d0;
+	margin: 0 0 10px;
 
-#journals .journal {
-  border-bottom: 1px dotted $color-grey-d0;
-  margin: 0 0 10px;
-}
+	&.last {
+		border-bottom: none;
+		margin: 0;
+	}
 
-#journals .journal.last {
-  border-bottom: none;
-  margin: 0;
-}
+	.title h2 {
+		margin: 0;
+	}
 
-.journal .title h2 {
-  margin: 0;
-}
+	.date {
+		color: #999;
+		font-size: 14px;
+	}
 
-.journal .date {
-  color: #999;
-  font-size: 14px;
-  font-family: MuseoSansRegular, Arial, sans-serif;
-}
-
-.journal .entry {
-  line-height: 19px;
-  font-size: 13px;  
+	.entry {
+		line-height: 1.4;
+		font-size: 13px;
+	}
 }
 
 .supporters .micro_tile .photo {
@@ -308,141 +305,149 @@
   height: 100px;
 }
 
-#contribution_form .intro {
-  margin: 0 2px;
-  font-size: 14px;
-  line-height: 19px;
-  border-bottom: 1px dotted #d0d0d0;
-  background: #eaeaea;
-  padding: 20px;
-  text-align: center;
+.contribute-paths {
+	box-shadow: 1px 1px 5px rgba($color-black, 0.3);
 }
 
-#contribution_form .inner {
-  padding: 10px 20px;
-  text-align: center;
+.contribute-path {
+	background-color: $color-white;
 }
 
-#contribution_form .login_remind {
-  margin: 0 2px;
-  font-size: 14px;
-  line-height: 19px;
-  border-bottom: 1px dotted #d0d0d0;
-  background: #eaeaea;
-  padding: 20px;
-  text-align: center;
+.contribute-path-header {
+	background-color: #f2f2f2;
+	padding: 10px 20px;
+	border-top: 1px solid $color-grey-e7;
+	border-bottom: 1px solid $color-grey-e7;
+
+	h3 {
+		margin: 0;
+	}
 }
 
-#contribution_form .qlabel {
-  font-weight: bold;
-  font-size: 18px;
-  display: block;
-  margin: 0 0 10px;
+.contribute-path-content {
+	padding: 20px;
 }
 
-#contribution_form .suggestion_items {
-  display: inline-block;
-  text-align: left;
-}
+#contribution_form {
+	display: none;
 
-#contribution_form .suggestion {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  vertical-align: middle;
-  font-size: 18px;
-  margin: 5px 5px;
-}
+	.intro {
+		margin: 0 2px;
+		font-size: 14px;
+		line-height: 19px;
+		border-bottom: 1px dotted #d0d0d0;
+		background: #eaeaea;
+		padding: 20px;
+		text-align: center;
+	}
 
-#contribution_form .suggestion .other input {
-  width: 100px;
-}
+	.inner {
+		padding: 10px 20px;
+		text-align: center;
+	}
 
-#contribution_form .action {
-  margin: 10px 0 0;
+	.login_remind {
+		margin: 0 2px;
+		font-size: 14px;
+		line-height: 19px;
+		border-bottom: 1px dotted #d0d0d0;
+		background: #eaeaea;
+		padding: 20px;
+		text-align: center;
+	}
+
+	.qlabel {
+		font-weight: bold;
+		font-size: 18px;
+		display: block;
+		margin: 0 0 10px;
+	}
+
+	.suggestion_items {
+		display: inline-block;
+		text-align: left;
+	}
+
+	.suggestion {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 18px;
+		margin: 5px 5px;
+
+		.other input {
+			width: 100px;
+		}
+	}
+
+	.action {
+		margin: 10px 0 0;
+	}
 }
 
 .gallery {
-  zoom: 1;
-}
+	@include clearfix();
 
-.gallery:before,
-.gallery:after {
-  content: "";
-  display: table;
-}
+	.gi {
+		width: 130px;
+		height: 100px;
+		overflow: hidden;
+		float: left;
+		cursor: pointer;
+		position: relative;
+		background: $color-grey-33;
+		margin: 10px;
 
-.gallery:after {
-  clear: both;
-}
+		&:hover {
+			.overlay {
+				border-bottom-color: $color-primary-accent;
+			}
+		}
 
-.gallery .gi {
-  width: 130px;
-  height: 100px;
-  overflow: hidden;
-  float: left;
-  cursor: pointer;
-  position: relative;
-  background: #333;
-  margin: 10px;
-}
+		.overlay {
+			border-bottom: 5px solid transparent;
+			transition: all 250ms;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 10;
+		}
 
-.gallery .gi .overlay {
-  border-bottom: 5px solid transparent;
-  transition: all 0.5s;  
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.gallery .gi:hover .overlay {
-  border-bottom: 5px solid #21C25E;
-}
-
-.gallery .gi .img {
-  display: block;
+		.img {
+			display: block;
+		}
+	}
 }
 
 #report {
   margin: 20px 0;
 }
 
-#featured_stores {
-  margin-left: -10px;
+.store_chooser {
+	.details {
+		float: none;
+		width: auto;
+		padding-right: 0;
+		margin-right: 0;
+		border-right: none;
+	}
+
+	form .inner {
+		margin-left: 0;
+		text-align: center;
+	}
 }
 
-#contribute {
-  margin: 30px 0 0;
-}
+#shop {
+	.more {
+		clear: both;
+		margin: 20px 0;
+		text-align: center;
 
-#contribute .tab-content {
-  padding: 20px 0;
+		.intro {
+			margin: 0 0 10px;
+			font-weight: bold;
+		}
+	}
 }
-
-.store_chooser .details {
-  float: none;
-  width: auto;
-  padding-right: 0;
-  margin-right: 0;
-  border-right: none;
-}
-
-.store_chooser form .inner {
-  margin-left: 0;
-  text-align: center;
-}
-
-#shop .more {
-  clear: both;
-  margin: 20px 0;
-  text-align: center;
-}
-
-#shop .more .intro {
-  margin: 0 0 10px;
-  font-weight: bold;
-}
-
