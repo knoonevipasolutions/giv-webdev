@@ -15,8 +15,8 @@
 
 	.mi-active {
 		a.menuitemlabel {
-			color: $color-blue;
-			border-left: 8px solid $color-blue;
+			color: $color-secondary-accent;
+			border-left: 8px solid $color-primary-accent;
 		}
 	}
 
@@ -28,8 +28,8 @@
 		transition: all 0.5s;
 
 		&:hover {
-			color: $color-green;
-			border-left: 8px solid $color-green;
+			color: $color-secondary-accent;
+			border-left: 8px solid $color-grey-cc;
 		}
 	}
 }
