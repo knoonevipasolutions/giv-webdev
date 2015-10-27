@@ -1,0 +1,36 @@
+@import "../../config/base-import";
+
+.it_form {
+	.question {
+		margin-bottom: 10px;
+		background: $color-grey-e7;
+		box-shadow: 1px 1px 3px rgba($color-black, 0.2);
+		padding: 10px;
+		font-size: 13px;
+		@include clearfix();
+
+		label {
+			font-family: $font-roboto-bold;
+			font-size: 13px;
+			margin-bottom: 2px;
+			margin-right: 5px;
+		}
+
+		&.required label:before {
+			content: "*";
+			color: $color-secondary-accent;
+			padding-right: 3px;
+		}
+
+		input[type=text],
+		input[type=email],
+		input[type=tel],
+		textarea {
+			width: 100%;
+		}
+	}
+
+	.actions {
+		text-align: right;
+	}
+}
