@@ -23,6 +23,11 @@ input {
 	}
 }
 
+.sbutton + .sbutton,
+.btn + .btn {
+	margin-left: 5px;
+}
+
 .cbutton .subtext {
 	display: block;
 	color: #107d10;
