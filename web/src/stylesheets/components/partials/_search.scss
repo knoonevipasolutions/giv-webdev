@@ -1,0 +1,57 @@
+/* search box */
+.search_box {
+	position: relative;
+	display: inline-block;
+	margin: 0 0 10px;
+
+	form {
+		display: inline-block;
+		position: relative;
+	}
+
+	.question {
+		&.has_value {
+			.default {
+				display: none;
+			}
+		}
+
+		input[type=text] {
+			padding: 9px 40px 9px 18px;
+			border-radius: 20px;
+			width: 170px;
+		}
+
+		.field {
+			position: relative;
+		}
+
+		.default {
+			position: absolute;
+			top: 2px;
+			left: 20px;
+			color: $color-grey-aa;
+			font-family: $font-georgia;
+			font-style: italic;
+			font-size: 16px;
+		}
+	}
+
+	.actions .search {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+
+		input {
+			background: center center $color-primary-accent url(/resources/dyn/files/181902z18ea1856/_fn/magnifier-icon.png) no-repeat;
+			border: none;
+			margin: 0;
+			padding: 0;
+			border-radius: 18px;
+			text-indent: -4000em;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+		}
+	}
+}
