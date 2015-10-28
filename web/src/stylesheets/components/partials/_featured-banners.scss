@@ -26,10 +26,12 @@ $feature-banner-aspect-ratio: 670 / 200;
 		margin-right: 5px;
 		border-radius: 2px;
 		cursor: pointer;
-		transition: all 0.5s;
+		transition: all 250ms;
+		border: 1px solid $color-grey-cc;
 
 		&.tab-selected {
-			background-color: #2896D3;
+			background-color: $color-primary-accent;
+			border-color: darken($color-primary-accent, 5%);
 			border-radius: 10px;
 		}
 
@@ -50,7 +52,7 @@ $feature-banner-aspect-ratio: 670 / 200;
 
 	.progress {
 		height: 2px;
-		background-color: #2896D3;
+		background-color: $color-primary-accent;
 		position: absolute;
 		bottom: 0;
 		left: 0;
