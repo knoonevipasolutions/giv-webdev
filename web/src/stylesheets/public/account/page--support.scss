@@ -9,6 +9,7 @@
 		font-size: 13px;
 		@include clearfix();
 
+		.label,
 		label {
 			font-family: $font-roboto-bold;
 			font-size: 13px;
