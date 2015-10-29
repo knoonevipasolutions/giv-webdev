@@ -1,12 +1,7 @@
 /* paging */
 .paging {
 	text-align: center;
-	padding: 0 20px;
-
-	.pager {
-		display: inline-block;
-		padding: 5px;
-	}
+	padding: 0 $spacing-mobile-horizontal;
 
 	.pages {
 		.page {
