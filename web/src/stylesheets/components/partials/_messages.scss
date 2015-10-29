@@ -12,8 +12,16 @@
 		display: none;
 	}
 
+	a {
+		color: $color-white;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	.message {
-		color: #fff;
+		color: $color-white;
 		margin: 10px;
 	}
 
