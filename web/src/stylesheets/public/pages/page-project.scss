@@ -328,59 +328,45 @@
 	padding: 20px;
 }
 
-#contribution_form {
-	display: none;
-
+.contribute-form {
 	.intro {
-		margin: 0 2px;
-		font-size: 14px;
-		line-height: 19px;
-		border-bottom: 1px dotted #d0d0d0;
-		background: #eaeaea;
-		padding: 20px;
-		text-align: center;
+		margin-bottom: 15px;
 	}
 
-	.inner {
-		padding: 10px 20px;
-		text-align: center;
+	.fields {
+		margin-top: 25px;
 	}
 
-	.login_remind {
-		margin: 0 2px;
-		font-size: 14px;
-		line-height: 19px;
-		border-bottom: 1px dotted #d0d0d0;
-		background: #eaeaea;
-		padding: 20px;
-		text-align: center;
-	}
-
-	.qlabel {
-		font-weight: bold;
-		font-size: 18px;
+	.field-label {
+		font-family: $font-roboto-medium;
 		display: block;
-		margin: 0 0 10px;
 	}
 
-	.suggestion_items {
-		display: inline-block;
-		text-align: left;
-	}
+	.field {
+		&.suggestions {
+			.suggestion {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 15px;
 
-	.suggestion {
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 18px;
-		margin: 5px 5px;
+				.other input {
+					width: 70px;
+					margin-left: 5px;
+				}
+			}
 
-		.other input {
-			width: 100px;
+			.suggestion-label {
+				margin-left: 5px;
+			}
 		}
 	}
 
 	.action {
-		margin: 10px 0 0;
+		margin: 5px 0 25px;
+	}
+
+	.message-container {
+		margin: 15px 0 0;
 	}
 }
 
