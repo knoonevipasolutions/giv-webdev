@@ -2,6 +2,10 @@ $sizing-large-tile: 210px;
 $spacing-large-tile-side: 10px;
 $large-tile-total-width: $sizing-large-tile + ($spacing-large-tile-side * 2);
 
+.store-tile-set {
+	margin: 20px 0;
+}
+
 .store-tile {
 	@include style-tile-base;
 	padding: 10px;
