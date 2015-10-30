@@ -109,45 +109,62 @@
 
 	  //contribution form management
 	  (function(){
-	    var $con = $('#contribution_form');
-	    var $form = $('form', $con);
-	    var $amount = $('input[name=amount]', $form);
-	    var $other = $('input[name=suggest_other]', $form);
-	    var $mc = $('<div class="message_container" />').prependTo($form.find('.inner')).hide();
+	    var $con = $('.contribute-form');
+	    var $form = $con.find('form');
+	    var $amount = $form.find('input[name=amount]');
+	    var $other = $form.find('input[name=suggest_other]');
+	    var $mc = $('<div class="message-container" />').prependTo($form.find('.inner')).hide();
 
-	    $('input[name=suggestion]', $form).change(function(){
-	      if($(this).val() < 0)
-	        $other.focus();
+		  function updateContributeAmount(){
+			  var val = parseFloat($('input[name=suggestion]:checked').val(), 10);
+			  if (val > 0) {
+				  $amount.val(val);
+			  } else {
+				  var otherVal = $other.val().replace('$', '');
+
+				  //if other val is selected and it has no content
+				  if (!otherVal.length) {
+					  return {
+						  valueUpdated: false,
+						  message: 'Please fill in the box with the amount you wish to contribute'
+					  };
+				  }
+
+				  //attempt to parse string value to float
+				  otherVal = (isNaN(parseFloat(otherVal)) ? 0 : otherVal);
+
+				  //if other value is less than 5
+				  if (otherVal < 5) {
+					  return {
+						  valueUpdated: false,
+						  message: 'The minimum contribution is $5.00'
+					  };
+				  } else {
+					  $amount.val(otherVal);
+				  }
+			  }
+
+			  return {
+				  valueUpdated: true,
+				  message: ''
+			  };
+		  }
+
+	    $form.find('input[name=suggestion]').change(function() {
+	      if ($(this).val() < 0) {
+			    $other.focus();
+		    }
 	    });
 
-	    var updateContribAmount = function(){
-	      var val = parseFloat($('input[name=suggestion]:checked').val(), 10);
-	      if(val < 0){
-	        var other_val = $other.val().replace('$', '');
-	        if(!other_val.length)
-	          return {status: false, message: 'Please fill in the box with the amount you wish to contribute'};
-
-	        other_val = (isNaN(parseFloat(other_val)) ? 0 : other_val);
-	        if(other_val < 5){
-	          return {status: false, message: 'The minimum contribution is $5.00'};
-	        } else {
-	          $amount.val(other_val);
-	        }
-	      } else {
-	        $amount.val(val);
-	      }
-
-	      return {status: true, message: ''};
-	    };
-
 	    $form.submit(function(evt){
-	      var result = updateContribAmount.call(this);
-	      if(!result.status){
-	        $mc.empty().show();
-	        $('<div class="message error"></div>').text(result.message).appendTo($mc);
-	        $.fancybox.update();
+	      var result = updateContributeAmount.call(this);
+	      if (!result.valueUpdated) {
+	        $mc
+		        .empty()
+		        .show()
+		        .append($('<div class="message error" />').text(result.message));
 	      }
-	      return result.status;
+	      return result.valueUpdated;
 	    });
 	  })();
 
