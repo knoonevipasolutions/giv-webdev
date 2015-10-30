@@ -1,230 +1,250 @@
+@import "../../config/base-import";
+
 .checkout {
   margin: 0 0 30px;
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		margin: 4px 0 0;
+		margin-top: 1px;
+		line-height: normal;
+		cursor: pointer;
+	}
+
+	input[type="file"],
+	input[type="image"],
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	input[type="radio"],
+	input[type="checkbox"] {
+		width: auto;
+	}
+
+	fieldset {
+		padding: 0;
+		margin-bottom: 20px;
+		border: none;
+		margin-left: auto;
+		margin-right: auto;
+		width: 240px;
+
+		legend {
+			font-family: $font-roboto-bold;
+			color: $color-secondary-accent;
+		}
+
+		label,
+		.label {
+			font-family: $font-roboto-medium;
+			font-size: 14px;
+			display: block;
+		}
+
+		.user-entry-required {
+			.label,
+			label {
+				&:before {
+					content: "*";
+					color: $color-secondary-accent;
+					padding-right: 3px;
+				}
+			}
+		}
+	}
+
+	.uneditable-input,
+	select {
+		width: 240px;
+	}
+
+	.double_entry_field,
+	.contact_phone_number,
+	.name .given_name,
+	.name .middle,
+	.name .family_name,
+	.address .address_line,
+	.address .city,
+	.address .region,
+	.address .postal_code,
+	.address .country,
+	.credit_card_type,
+	.credit_card_name,
+	.credit_card_account,
+	.credit_card_ccid,
+	.credit_card_expiration {
+		margin-bottom: 10px;
+	}
+
+	.credit_card_ccid {
+		input {
+			width: 50px;
+		}
+	}
+
+	.phone_number {
+		display: inline-block;
+
+		.format,
+		.nanp_example {
+			display: none;
+		}
+
+		.number {
+			label {
+				width: auto;
+				display: inline;
+				margin-right: 0;
+			}
+
+			input.nanp {
+				width: 100px;
+				margin-right: 5px;
+			}
+
+			input.nanp_extension {
+				width: 60px;
+			}
+		}
+	}
+
+	.phonenumber_existing,
+	.address_existing {
+		display: none;
+	}
+
+	select#billing_region {
+		//MIWT being dumb and setting it to block as inline style
+		display: inline-block !important;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		fieldset {
+			width: 460px;
+
+			label,
+			.label {
+				display: inline-block;
+				margin: 5px 0 0;
+				margin-right: 15px;
+				width: 200px;
+				text-align: right;
+			}
+		}
+
+		select {
+			margin-left: 4px;
+		}
+	}
 }
 
-.shoppingcart table,
-.checkout table{
-  margin-bottom: 10px;
-  border-collapse: collapse;
+.shoppingcart,
+.checkout {
+	table {
+		margin-bottom: 10px;
+		border-collapse: collapse;
+
+		td {
+			padding: 3px;
+			border-top: 1px solid #e5e5e5;
+		}
+	}
+
+	button {
+		margin-right: 5px;
+	}
 }
 
-.shoppingcart table td,
-.checkout table td{
-  padding: 3px;
-  border-top: 1px solid #e5e5e5;
+.name_field,
+.address_field {
+	> .label {
+		display: none;
+	}
 }
 
-.shoppingcart button{
-  margin-right: 5px;
-}
-
-.checkout button.miwt_submit,
-.checkout button.checkout,
-.checkout button.quantity_update{
-  margin-left: 485px;
-}
-
-.name_field > .label,
-.address_field > .label{
-  display: none;
-}
-
-
-.checkout label,
-.checkout .label {
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 20px;
-}
-
-
-fieldset label,
-fieldset .label {
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  margin: 0 5px 5px 0;
-  width: 200px;
-  text-align: right;
-}
-
-.rtb label,
-.rtb .label,
-.ctb label,
-.ctb .label{
-  width: auto;
-}
-
-
-.order_summary{
-  margin-bottom: 40px;
-}
-
-fieldset{
-  margin-bottom: 20px;
-  border: none;
-}
-
-fieldset legend{
-  font-size: 1.1rem;
-  font-family: 'MuseoSansRegular',arial,helvetica,sans-serif;
-  color: #2A96D4;
-}
-
-fieldset label,
-fieldset .label {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  width: 150px;
-  margin-right: 15px;
-  font-weight: bold;
-  font-size: 13px;
-  padding: 0 0 5px 10px;
-  color: #333;
-}
-
-fieldset .user_entry_required label:before,
-fieldset .user_entry_required .label:before {
-  content: "*";
-  color: #2A96D4;
-  padding-right: 3px;
+.rtb,
+.ctb {
+	label,
+	.label {
+		width: auto;
+	}
 }
 
 .genform .order_summary .quantity input[type="text"] {
   width: auto;
 }
 
-.order_summary table {
-  width: 100%;
+.order_summary {
+	margin-bottom: 40px;
+	font-size: 13px;
+
+	table {
+		width: 100%;
+	}
+
+	th {
+		font-weight: normal;
+		font-family: $font-roboto-bold;
+		text-align: left;
+	}
+
+	.total td {
+		font-family: $font-roboto-bold;
+		color: $color-secondary-accent;
+	}
+
+	td.remove {
+		label {
+		}
+	}
 }
 
-.order_summary th {
-  text-align: left;
-}
-
-.order_summary .total td {
-  font-weight: bold;
-  color: #32B04A;
-}
-
-.credit_card_expiration select{
+.credit_card_expiration select {
   width: 105px;
 }
 
-.payment_method label {
-  width: auto;
-  vertical-align: baseline;
+.payment_method {
+	label {
+		width: auto;
+		vertical-align: baseline;
+	}
+
+	input[type="radio"] {
+		display: inline-block;
+		vertical-align: baseline;
+	}
 }
 
-.payment_method input[type="radio"] {
-  display: inline-block;
-  *display: inline;
-  zoom:1;
-  vertical-align: baseline;
+.category,
+.direct_contribution {
+	.extra_value_renderer {
+		display: inline-block;
+		height: 20px;
+		font-size: 14px;
+		margin-bottom: 9px;
+		line-height: 20px;
+		color: #555555;
+		border-radius: 3px;
+	}
 }
 
-.payment_method_options label {
-  width: 150px;
+.direct_contribution .extra_value_renderer {
+	height: 50px;
+	margin-bottom: 0;
+	line-height: 20px;
+	vertical-align: top;
+
+	input,
+	label {
+		margin: 0;
+		vertical-align: middle;
+	}
 }
 
-select#billing_region{
-  display: inline-block !important;
-  *display: inline !important;
-  *zoom: 1;
+.actions.quantity_update {
+	text-align: right;
 }
 
-.category .extra_value_renderer,
-.direct_contribution .extra_value_renderer{
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-  height: 20px;
-  font-size: 14px;
-  margin-bottom: 9px;
-  line-height: 20px;
-  color: #555555;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.direct_contribution .extra_value_renderer{
-  height: 50px;
-  margin-bottom: 0px;
-  line-height: 20px;
-  vertical-align: top;
-}
-
-.direct_contribution .extra_value_renderer input,
-.direct_contribution .extra_value_renderer label{
-  margin: 0;
-  vertical-align: middle;
-}
-
-input,
-textarea,
-.uneditable-input {
-  width: 206px;
-}
-
-.validation_error input[type="text"],
-.validation_error input[type="email"],
-.validation_error input[type="number"],
-.validation_error textarea,
-.validation_error select{
-  border-color: rgba(255, 0, 0, 0.8);
-  outline: 0;
-  outline: thin dotted \9;  
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(255, 0, 0, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(255, 0, 0, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(255, 0, 0, 0.6);
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px;
-  line-height: normal;
-  cursor: pointer;
-}
-
-input[type="file"],
-input[type="image"],
-input[type="submit"],
-input[type="reset"],
-input[type="button"],
-input[type="radio"],
-input[type="checkbox"] {
-  width: auto;
-}
-
-
-.phone_number .format,
-.phone_number .nanp_example{
-  display: none;
-}
-
-.phone_number{
-  display: inline-block;
-  *display: inline;
-  *zoom: 1;
-}
-
-.phone_number .number label{
-  width: auto;
-}
-
-.phone_number .number input.nanp{
-  width: 100px;
-  margin-right: 5px;
-}
-
-.phone_number .number input.nanp_extension{
-  width: 60px;
-}
-
-.phonenumber_existing,
-.address_existing {
-  display: none;
+.actions.checkout {
+	text-align: center;
 }
