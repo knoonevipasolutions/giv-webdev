@@ -1,5 +1,33 @@
 @import "../../config/base-import";
 
+.order_summary {
+	background-color: $color-white;
+	box-shadow: 1px 1px 5px rgba($color-black, 0.3);
+	padding: 20px;
+	margin-bottom: 40px;
+	font-size: 13px;
+
+	table {
+		width: 100%;
+	}
+
+	th {
+		font-weight: normal;
+		font-family: $font-roboto-bold;
+		text-align: left;
+	}
+
+	.total td {
+		font-family: $font-roboto-bold;
+		color: $color-secondary-accent;
+	}
+
+	td.remove {
+		label {
+		}
+	}
+}
+
 .checkout {
   margin: 0 0 30px;
 
@@ -172,31 +200,6 @@
 
 .genform .order_summary .quantity input[type="text"] {
   width: auto;
-}
-
-.order_summary {
-	margin-bottom: 40px;
-	font-size: 13px;
-
-	table {
-		width: 100%;
-	}
-
-	th {
-		font-weight: normal;
-		font-family: $font-roboto-bold;
-		text-align: left;
-	}
-
-	.total td {
-		font-family: $font-roboto-bold;
-		color: $color-secondary-accent;
-	}
-
-	td.remove {
-		label {
-		}
-	}
 }
 
 .credit_card_expiration select {
