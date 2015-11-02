@@ -1,9 +1,32 @@
 @import "../../config/base-import";
 
-#featured_stores .stores {
-  margin-top: 15px;
-	margin-bottom: 15px;
-  @include clearfix();
+#aside {
+	.search_box {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	@include breakpoint($bp-tablets-landscape) {
+		.search_box {
+			margin-top: 0;
+		}
+	}
+}
+
+#aside-wc-0 {
+	margin: 0 auto;
+
+	@include breakpoint($bp-mobile-landscape) {
+		max-width: 460px;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		max-width: 670px;
+	}
+}
+
+#featured_stores {
+	margin: 15px 0;
 }
 
 .term_menu {
@@ -11,6 +34,28 @@
   margin: 10px 0 20px;
 }
 
+.page_menu {
+	@include breakpoint($bp-tablet-portrait-and-lower) {
+		.mi {
+			display: inline-block;
+			vertical-align: top;
+			width: 33.333333333%;
+		}
+
+		.menuitemlabel {
+			display: inline-block;
+		}
+	}
+
+	@include breakpoint($bp-mobile-only) {
+		.mi {
+			width: 50%;
+		}
+	}
+}
+
 .search_listing .results {
   @include clearfix();
+	margin-top: 15px;
+	margin-bottom: 15px;
 }

@@ -88,18 +88,24 @@ body {
 	right: $spacing-mobile-horizontal;
 	margin-top: -10px;
 
-	@include breakpoint($bp-tablets-portrait) {
-		display: none;
-	}
-
 	.menu-control-line {
-		background-color: $color-primary-accent;
+		background-color: $color-grey-cc;
 		height: 4px;
 		display: block;
 
 		+ .menu-control-line {
 			margin-top: 4px;
 		}
+	}
+
+	.menu-opened & {
+		.menu-control-line {
+			background-color: $color-primary-accent;
+		}
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		display: none;
 	}
 }
 

@@ -1,19 +1,15 @@
 @import "../../config/base-import";
 
 #main {
+	padding-top: 15px;
+
   @include breakpoint($bp-tablets-landscape) {
     float: left;
-    padding-top: 15px;
     width: 690px;
   }
 }
 
 #aside {
-  .search_box {
-    padding: 0 0 10px;
-    border-bottom: 1px dotted #c0c0c0;
-  }
-
   @include breakpoint($bp-tablets-landscape) {
     float: left;
     width: 250px;
@@ -28,22 +24,24 @@
 }
 
 #search-wc-0 {
+	padding-left: $spacing-mobile-horizontal;
+	padding-right: $spacing-mobile-horizontal;
 	@include clearfix(true);
 }
 
 .search_listing {
   .noresults {
     margin: 15px 0 15px 20px;
-    background: #fff;
+    background: $color-white;
     padding: 20px;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 4px rgba($color-black, 0.2);
   }
 
   .search_criteria {
     margin: 15px 15px 0;
-    background: #fff;
+    background: $color-white;
     padding: 10px;
-    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-    color: #20AFCF;
+    box-shadow: 1px 1px 4px rgba($color-black, 0.2);
+    color: $color-secondary-accent;
   }
 }

@@ -1,3 +1,5 @@
+@import "../../config/base-import";
+
 .featured_banners {
 	margin-bottom: 15px;
 }
@@ -7,12 +9,13 @@
 }
 
 #search .search_box {
-  float: right;
-	margin-top: 14px;
-}
+	margin-top: 20px;
 
-#search .search_box .question input {
-  width: 200px; 
+	@include breakpoint($bp-tablets-portrait) {
+		float: right;
+		margin-top: 14px;
+		width: 200px;
+	}
 }
 
 #aside {
