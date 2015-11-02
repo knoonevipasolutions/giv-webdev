@@ -12,7 +12,7 @@ $feature-store-tile-total-width: $sizing-feature-store-tile + ($spacing-feature-
 	}
 
 	@include breakpoint($bp-tablets-portrait) {
-		width: 6 * $feature-store-tile-total-width;
+		width: 5 * $feature-store-tile-total-width;
 	}
 }
 
