@@ -59,6 +59,8 @@ $html-entity-nbsp: "\a0";
 
 $bp-mobile-landscape: (min-width 480px);
 $bp-mobile-only: (max-width 767px);
+$bp-tablet-portrait-and-lower: (max-width 1023px);
+$bp-tablet-portrait-only: (min-width 768px) (max-width 1023px);
 $bp-tablets-portrait: (min-width 768px);
 $bp-tablets-landscape: (min-width 1024px);
 $bp-desktop: (min-width 1280px);
