@@ -11,6 +11,7 @@ form label.access503 {
 	input[type=text],
 	input[type=email],
 	input[type=tel],
+	input[type=url],
 	textarea {
 		width: 240px;
 		margin: 0;
@@ -197,6 +198,8 @@ form label.access503 {
 			margin-left: 190px;
 
 			input[type=text],
+			input[type=url],
+			input[type=email],
 			textarea {
 				width: 100%;
 			}
