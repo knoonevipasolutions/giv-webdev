@@ -1,13 +1,6 @@
 /* search box */
 .search_box {
 	position: relative;
-	display: inline-block;
-	margin: 0 0 10px;
-
-	form {
-		display: inline-block;
-		position: relative;
-	}
 
 	.question {
 		&.has_value {
@@ -19,7 +12,7 @@
 		input[type=text] {
 			padding: 9px 40px 9px 18px;
 			border-radius: 20px;
-			width: 170px;
+			width: 100%;
 		}
 
 		.field {
