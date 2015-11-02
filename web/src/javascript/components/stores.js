@@ -5,7 +5,7 @@ jQuery(function($){
     $con = $('#featured_stores .stores');
   var url = $con.data('source');
   
-  var setupPopupStoreChooser = function(){
+  function setupPopupStoreChooser() {
     var $con = $('.store_chooser');
     
     if(!$con.length) return;
@@ -23,16 +23,16 @@ jQuery(function($){
     $('form', $con).submit(function(){
       return !$action.hasClass('dbutton');
     });
-  };
+  }
   
   //start shop now
-  $('.stores .store .sbutton, .stores .store .tile_link').click(function(evt){
+  $('.stores .store .sbutton, .stores .store .tile_link').click(function(evt) {
     evt.preventDefault();
     
     var $store = $(this).closest('.store');
     var id = $store.data('id');
     
-    $.get(url,{id: id}, function(result){
+    $.get(url, {id: id}, function(result){
       $.fancybox($(result).find('#body > *').addClass('fancybox-content'), {
         type: 'inline',
         autoSize: false,
