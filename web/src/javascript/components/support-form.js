@@ -1,7 +1,7 @@
 jQuery(function($){
   $('.it_form').each(function(){
     var $con = $(this);
-    var $mc = $('<div class="message_container" />');
+    var $mc = $('<div class="message-container" />');
     var $errors = $('.validation_error', $con);
     
     if($errors.length)
