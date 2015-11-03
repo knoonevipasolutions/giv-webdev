@@ -9,6 +9,15 @@ jQuery(function($) {
 
 	var actionInProgress = false;
 
+	function initFavButton() {
+		var $favorite = $(this);
+		$favorite
+			.addClass('tooltip_popup_parent')
+			.append('<span class="tooltip_popup"><span class="arrow" /><span class="message" /></span>')
+			.find('.message')
+			.text($favorite.data('tooltipMessage'));
+	}
+
   //add to favorites button
   function updateFavStatus() {
     var $favorite = $(this);
@@ -26,6 +35,7 @@ jQuery(function($) {
   }
 
   $('.fav_action_button')
+	  .each(initFavButton)
 	  .filter(':not(.' + CSS_CLASS_GUEST_BUTTON + ')')
 	  .each(updateFavStatus)
 	  .on('click', function(evt) {
