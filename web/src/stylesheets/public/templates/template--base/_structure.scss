@@ -51,9 +51,8 @@ body {
 	@include clearfix();
 }
 
-#main_nav,
-#total_raised,
-#account_menu,
+.main-nav,
+.account-menu,
 .guest-nav {
 	@include breakpoint($bp-tablets-portrait) {
 		display: inline-block;
@@ -109,7 +108,7 @@ body {
 	}
 }
 
-#account_menu {
+.account-menu {
 	margin-left: 50px;
 	font-size: 13px;
 	position: relative;
@@ -128,7 +127,7 @@ body {
 	}
 }
 
-#account_trigger {
+.account-trigger {
 	cursor: pointer;
 	padding: 4px 10px;
 	height: $sizing-header-height;
@@ -181,7 +180,7 @@ body {
 	}
 }
 
-.account_popup {
+.account-popup {
 	position: absolute;
 	margin-top: 1px;
 	top: 100%;
@@ -212,18 +211,6 @@ body {
 
 	.actions {
 		margin: 10px 0 0;
-	}
-}
-
-#total_raised {
-	line-height: 24px;
-	font-size: 24px;
-	text-align: center;
-	width: 180px;
-
-	.total {
-		color: #55c569;
-		display: block;
 	}
 }
 
