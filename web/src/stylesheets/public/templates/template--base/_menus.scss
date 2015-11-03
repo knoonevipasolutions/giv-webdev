@@ -14,11 +14,6 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		border-bottom: 1px solid $color-grey-e7;
-
-		&:hover {
-			.mil {
-			}
-		}
 	}
 
 	.mil {
@@ -98,13 +93,22 @@
 
 	.menuitemlabel {
 		display: block;
-		font-size: 13px;
-		padding: 15px;
-		color: $color-secondary-accent;
 		text-decoration: none;
+	}
 
-		&:hover {
-			color: $color-primary-accent;
+
+	@include breakpoint($bp-mobile-only) {
+		.menuitemlabel {
+			font-family: $font-roboto-medium;
+			font-size: 14px;
+			padding: 15px;
+			color: $color-grey-1b;
+			text-transform: uppercase;
+			border-bottom: 1px solid $color-grey-e7;
+
+			&:hover {
+				border-left: 10px solid $color-primary-accent;
+			}
 		}
 	}
 
@@ -115,9 +119,14 @@
 			margin-left: 20px;
 		}
 
-
 		.menuitemlabel {
-			padding: 0;
+			color: $color-secondary-accent;
+			font-family: $font-roboto-regular;
+			font-size: 13px;
+
+			&:hover {
+				color: $color-primary-accent;
+			}
 		}
 	}
 }
