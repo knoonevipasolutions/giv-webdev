@@ -8,18 +8,30 @@
   margin: 10px 0 20px; 
 }
 
-#search .search_box {
-	margin-top: 20px;
+#search {
+	.search_box {
+		margin-top: 20px;
+		display: none;
+	}
 
 	@include breakpoint($bp-tablets-portrait) {
-		float: right;
-		margin-top: 14px;
-		width: 200px;
+		.search_box {
+			display: block;
+			float: right;
+			margin-top: 14px;
+			width: 200px;
+		}
 	}
 }
 
 #aside {
-  display: none;
+	.search_box {
+		margin: 20px 0;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		display: none;
+	}
 }
 
 #main {

@@ -1,7 +1,7 @@
 @import "../../config/base-import";
 
 #main {
-	padding-top: 15px;
+	margin-top: 15px;
 
   @include breakpoint($bp-tablets-landscape) {
     float: left;
@@ -10,10 +10,11 @@
 }
 
 #aside {
+	margin-top: 15px;
+
   @include breakpoint($bp-tablets-landscape) {
     float: left;
     width: 250px;
-    padding-top: 15px;
     padding-right: 10px;
   }
 }
