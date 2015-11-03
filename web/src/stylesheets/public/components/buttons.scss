@@ -49,12 +49,15 @@ input {
 
 	.icon {
 		display: inline-block;
-		vertical-align: middle;
-		margin-right: 5px;
+		vertical-align: top;
 		cursor: pointer;
 		width: 20px;
-		height: 20px;
+		height: 18px;
 		background: 0 0 transparent url(/resources/dyn/files/181306z12105999/_fn/favorite-icon-sprite.png) no-repeat;
 		background-size: 20px;
+
+		+ .text {
+			margin-left: 5px;
+		}
 	}
 }

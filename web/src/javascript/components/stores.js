@@ -26,7 +26,7 @@ jQuery(function($){
   }
   
   //start shop now
-  $('.stores .store .sbutton, .stores .store .tile_link').click(function(evt) {
+  $('.stores .store .shop .sbutton, .stores .store .tile_link').click(function(evt) {
     evt.preventDefault();
     
     var $store = $(this).closest('.store');

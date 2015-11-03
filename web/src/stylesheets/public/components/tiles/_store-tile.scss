@@ -92,8 +92,12 @@ $store-tile-total-width: $sizing-store-tile + ($spacing-store-tile-side * 2);
 		}
 	}
 
-	.action {
+	.actions {
 		text-align: center;
-		margin: 10px 0 0;
+		margin-top: 10px;
+	}
+
+	.action {
+		display: inline-block;
 	}
 }

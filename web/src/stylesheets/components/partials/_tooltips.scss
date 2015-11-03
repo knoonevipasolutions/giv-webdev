@@ -2,16 +2,20 @@
 /* tooltip popups */
 .tooltip_popup {
 	visibility: hidden;
-	transition: visibility 0s 0.5s, opacity 0.5s, margin-bottom 0.5s, margin-left 0.5s, margin-right 0.5s;
 	opacity: 0;
+	transition: visibility 0s 0.5s, opacity 0.5s, margin-bottom 0.5s, margin-left 0.5s, margin-right 0.5s;
 	background: $color-grey-33;
 	color: $color-white;
-	position: absolute;
 	text-align: center;
 	font-size: 11px;
 	box-shadow: 0 0 3px rgba($color-black, 0.6);
 	padding: 3px;
 	display: inline-block;
+	position: absolute;
+	left: 50%;
+	z-index: 300;
+	transform: translateX(-50%);
+	width: 100px;
 
 	.tpc:hover & {
 		visibility: visible;
@@ -45,8 +49,7 @@
 		bottom: 100%;
 		left: 50%;
 		width: 100px;
-		margin-left: -50px;
-		margin-bottom: 0;
+		margin-bottom: 10px;
 	}
 
 	&:hover {
