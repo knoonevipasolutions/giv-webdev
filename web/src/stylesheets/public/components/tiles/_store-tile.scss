@@ -97,6 +97,11 @@ $store-tile-total-width: $sizing-store-tile + ($spacing-store-tile-side * 2);
 		margin-top: 10px;
 	}
 
+	.manage-actions {
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
 	.action {
 		display: inline-block;
 	}
