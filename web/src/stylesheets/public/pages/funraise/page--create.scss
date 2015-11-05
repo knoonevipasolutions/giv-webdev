@@ -1,0 +1,20 @@
+@import "../../../config/base-import";
+
+.create-fundraising {
+	margin-bottom: 20px;
+
+	.prop {
+		margin: 20px 0;
+
+		.label {
+			font-family: $font-roboto-medium;
+			margin-bottom: 5px;
+		}
+	}
+
+	.headline {
+		input {
+			width: 100%;
+		}
+	}
+}
