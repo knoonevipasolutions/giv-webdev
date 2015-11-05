@@ -1,0 +1,49 @@
+.fundraiser-summary {
+	background: $color-white;
+	box-shadow: 2px 2px 5px rgba($color-black, 0.1);
+	border-radius: 5px;
+	display: table;
+	width: 100%;
+	margin: 30px 0;
+}
+
+.fundraiser-image {
+	height: 160px;
+	background-color: $color-grey-e7;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border-right: 1px solid $color-grey-cc;
+
+	@include breakpoint($bp-tablets-portrait) {
+		display: table-cell;
+		width: 250px;
+		height: auto;
+	}
+}
+
+.fundraiser-content {
+	padding:  20px;
+
+	@include breakpoint($bp-tablets-portrait) {
+		display: table-cell;
+	}
+}
+
+.fundraiser-headline {
+	font-family: $font-roboto-medium;
+	font-size: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.fundraiser-description {
+	font-size: 14px;
+	overflow: auto;
+	max-height: 400px;
+
+	@include breakpoint($bp-tablets-portrait) {
+		max-height: 200px;
+	}
+}
