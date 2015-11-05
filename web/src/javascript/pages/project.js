@@ -9,15 +9,19 @@
 		};
 	}
 
-	$(function(){
+	$(document).ready(function() {
 	  var store_url = $('#featured_stores .stores').data('source');
 	  var project_id = $('#content .project').data('id');
-	  var $user_account = $('#user-account');
+		var $header = $('#header');
+		var $scrollBody = $('html, body');
 
-	  //hide the contribution tab if no content
-	  if($('#contribute #direct .give_directly').length == 0){
-	    $('#direct_tab').hide();
-	  }
+		$('.contribute-method').on('click', function(evt) {
+			var $method = $(this);
+			var newTop = $($method.attr('href')).offset().top - $header.height() - 20;
+
+			evt.preventDefault();
+			$scrollBody.animate({scrollTop: newTop}, 500);
+		});
 
 	  //shopping button
 	  $('#shop .more a').fancybox({
