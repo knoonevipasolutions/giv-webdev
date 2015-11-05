@@ -41,6 +41,10 @@ body {
 	top: 0;
 	left: 0;
 	right: 0;
+
+	.account-menu {
+		margin-left: 50px;
+	}
 }
 
 #header-wc-0 {
@@ -109,34 +113,33 @@ body {
 }
 
 .account-menu {
-	margin-left: 50px;
 	font-size: 13px;
 	position: relative;
-
-	&.shown {
-		border-top-color: #2896d3;
-		background-color: #E9E9E9;
-		border-bottom: 1px solid #E9E9E9;
-		margin-bottom: -1px;
-	}
 
 	.find_more {
 		clear: both;
 		text-align: center;
 		padding: 10px 0 0;
 	}
+
+	@include breakpoint($bp-mobile-only) {
+		padding: 15px;
+
+		.collapsible-shown {
+			display: block !important;
+		}
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		&.shown {
+			background-color: #E9E9E9;
+		}
+	}
 }
 
 .account-trigger {
 	cursor: pointer;
-	padding: 4px 10px;
-	height: $sizing-header-height;
 	color: $color-grey-33;
-	transition: background 0.5s;
-
-	&:hover {
-		background-color: $color-grey-f5;
-	}
 
 	.photo {
 		display: inline-block;
@@ -152,46 +155,52 @@ body {
 		}
 	}
 
-	.label {
-		display: inline-block;
-		vertical-align: middle;
-		margin-left: 10px;
-		margin-right: 5px;
-		font-weight: bold;
+	@include breakpoint($bp-mobile-only) {
+		.label {
+			display: none;
+		}
 	}
 
-	.arrow {
-		display: inline-block;
-		vertical-align: middle;
-		border: 5px solid $color-white;
-		border-top: 5px solid $color-grey-33;
-		border-bottom: none;
-		margin-top: 4px;
-		height: 0;
-	}
+	@include breakpoint($bp-tablets-portrait) {
+		transition: background 0.5s;
+		padding: 4px 10px;
+		height: $sizing-header-height;
 
-	.shown & {
+		&:hover {
+			background-color: $color-grey-f5;
+		}
+
+		.label {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+			margin-right: 5px;
+			font-weight: bold;
+		}
+
 		.arrow {
-			border: 5px solid #E9E9E9;
-			border-bottom: 5px solid #333;
-			border-top: none;
+			display: inline-block;
+			vertical-align: middle;
+			border: 5px solid $color-white;
+			border-top: 5px solid $color-grey-33;
+			border-bottom: none;
 			margin-top: 4px;
+			height: 0;
+		}
+
+		.shown & {
+			.arrow {
+				border: 5px solid #E9E9E9;
+				border-bottom: 5px solid #333;
+				border-top: none;
+				margin-top: 4px;
+			}
 		}
 	}
 }
 
 .account-popup {
-	position: absolute;
-	margin-top: 1px;
-	top: 100%;
-	right: 0;
-	background-color: #E9E9E9;
-	border: 1px solid #D7D7D7;
-	border-top: none;
-	padding: 15px;
 	text-align: left;
-	min-width: 210px + 30px + 2px; //add padding and border width
-	box-shadow: 2px 2px 2px 0 rgba(130,130,130,0.2);
 
 	.name {
 		font-family: $font-roboto-medium;
@@ -203,14 +212,35 @@ body {
 		margin-left: 5px;
 	}
 
-	.favorites {
-		margin: 10px -15px -15px;
-		background: $color-white;
-		padding: 15px;
+	@include breakpoint($bp-mobile-only) {
+		.actions {
+			margin: 15px 0;
+		}
+
+		.favorites {
+			margin: 15px 0;
+		}
 	}
 
-	.actions {
-		margin: 10px 0 0;
+	@include breakpoint($bp-tablets-portrait) {
+		padding: 15px;
+		min-width: 210px + 30px + 2px; //add padding and border width
+		box-shadow: 2px 2px 2px 0 rgba(130,130,130,0.2);
+		background-color: #E9E9E9;
+		border: 1px solid #D7D7D7;
+		position: absolute;
+		top: 100%;
+		right: 0;
+
+		.actions {
+			margin-top: 10px;
+		}
+
+		.favorites {
+			margin: 10px -15px -15px;
+			background: $color-white;
+			padding: 15px;
+		}
 	}
 }
 
