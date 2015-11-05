@@ -26,7 +26,15 @@
 }
 
 #featured_stores {
-	margin: 15px 0;
+	margin: 15px auto;
+
+	@include breakpoint($bp-mobile-only) {
+		max-width: 460px;
+	}
+
+	@include breakpoint($bp-tablet-portrait-only) {
+		max-width: 670px;
+	}
 }
 
 .term_menu {

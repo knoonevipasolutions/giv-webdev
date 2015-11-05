@@ -1,42 +1,59 @@
 $sizing-feature-store-tile: 100px;
 $spacing-feature-store-tile-side: 6px;
-$feature-store-tile-total-width: $sizing-feature-store-tile + ($spacing-feature-store-tile-side * 2);
 
 .store-tile-featured-set {
-	width: 2 * $feature-store-tile-total-width;
 	margin: 0 auto;
 	@include clearfix();
 
+	.store-tile-featured {
+		width: 50%;
+	}
+
 	@include breakpoint($bp-mobile-landscape) {
-		width: 4 * $feature-store-tile-total-width;
+		.store-tile-featured {
+			width: 25%;
+		}
 	}
 
 	@include breakpoint($bp-tablets-portrait) {
-		width: 6 * $feature-store-tile-total-width;
+		.store-tile-featured {
+			width: 16.666666666%;
+		}
 	}
 
 	&.project-store-tile-set {
-		@include breakpoint($bp-tablets-landscape) {
-			width: 5 * $feature-store-tile-total-width;
+		@include breakpoint($bp-tablets-portrait) {
+			.store-tile-featured {
+				width: 20%;
+			}
 		}
 	}
 }
 
 .store-tile-featured {
-	@include style-tile-base($radius: 4px);
-	width: $sizing-feature-store-tile;
-	height: $sizing-feature-store-tile;
-	margin: $spacing-feature-store-tile-side;
-	box-shadow: 1px 1px 4px rgba($color-black, 0.2);
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
 
 	.tile_link {
+		@include style-tile-base($radius: 4px);
 		display: block;
+		box-shadow: 1px 1px 4px rgba($color-black, 0.2);
+		margin: $spacing-feature-store-tile-side;
+		height: $sizing-feature-store-tile;
 
 		&:hover {
 			.info {
 				top: 0;
 				opacity: 1;
 			}
+		}
+	}
+
+	.photo {
+		img {
+			max-width: 100%;
+			height: auto;
 		}
 	}
 
@@ -52,7 +69,6 @@ $feature-store-tile-total-width: $sizing-feature-store-tile + ($spacing-feature-
 		left: 0;
 		font-size: 12px;
 		border-radius: 4px;
-		text-align: center;
 
 		.percent {
 			.label {
