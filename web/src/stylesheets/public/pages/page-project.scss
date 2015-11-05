@@ -3,6 +3,15 @@
 #body_heading {
 	background-color: #eaeaea;
 	border-bottom: 1px dotted #e0e0e0;
+
+
+	@include breakpoint($bp-tablet-portrait-only) {
+		.fundraiser-summary {
+			width: 650px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 
 #body {
@@ -372,26 +381,29 @@
 
 .contribute-paths {
 	box-shadow: 1px 1px 5px rgba($color-black, 0.3);
+	background-color: $color-white;
+	padding: 20px;
 	margin-bottom: 20px;
 }
 
 .contribute-path {
-	background-color: $color-white;
+	margin-top: 30px;
+}
+
+#shop {
+	margin-top: 0;
 }
 
 .contribute-path-header {
-	background-color: #f2f2f2;
-	padding: 10px 20px;
-	border-top: 1px solid $color-grey-e7;
-	border-bottom: 1px solid $color-grey-e7;
-
 	h3 {
-		margin: 0;
+		margin: 0 0 10px;
+		border-bottom: 1px solid $color-grey-e7;
+		padding-bottom: 5px;
 	}
 }
 
 .contribute-path-content {
-	padding: 20px;
+	font-size: 14px;
 }
 
 .contribute-form {
@@ -508,13 +520,11 @@
 
 #shop {
 	.more {
-		clear: both;
-		margin: 20px 0;
+		margin-top: 10px;
 		text-align: center;
 
 		.intro {
-			margin: 0 0 10px;
-			font-weight: bold;
+			margin-bottom: 10px;
 		}
 	}
 }
