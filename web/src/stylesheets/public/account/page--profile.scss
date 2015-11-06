@@ -1,0 +1,21 @@
+@import "../../config/base-import";
+
+.basic_account_editor {
+
+	@include breakpoint($bp-mobile-only) {
+		.prop {
+			&.picture {
+				display: none;
+			}
+
+			> .val {
+				margin-left: 0;
+			}
+
+			.help {
+				margin-left: 0;
+				margin-right: 0;
+			}
+		}
+	}
+}

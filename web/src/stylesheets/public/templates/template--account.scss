@@ -4,20 +4,25 @@
   position: static; /* boooooo MIWT */
 }
 
-#aside,
 #main {
-  float: left;
-}
-
-#main {
-  width: 680px;
-  margin: 40px 0 30px;
   font-size: 14px;
+	margin: 20px 0;
+
+	@include breakpoint($bp-tablets-portrait) {
+		float: left;
+		width: 680px;
+		margin: 40px 0 30px;
+	}
 }
 
 #aside {
-  width: 260px;
-  padding: 40px 35px 15px 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+  @include breakpoint($bp-tablets-portrait) {
+	  float: left;
+    width: 260px;
+  }
 }
 
 #ui-datepicker-div {
@@ -25,40 +30,76 @@
 }
 
 #user {
-  margin: 0 0 30px;
-  background: #fff;
-  box-shadow: 1px 1px 5px rgba($color-black,0.3);
-  text-align: center;
+  margin-bottom: 30px;
+  background: $color-white;
+  box-shadow: 1px 1px 5px rgba($color-black, 0.3);
+	@include clearfix();
 
   .photo {
-    width: 210px;
-    height: 210px;
     background: $color-grey-d0;
+	  width: 100px;
+	  height: 100px;
 
     img {
       display: block;
+	    width: 100%;
+	    height: auto;
     }
   }
 
-  .info .raised {
-    margin: 0;
-    background-color: $color-secondary-accent;
-    color: $color-white;
-    padding: 10px;
-    font-family: $font-roboto-medium;
-    font-size: 14px;
+  .info {
+	  text-align: center;
+	  height: 100px;
+	  margin: 0;
+	  background-color: $color-secondary-accent;
+	  color: $color-white;
+	  padding: 10px;
+	  font-family: $font-roboto-medium;
+	  font-size: 14px;
 
-    .val {
-      font-size: 28px;
-      display: block;
-    }
+	  .raised {
+		  .val {
+			  font-size: 28px;
+			  display: block;
+		  }
 
-    .label {
-      color: change_color($color-secondary-accent, $lightness: 80%);
-      margin-top: -3px;
-      display: block;
-    }
+		  .label {
+			  color: change_color($color-secondary-accent, $lightness: 80%);
+			  margin-top: -3px;
+			  display: block;
+		  }
+	  }
   }
+
+	@include breakpoint($bp-mobile-only) {
+		display: table;
+		width: 100%;
+
+		.photo {
+			display: table-cell;
+		}
+
+		.info {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		.photo {
+			width: 210px;
+			height: 210px;
+		}
+	}
+}
+
+.page_menu {
+	@include breakpoint($bp-mobile-only) {
+		.nav-accounts,
+		.nav-projects {
+			display: none;
+		}
+	}
 }
 
 /* project tiles */
