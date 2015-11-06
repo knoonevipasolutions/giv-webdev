@@ -1,0 +1,8 @@
+@import "../../../config/base-import";
+
+//Only for this page is this acceptable.  Should add a class to the layout
+.text {
+	a {
+		@include style-content-link;
+	}
+}
