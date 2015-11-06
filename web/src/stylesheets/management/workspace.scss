@@ -14,7 +14,7 @@
  padding:0;
 }
 div.workspace_search,
-.task_container div.task{
+.task-container div.task{
  background-color: #fff;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
  padding: 1em;
@@ -29,52 +29,43 @@ div.workspace_ts {
  margin-top:1em;
 }
 .workspace div.uitask{
- -moz-border-radius: 5px;
  border-radius: 5px;
  background: #fff;
 }
-div.uitask_manager{
+div.uitask-manager{
  float:left;
 }
-.uitask_info label{
+.uitask-info label{
  font-weight: bold;  
  width: 8em;
  float: left;
  clear: left;
 }
-div.uitask_info{
+div.uitask-info{
  line-height: 1.25em;
  padding: 5px;
  position: absolute;
  max-width: 35em;
  z-index: 15;
  background: white;
- -moz-border-radius: 5px;
- -webkit-border-radius: 5px;
  border-radius: 5px;
  border: 1px solid #B9B196;
 }
-#ie6only div.uitask_info,
-#ie7only div.uitask_info{
- margin-left: -2em;
- margin-top: 1.5em;
- width: 35em;
-}
-.uitask_info a.close:before{
+.uitask-info a.close:before{
   content: '['; }
-.uitask_info a.close:after{
+.uitask-info a.close:after{
   content: ']';
 }
-.uitask_info a.close{
+.uitask-info a.close{
  float: right;
  padding: .5em .5em .5em 29px;
  background: url(/resources/all/files/_SiteRoot/SITE1/VS4/Actions/24/cancel.png) no-repeat;
 }
-div.uitask_manager_con{
+div.uitask-manager-con{
  padding: .5em .25em;
  margin: .25em;
  border-radius: 10px;
- background-color:whiteSmoke;
+ background-color: whiteSmoke;
  overflow:hidden;
  clear: both;
  zoom:1;
@@ -84,11 +75,11 @@ div.task_count_0{
  background-color:inherit; /*no worky ie*/
  padding:0;
 }
-div.sub_uitask_list{
+div.sub-uitask-list{
  float:right;
  font-size:.9em;
 }
-.sub_uitask_list div.sub_uitask_list{
+.sub-uitask-list div.sub-uitask-list{
  font-size:.9em;
 }
 div.uitask{
@@ -97,67 +88,40 @@ div.uitask{
  margin: 0 5px 0 2px;
  padding: 5px 8px;
 }
-.sub_uitask_list div.uitask{
+.sub-uitask-list div.uitask{
  border:none;
  margin: 1px 3px 0 1px;
  padding: 0px 2px;
 }
-.sub_uitask_list .uitask.selected{
+.sub-uitask-list .uitask.selected{
  border:none;
  border-bottom:1px dotted #ccc;
- -moz-box-shadow:none;
- -webkit-box-shadow:none;
  box-shadow:none;
- /*
- border: 1px dotted #eee;
- -moz-box-shadow:1px 1px 1px rgba(0,0,0,.1);
- -webkit-box-shadow:1px 1px 1px rgba(0,0,0,.1);
- box-shadow:1px 1px 1px rgba(0,0,0,.1);
- */
 }
 .uitask.selected{
  background: #fff;
  border-color: #aaa;
- -moz-box-shadow:1px 1px 2px rgba(0,0,0,.1);
- -webkit-box-shadow:1px 1px 2px rgba(0,0,0,.1);
  box-shadow:1px 1px 2px rgba(0,0,0,.1);
 }
-.uitask_type_con,
-a.uitask_label,
+.uitask-type-con,
+a.uitask-label,
 .uitask .actions{
  opacity: .7;
 }
-.selected > .uitask_type_con,
-.selected > a.uitask_label,
+.selected > .uitask-type-con,
+.selected > a.uitask-label,
 .selected > .actions{
  opacity: 1;
 }
-/* FOR MSIE because it is so broken that trying to set the opacity triggers a whole slew of bugs that would require hair pulling and 10KiB worth of CSS to deal with. */
-#ie7only .uitask_list .selected a,
-#ie6only .uitask_list .selected a {
-  text-decoration: underline;
-}
-#ie7only div.uitask,
-#ie6only div.uitask{
-  height:22px;
-}
-#ie7only div.sub_uitask_list,
-#ie7only .sub_uitask_list div.uitask,
-#ie6only div.sub_uitask_list,
-#ie6only .sub_uitask_list div.uitask
-{
-  float:none;
-  display:inline;
-}
 /* end workaround */
-a.uitask_label{
+a.uitask-label{
  text-decoration: none;
  color: #002;
 }
-a.uitask_label:hover{
+a.uitask-label:hover{
  text-decoration: underline;
 }
-.uitask_actions button{
+.uitask-actions button{
  width: 16px;
  height: 16px;
  border: none;
@@ -169,8 +133,6 @@ a.uitask_label:hover{
  cursor: pointer;
  cursor: hand;
 }
-.sub_uitask_list .uitask_actions button{
-}
 .uitask button.info{
  background-image: url(/resources/all/docroot/cms/icons/x16/info_plus_hover.png);
 }
@@ -180,28 +142,23 @@ a.uitask_label:hover{
 .uitask button:hover{
  background-position: left bottom;
 }
-#ie6only .uitask button{
- display:inline-block; /*fix msie bugs*/
- font-size: 0px;
- line-height: 0;
-}
-img.uitask_type{
+img.uitask-type{
  width: 22px;
  height: 22px;
 }
-.sub_uitask_list img.uitask_type{
+.sub-uitask-list img.uitask-type{
  width: 20px;
  height: 20px;
 }
-.sub_uitask_list .sub_uitask_list img.uitask_type{
+.sub-uitask-list .sub-uitask-list img.uitask-type{
  width: 18px;
  height: 18px;
 }
 .uitask button,
-img.uitask_type,
-a.uitask_label{
+img.uitask-type,
+a.uitask-label{
  vertical-align: middle;
 }
-span.uitask_type{
+span.uitask-type{
  display: none;
 }

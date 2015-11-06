@@ -12,11 +12,7 @@
   -moz-border-radius: 2px;
   border-radius: 2px;
   font-size: 13px;
-  
-  -webkit-box-shadow: 1px 1px 1px rgba(255,255,255,0.5),
-      0 0 2px rgba(0,0,0,0.1) inset;
-  -moz-box-shadow: 1px 1px 1px rgba(255,255,255,0.5),
-      0 0 2px rgba(0,0,0,0.1) inset;
+
   box-shadow: 1px 1px 1px rgba(255,255,255,0.5),
       0 0 2px rgba(0,0,0,0.1) inset;
   
@@ -168,15 +164,6 @@
 .ieonly .genform a.miwt_button {
   background: none;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#cfcfcf',GradientType=0 ); /* IE6-8 */ 
-}
-
-#ie7only .genform button {
-  border-width: 3px; 
-  border-bottom-width: 1px; 
-  height: 27px;
-  line-height: 14px;
-  padding-left: 2px;
-  padding-right: 2px;
 }
 
 .genform button:hover,

@@ -1,14 +1,4 @@
-/* HTML5 fix for IE because of shim'ed elements being inline */
-article, aside, canvas, details,
-figcaption, figure, footer, header,
-hgroup, nav, section, summary, video {
-  display: block;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
+@import "../libs/normalize";
 
 body {
   background: left top #ededed url(/resources/dyn/files/182179zdcdfa94f/_fn/debut-light.png) repeat;
@@ -34,10 +24,6 @@ a:hover {
 }
 
 a.transition {
-  -webkit-transition: color 0.5s;
-  -moz-transition: color 0.5s;
-  -ms-transition: color 0.5s;
-  -o-transition: color 0.5s;
   transition: color 0.5s; 
 }
 
@@ -55,18 +41,24 @@ h2 {
 .message-container {
   margin: 0 0 10px;
   border: 1px solid #1c9633;
-  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   background-color: #32b14a;
   font-size: 13px;
   text-align: left;
 
-}
+	&.empty {
+		display: none;
+	}
 
-.message-container .message {
-  color: #fff;
-  margin: 10px;
+	.message {
+		color: #fff;
+		margin: 10px;
+	}
+
+	.warning {
+		padding-left: 24px;
+		background: 0 0 transparent url(/resources/dyn/files/182685z57beef2e/_fn/message-warning.png) no-repeat;
+	}
 }
 
 .message-container .error,
@@ -75,18 +67,13 @@ h2 {
   background: 0 0 transparent url(/resources/dyn/files/182937z511810f4/_fn/message-error.png) no-repeat;
 }
 
-.message-container .warning {
-  padding-left: 24px;
-  background: 0 0 transparent url(/resources/dyn/files/182685z57beef2e/_fn/message-warning.png) no-repeat;
-}
-
 #header {
   padding: 10px 20px;
   background: #fff;
-}
 
-#header h1 {
-  margin: 0;
+	h1 {
+		margin: 0;
+	}
 }
 
 #logout {
@@ -129,10 +116,6 @@ h2 {
   font-family: MuseoSansRegular, Arial, sans-serif;
   padding: 2px 12px;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
   border-bottom: 8px solid transparent;
   display: block;
