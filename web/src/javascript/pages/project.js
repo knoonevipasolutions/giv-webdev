@@ -39,26 +39,6 @@
 	    }
 	  });
 
-
-	  //contribution button
-	  $('.action.give_directly a.sbutton').click(function(evt){
-	    evt.preventDefault();
-	    $.fancybox($('#contribution_form'), {
-	      autoSize: false,
-	      maxWidth: 500,
-	      minHeight: 50,
-	      height: 'auto',
-	      padding: 6,
-	      title: 'Give Directly',
-	      helpers:  {
-	        title: {
-	          position: 'top',
-	          type: 'inside'
-	        }
-	      }
-	    });
-	  });
-
 	  var setupPopupStoreChooser = function(){
 	    var $con = $('.store_chooser');
 
