@@ -1,0 +1,168 @@
+@import "../../config/base-import";
+
+#featured {
+	background-color: #eaeaea;
+	border-bottom: 1px dotted #e0e0e0;
+	padding: 20px 0;
+
+	h1 {
+		color: #333;
+		margin: 0;
+		padding: 0;
+		font-size: 24px;
+	}
+
+	.website {
+		a {
+			@include style-content-link;
+		}
+	}
+}
+
+#featured-wc-0 {
+	max-width: $constraint-max-width;
+	margin: 0 auto;
+	padding: 0 $spacing-mobile-horizontal;
+}
+
+#main {
+	position: relative;
+	font-size: 14px;
+
+	@include breakpoint($bp-tablets-portrait) {
+		margin-top: 20px;
+		margin-left: 250px;
+	}
+}
+
+#aside {
+	@include breakpoint($bp-mobile-only) {
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		float: left;
+		width: 220px;
+	}
+}
+
+#parent {
+	display: inline-block;
+	background: $color-white;
+	box-shadow: 1px 1px 5px rgba($color-black, 0.3);
+	text-align: center;
+
+	.photo {
+		width: 220px;
+		height: 220px;
+		background: $color-grey-d0;
+
+		img {
+			display: block;
+		}
+	}
+
+	.info {
+		margin: 0;
+		background-color: $color-secondary-accent;
+		color: $color-white;
+		padding: 10px;
+		font-size: 14px;
+
+		.projects {
+			margin-top: 10px;
+		}
+
+		.raised,
+		.projects {
+			.val {
+				font-size: 28px;
+				display: block;
+			}
+
+			.label {
+				color: change_color($color-secondary-accent, $lightness: 80%);
+				margin-top: -3px;
+				display: block;
+			}
+		}
+	}
+}
+
+#content {
+  margin: 0;
+  line-height: 19px;
+  font-size: 14px;
+
+	h2 {
+		margin-top: 0;
+	}
+
+	a {
+		@include style-content-link;
+	}
+}
+
+#project_heading {
+  border-top: 1px dotted #c0c0c0;
+
+	h2 {
+		float: left;
+		margin-right: 20px;
+		margin-top: 6px;
+		margin-bottom: 0;
+		padding-top: 10px;
+	}
+}
+
+#projects {
+  padding-top: 10px;
+
+	div.tab-items {
+		padding: 10px 0;
+	}
+
+	ul.tab-items {
+		@include resetMenu;
+
+		li {
+			font-size: 14px;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 2px 12px;
+			cursor: pointer;
+			transition: all 0.5s;
+			border-bottom: 8px solid transparent;
+
+			&.over {
+				border-bottom: 8px solid $color-secondary-accent;
+			}
+
+			&.tab-selected {
+				border-bottom: 8px solid $color-secondary-accent;
+
+				.count {
+					color: $color-secondary-accent;
+				}
+			}
+
+			&.disabled {
+				color: $color-grey-aa;
+				border-bottom: none;
+
+				.count {
+					color: $color-grey-99;
+				}
+			}
+
+			.count {
+				margin-right: 3px;
+				padding: 1px 4px;
+				font-family: $font-roboto-bold;
+				font-size: 18px;
+				transition: all 0.5s;
+			}
+		}
+	}
+}
