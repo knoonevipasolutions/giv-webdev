@@ -1,7 +1,7 @@
 jQuery(function($) {
 
 	var API_URL = '/partial/ajax/add_to_favorites';
-	var GUEST_URL = '/popup/favorite-guest';
+	var GUEST_URL = '/ws/popup/favorite-guest';
 
 	var CSS_CLASS_GUEST_BUTTON = 'fav_guest';
   var CSS_CLASS_FAV_ADD = 'fav_add';
@@ -117,22 +117,25 @@ jQuery(function($) {
   //favorite button if guest
   $('.fav_action_button.fav_guest').on('click', function(evt) {
     var projectId = $(this).closest('.project').data('id');
+	  var fullGuestUrl = GUEST_URL + '?project_id=' + encodeURIComponent(projectId) + '&ret='+encodeURIComponent(window.location.pathname);
+
     evt.preventDefault();
-    $.fancybox(GUEST_URL + '?project_id='+encodeURIComponent(projectId)+'&ret='+encodeURIComponent(window.location.pathname), {
-      type: 'iframe',
-      autoSize: false,
-      maxWidth: 500,
-      minHeight: 175,
-      height: 'auto',
-      padding: 6,
-      title: 'Login Required',
-      helpers:  {
-        title: {
-          position: 'top',
-          type: 'inside'
-        }
-      }
-    });
+
+	  $.fancybox.showLoading();
+	  $.get(fullGuestUrl, function(result) {
+		  $.fancybox.hideLoading();
+		  $.fancybox($.parseHTML(result), {
+			  maxWidth: 500,
+			  padding: 6,
+			  title: 'Login Required',
+			  helpers:  {
+				  title: {
+					  position: 'top',
+					  type: 'inside'
+				  }
+			  }
+		  });
+	  });
   });
 
 });

@@ -528,3 +528,16 @@
 		}
 	}
 }
+
+//at time of writing this is only for the favoriting a project while a guest
+.popup-content {
+	padding: 20px;
+
+	.actions {
+		text-align: center;
+
+		.sbutton {
+			margin-top: 5px;
+		}
+	}
+}
