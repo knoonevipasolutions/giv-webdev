@@ -9,20 +9,32 @@
 	margin: 20px 0;
 
 	@include breakpoint($bp-tablets-portrait) {
-		float: left;
 		width: 680px;
-		margin: 40px 0 30px;
+		margin: 40px auto 30px;
+	}
+
+	@include breakpoint($bp-tablets-landscape) {
+		float: left;
 	}
 }
 
 #aside {
 	margin-top: 20px;
 	margin-bottom: 20px;
+	@include clearfix();
 
   @include breakpoint($bp-tablets-portrait) {
-	  float: left;
-    width: 260px;
+    width: 680px;
+	  margin-left: auto;
+	  margin-right: auto;
   }
+
+	@include breakpoint($bp-tablets-landscape) {
+		width: 210px;
+		float: left;
+		margin-right: 50px;
+		margin-top: 40px;
+	}
 }
 
 #ui-datepicker-div {
@@ -30,7 +42,6 @@
 }
 
 #user {
-  margin-bottom: 30px;
   background: $color-white;
   box-shadow: 1px 1px 5px rgba($color-black, 0.3);
 	@include clearfix();
@@ -74,6 +85,7 @@
 	@include breakpoint($bp-mobile-only) {
 		display: table;
 		width: 100%;
+		margin-bottom: 30px;
 
 		.photo {
 			display: table-cell;
@@ -85,11 +97,20 @@
 		}
 	}
 
+	@include breakpoint($bp-tablet-portrait-only) {
+		float: left;
+		margin-right: 30px;
+	}
+
 	@include breakpoint($bp-tablets-portrait) {
 		.photo {
 			width: 210px;
 			height: 210px;
 		}
+	}
+
+	@include breakpoint($bp-tablets-landscape) {
+		margin-bottom: 30px;
 	}
 }
 
