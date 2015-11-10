@@ -3,7 +3,7 @@
 #body_heading {
 	background-color: #eaeaea;
 	border-bottom: 1px dotted #e0e0e0;
-
+	@include clearfix(true);
 
 	@include breakpoint($bp-tablet-portrait-only) {
 		.fundraiser-summary {
@@ -12,6 +12,10 @@
 			margin-right: auto;
 		}
 	}
+}
+
+#body_heading-wc-0 {
+	padding: 0 $spacing-mobile-horizontal;
 }
 
 #body {
@@ -36,7 +40,7 @@
 		float: left;
 		width: 270px;
 		margin-left: 20px;
-		margin-top: 50px;
+		margin-top: 34px;
 	}
 }
 
@@ -83,8 +87,6 @@
 }
 
 #sections {
-	margin-top: 16px;
-
 	.tab-content {
 		padding: 20px;
 		background: $color-white;
@@ -346,7 +348,7 @@
 
 	@include breakpoint($bp-tablet-portrait-and-lower) {
 		display: block;
-		margin: 20px 0;
+		margin-bottom: 20px;
 	}
 }
 

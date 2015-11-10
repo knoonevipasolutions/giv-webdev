@@ -244,27 +244,17 @@ body {
 	}
 }
 
-#body-wc-0,
-#body_heading-wc-0,
-#e_content_wrapper-wc-0 {
-	padding: 0 $spacing-mobile-horizontal;
-}
+#e_body-wc-0 {
+	padding-top: $sizing-header-height;
 
-#body-wc-0,
-#e_content_wrapper-wc-0 {
 	@include breakpoint($bp-tablets-portrait) {
 		padding-bottom: $sizing-footer-height;
 	}
 }
 
 #e_content_wrapper-wc-0 {
+	padding: 20px $spacing-mobile-horizontal;
 	@include clearfix();
-}
-
-#body-wc-0,
-#e_body-wc-0,
-#body_heading {
-	padding-top: $sizing-header-height;
 }
 
 #footer {
