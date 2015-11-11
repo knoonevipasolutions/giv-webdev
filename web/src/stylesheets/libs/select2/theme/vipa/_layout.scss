@@ -51,6 +51,39 @@
     &[aria-disabled=true] {
       color: $results-choice-fg-unselectable-color;
     }
+
+    .select2-results__option {
+      padding-left: 2em;
+
+      .select2-results__group {
+        padding-left: 0;
+      }
+
+      .select2-results__option {
+        margin-left: -2em;
+        padding-left: 3em;
+
+        .select2-results__option {
+          margin-left: -3em;
+          padding-left: 4em;
+
+          .select2-results__option {
+            margin-left: -4em;
+            padding-left: 5em;
+
+            .select2-results__option {
+              margin-left: -5em;
+              padding-left: 6em;
+
+              .select2-results__option {
+                margin-left: -6em;
+                padding-left: 7em;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .select2-results__option--highlighted[aria-selected] {
@@ -62,6 +95,8 @@
     cursor: default;
     display: block;
     padding: 6px;
+    font-weight: normal;
+    font-family: $font-roboto-bold;
   }
 
   &.select2-container--open .select2-dropdown {

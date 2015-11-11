@@ -1,12 +1,15 @@
 .select2-container {
+  box-sizing: border-box;
+
   display: inline-block;
   margin: 0;
   position: relative;
   vertical-align: middle;
+
+  @import "single";
+  @import "multiple";
 }
 
-@import "single";
-@import "multiple";
 @import "dropdown";
 
 .select2-close-mask {
@@ -27,8 +30,20 @@
   // styles required for IE to work
 
   background-color: #fff;
+  filter: alpha(opacity=0);
+}
+
+.select2-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 //@import "theme/default/layout";
 //@import "theme/classic/layout";
-@import "theme/vipa/_layout";
+@import "theme/vipa/layout";
