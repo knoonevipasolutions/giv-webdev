@@ -8,7 +8,7 @@ input {
 	}
 
 	&.cbutton {
-		@include style-button-override(rgb(169,219,128));
+		@include style-button-override($color-green);
 	}
 
 	&.dbutton {
