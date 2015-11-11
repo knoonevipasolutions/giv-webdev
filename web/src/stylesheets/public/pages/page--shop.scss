@@ -1,0 +1,221 @@
+@import "../../config/base-import";
+
+.preview-component-con {
+}
+
+.preview-component-header {
+	margin-bottom: 10px;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		float: left;
+		width: 24px;
+		height: 24px;
+		margin-right: 5px;
+		//color #ccc;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB/UlEQVRIS61W0XXaQBCc1eo/lIArCPd0BeAKjCsIrsCkgjgVxKnAdgWGCkz+T09QgV0C/kds3ip3PIGPQ+Dcl550NzO3O7srQmJVVdWv6/oKwFBE+kQ00O0isiCiNwBzZp4ZY/Q5uij21gP/ADBOCWh9e2TmnzGiDwTOuRGABwC9juBh2wrAjbV22j63Q1CW5VhEFPzsRUQ3RVE8BoAtgVf+fDby7sHrcJOGwMe8OiMsh/SsmNloThoC55xe6dt/Uh9gnqy1Y/LqXz8JviSiexG5B/AlYDHzBZVlORGRX+cSiMifPM9HxpiVc04dpHXTLCL6TvsvTyT6ba2dJMI8U4IFgK8R4Pf2dfe/t+14KApNxTvnJKZaRC6zLOtH6uKdmYfGGBWGY7UTJWir23PY0oNr1aq9B3Vdv6TsHQuRevgyKKyqqlfX9RzAgpknmsyu4ACW0SRr7PI8V5IA1gvPHry3Xq9fQndNGGOWsunUWnsdO5wwxs72xqapQtMNRVFo8WzXKVXfFNqxVuF7SuMY55yS3XaslX+totXsFGRb5i0QTfrFZrMZndDK1cqDbbPz6nTQHGrXOhL7HZXrtt12HQ4eK5ouBAcHTjjsB4+271i4UhzaWsbJkRlOe2fdnTAjnpj5rtPQb0tUIp/coc9BaIpLAG9ENM+ybJr6bfkLvMQcQjr063QAAAAASUVORK5CYII=');
+	}
+
+	.component-selected & {
+		&:before {
+			//color $color-green
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACGklEQVRIS61WzXHaQBh9z5HIMS5BzNhcgzuACgwX45yCKwiugHUFIRUEnwy+GFdgXEGUK3gGShDHWB59mRVaRTgrIbD3BNr93nv7/S5RsG4WymPIU1IaEHgg6vFxgQ9iKcKpuHL/paqWeTC0bayB0SfRLRJg9kQwFBdXNqL/CMZPqgXBTwCHZcAzZwIQF50jNcnabRDczlRXGIPvvSi4OKupoQFICRLld3sjb8pum5vEBNrnBy/4tYdb8vQEkYMTHZOYYDxTQxBf30V9Gnlcd2qqy0T94i3gIvh9AAyEGAD4ZLAiB1WO5qpH4PsbCB4rDlrtqgpG8/6E4Om/S+CSrz/uQiSUH+dHV708NwvknqOZ8kl8tgCvstd9vZ9Nx1wvCHyO50psqiOg+UHgWepiRUHjrKZ8bbetdqwEWXXZDNPB/Oiiof2dgNeFeChKb5uLAgqaRuHdQh3+CTEl4Fdc9HYB14LsQZYYrGnANIn5rZXr/88hHtLumpMZ6yDnp+mkc6zaNtuCxNg4LsBlYaHpA+fHShdPunap+rjQtrUKCk5MPEZP/QGF30rViiStItPsdNqlZZ4BCSoOqmGI1g6tfBU5qKfNLr7FetBY27UIliS8Usr1IWKzXRvDbUVThiB34Bjj5CZ6ItncVcSxAtEtHJnGOm7hIVTpGSG4jlyoUkM/KzF+XbygBehnCz3TFHWFgrIEOBUHk6Jny19mEBBo5uEAxgAAAABJRU5ErkJggg==');
+		}
+
+		.component-change {
+			display: block;
+		}
+	}
+
+	.component-change {
+		display: none;
+		float: right;
+		@include style-content-link;
+	}
+
+	h2 {
+		line-height: 24px;
+		margin: 0;
+		margin-left: 30px;
+	}
+}
+
+.preview-component {
+	max-width: 340px;
+	margin: 30px 0;
+
+	&.component-unselected {
+		.preview-component-body {
+			padding: 15px;
+			background-color: $color-grey-e7;
+			border: 3px dashed $color-grey-cc;
+		}
+
+		.component-details {
+			color: $color-grey-99;
+			margin-bottom: 5px;
+			font-size: 14px;
+		}
+	}
+
+	&.component-selected {
+		.component-details {
+			padding: 15px;
+			background-color: $color-white;
+			box-shadow: 0 0 5px rgba($color-black, 0.2);
+			margin-bottom: 10px;
+		}
+
+		.select2-container {
+			display: none;
+		}
+	}
+
+	.preview-component-body {
+		margin-left: 30px;
+	}
+
+	select {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.shop-affiliate-header {
+	margin-bottom: 10px;
+	//color: #ccc;
+
+	&:before {
+		content: "";
+		display: inline-block;
+		float: left;
+		width: 24px;
+		height: 24px;
+		margin-right: 5px;
+		//color #ccc;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACJElEQVRIS71W0XHTQBDd5ysAU0FMBVgj3TdJBTgV4FRAqACnAkIFJBUQV4DzrdNcOoAOsP91XuYJKaNI8tnOBHZGHo/ubt/u3tu3gkTMez8JIbwXkZmITEVkzO2q+gDgl4isjDHLJEn4f9Aw9LZ2/FlE5rEAWms3xpirIaAeQFEUc1X90kR7IAC3rUXkIsuyu/aZJwC1829HOO1tBXCRpulNs/AI8BLOW2jnTSYVQF1z3yrLOYCJqvIO3j4jo7Ux5k2SJOsKwDnHlD40jlR1Zq1d1mvXIvLxGSC3WZbNUUf/c8ABozgry3IMgAGcHAvCLFAUxWXNmt55VT2z1q6aBe/9uCxL9gPtlD8ApqrKICbdIAB8Qp7nKwDvhqLrMiKWAcFDCL87e5ZwzpG/r4YOq+qVtXZxSGmGSl11vHNOdzk4BsA5Rzn53vW1D+DeWlvVep/leb4AQHl5YtESicgyy7JZnuenxpidmdJjCOGaF97xv4leclMiEiGWAQCqbK8hVfU+SlPSLE1TNlrUmCGAH73ykKaRRqv2V1EADzu6+auqTnfRvGo0OulKRTsSY8xrakq3XwhMAnjvpyEE6ljX/koF39ZZMMpeP6gqS8RmpFxUE622NcUQAOnZHUwbY8yUA+ifyHVbAf7fwGnyrgcPyzIoHxE6bQBctqcZ98aGPjXocUbsYeqtMWZx0NBvO+Llb7fbGZ+6S5usNhSy0Wh0xyf22fIH8akyb3ybgzMAAAAASUVORK5CYII=');
+	}
+
+	.affiliate-selected & {
+		&:before {
+			//color $color-green
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACMUlEQVRIS71WQXLaQBDsJuBryAsCVZGv4QexXxBxCfgU+QVxXsDygpAXBJ9sfDG8IPCCcAZX4R9E3FIxUad2hSgZJIFTSeYm7ah7ZtQzs0SBXS1MjQ98C8on0ABQde7CFMS9xLEqGp3VzX0eDLMOYmB0SARFASRnEvqqoJtFtENwMzOBiE+baA9hiH1CEOetV2aY/uQRwRr8y+GYu54Uzt8dm35ysiH4G+AbOqKZZOIIbM1LK3zblIVoSqhBCEi8/oOMwqMy6s26CR3BYGb6IN5vfhrot73OyD5f33V6FD88mUS4bB2bgOvoFxkAIYXTX0SVQJ/Ay6eSRGXUeT03F4RTzY5FwOmZZ8bJwe3CVH+sXD+gBJzELaEGwaqA2nYQAj5yMHcAb7IIthVRlIEl/7nC97SPoJElCAE8z/m42/KMOaQ0maUWppZABQAHEwzujA/hdhtrH8Gk5RlX6302mLtMO1kEuSWyNWx7Xf9qbk6eoVSUKaSoB8YCSNmy8CcDcCVaCyE3CQnVnIacFMrUyqztmd6+8tgMS8DXbT8n04JGS/wnoqZZ3SzqM0VblkyZu0azKNujIh3JURkv7EzJ6BcngJuZaYhujj22ZFTYt+sspjn90BM4JmRHcLzRYgsFBpD8jMW0jMpo2AX0T8Z1egL8v4WT5L1ePFY5eeMjT1RLChfpbWYdc5d+6QEmvSMKpSpcRhWYg5Z+GsjdLlawVxYf8bUlyWoJYCpgqDKGRdeW36SqBZx7teUSAAAAAElFTkSuQmCC');
+		}
+	}
+
+	h2 {
+		line-height: 24px;
+		margin: 0;
+		margin-left: 30px;
+	}
+}
+
+.shop-affiliate-body {
+	margin-left: 30px;
+}
+
+.store-select {
+	display: block;
+}
+
+.store-select-commission {
+	background-color: $color-secondary-accent;
+	color: $color-white;
+	padding: 2px 5px;
+	margin-right:  10px;
+	border-radius: 2px;
+	font-family: $font-roboto-bold;
+	float: right;
+}
+
+.store-select-name {
+	display: block;
+	padding: 2px 0;
+}
+
+.project-select-name {
+	display: block;
+	padding: 2px 0;
+}
+
+.project-details {
+	@include clearfix();
+
+	.project-image {
+		width: 70px;
+		float: left;
+		text-align: center;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.project-content {
+		margin-left: 80px;
+	}
+
+	.project-name {
+		font-family: $font-roboto-medium;
+	}
+
+	.project-progress {
+		margin-top: 5px;
+	}
+
+	.project-stats {
+		font-size: 12px;
+		color: $color-grey-99;
+		margin-top: 2px;
+	}
+}
+
+.store-details {
+	position: relative;
+	@include clearfix();
+
+	.store-image {
+		position: absolute;
+		top: 50%;
+		left: 15px;
+		transform: translateY(-50%);
+		width: 100px;
+		overflow: hidden;
+		text-align: center;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	.store-content {
+		margin-left: 130px;
+	}
+
+	.store-name {
+		font-family: $font-roboto-medium;
+	}
+
+	.store-commission {
+		display: inline-block;
+		background-color: $color-grey-e7;
+		padding: 5px 10px;
+		margin-top: 5px;
+	}
+
+	.store-commission-label {
+		font-family: $font-roboto-bold;
+		margin-right: 5px;
+		color: $color-grey-99;
+	}
+
+	.store-commission-val {
+		color: $color-secondary-accent;
+		font-family: $font-roboto-bold;
+	}
+}
