@@ -10,8 +10,6 @@
 	}
 
 	$(document).ready(function() {
-	  var store_url = $('#featured_stores .stores').data('source');
-	  var project_id = $('#content .project').data('id');
 		var $header = $('#header');
 		var $scrollBody = $('html, body');
 

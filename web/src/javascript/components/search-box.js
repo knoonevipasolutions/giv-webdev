@@ -1,29 +1,26 @@
-jQuery(function($){
-  $('.search_box').each(function(){
+jQuery(function($) {
+  $('.search_box').each(function() {
     var $con = $(this);
     
-    $('.default', $con).click(function(evt){
+    $con.find('.default').on('click', function(evt) {
       $(this).siblings('input').focus();
     });
     
-    var checkContent = function(){
-      if($(this).val().trim().length > 0) $(this).closest('.question').addClass('has_value');  
-      if($(this).val().trim().length == 0) $(this).closest('.question').removeClass('has_value');  
-    };
+    function checkContent() {
+	    var contentVal = $(this).val().trim();
+	    var $question = $(this).closest('.question');
+      if (contentVal.length > 0) {
+	      $question.addClass('has_value');
+      }
+      if (contentVal.length == 0) {
+	      $question.removeClass('has_value');
+      }
+    }
     
-    $('.question', $con)
+    $con.find('.question')
       .has('.default')
       .find('.field input')
-      .focus(function(evt){
-        checkContent.call(this);
-      }).blur(function(evt){
-        checkContent.call(this);
-      }).keyup(function(evt){
-        checkContent.call(this);
-      }).change(function(evt){
-        checkContent.call(this);
-      }).each(function(){
-        checkContent.call(this);
-      });
+      .on('focus blur keyup change', checkContent)
+      .each(checkContent);
   });
 });
