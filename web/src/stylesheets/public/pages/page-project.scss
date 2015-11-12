@@ -352,6 +352,11 @@
 	}
 }
 
+.homescreen-save-link {
+	@include style-content-link;
+	font-size: 13px;
+}
+
 .journal {
 	border-bottom: 1px dotted $color-grey-d0;
 	margin: 0 0 10px;

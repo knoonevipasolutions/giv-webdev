@@ -1,6 +1,7 @@
 (function($, global){
 	var EVT_TAB_SHOW = 'tab-show';
 
+	//Hook into CMS Tabcontainer to fire off change events when tabs change
 	if (global.cms && global.cms.TabContainer) {
 		var oldShowElement = global.cms.TabContainer.prototype.showElement;
 		global.cms.TabContainer.prototype.showElement = function(el) {
@@ -146,12 +147,22 @@
 	    }
 	  });
 
+		//Initialize facebook comments when the tab is shown so that proper widths can be calculated
 		$('.comments_tc').on(EVT_TAB_SHOW, function() {
 			if (global.FB && global.FB.XFBML && FB.XFBML.parse) {
 				global.FB.XFBML.parse(this);
 			}
 		});
 
+		var addtohome = addToHomescreen({
+			lifespan: 0,
+			autostart: false
+		});
+
+		$('.homescreen-save-link').on('click', function(evt) {
+			evt.preventDefault();
+			addtohome.show(true);
+		});
 	});
 
 })(jQuery, window);
