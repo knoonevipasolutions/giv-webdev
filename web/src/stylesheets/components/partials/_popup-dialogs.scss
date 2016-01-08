@@ -25,3 +25,15 @@
 .fancybox-close {
 	z-index: 8060;
 }
+
+.popup-content {
+	padding: 20px;
+
+	.actions {
+		text-align: center;
+
+		.sbutton {
+			margin-top: 5px;
+		}
+	}
+}

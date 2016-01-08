@@ -102,6 +102,7 @@ jQuery(function($) {
 		        feedbackMsg = 'Could not add, already at max allowed';
 	          break;
 	        case 'invalid_project':
+          case 'invalid_store':
 	        default:
 		        feedbackMsg = 'There was an error adding to your favorites, please try again later';
 	      }
@@ -117,7 +118,15 @@ jQuery(function($) {
   //favorite button if guest
   $('.fav_action_button.fav_guest').on('click', function(evt) {
     var projectId = $(this).closest('.project').data('id');
-	  var fullGuestUrl = GUEST_URL + '?project_id=' + encodeURIComponent(projectId) + '&ret='+encodeURIComponent(window.location.pathname);
+    var storeId = $(this).closest('.store').data('id');
+    var guestUrlParams = '?ret='+encodeURIComponent(window.location.pathname);
+    if (projectId && !isNaN(projectId)) {
+      guestUrlParams += '&project_id=' + encodeURIComponent(projectId);
+    }
+    if (storeId && !isNaN(storeId)) {
+      guestUrlParams += '&store_id=' + encodeURIComponent(storeId);
+    }
+	  var fullGuestUrl = GUEST_URL + guestUrlParams;
 
     evt.preventDefault();
 
@@ -125,7 +134,7 @@ jQuery(function($) {
 	  $.get(fullGuestUrl, function(result) {
 		  $.fancybox.hideLoading();
 		  $.fancybox($.parseHTML(result), {
-			  maxWidth: 500,
+			  maxWidth: 550,
 			  padding: 6,
 			  title: 'Login Required',
 			  helpers:  {
