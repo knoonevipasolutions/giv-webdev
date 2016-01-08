@@ -163,6 +163,10 @@
 			evt.preventDefault();
 			addtohome.show(true);
 		});
+
+		if(!$('.contribute-path').length) {
+			$('.contribute-paths').remove();
+		}
 	});
 
 })(jQuery, window);
