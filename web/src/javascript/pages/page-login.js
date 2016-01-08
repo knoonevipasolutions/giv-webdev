@@ -51,6 +51,9 @@ jQuery(function($){
   if(typeof QueryString.project_id != "undefined"){
     $('<input type="hidden" name="project_id" />').val(QueryString.project_id).appendTo('#create_account form');
   }
+  if(typeof QueryString.store_id != "undefined"){
+    $('<input type="hidden" name="store_id" />').val(QueryString.store_id).appendTo('#create_account form');
+  }
   
   $('#create input[name=ret]').each(function(){
     if($(this).val().indexOf('type') > -1) return;
