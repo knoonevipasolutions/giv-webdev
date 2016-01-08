@@ -238,6 +238,12 @@
 	.contribute-methods {
 		border: 1px solid darken($color-primary-accent, 10%);
 		background-color: $color-primary-accent;
+
+		&.contribute-methods-2 {
+			.contribute-method {
+				width: 50%;
+			}
+		}
 	}
 
 	.contribute-method {
