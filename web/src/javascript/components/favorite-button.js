@@ -38,7 +38,7 @@ jQuery(function($) {
 	  .each(initFavButton)
 	  .filter(':not(.' + CSS_CLASS_GUEST_BUTTON + ')')
 	  .each(updateFavStatus)
-	  .on('click', function(evt) {
+	  .on('click touchstart', function(evt) {
 	    evt.preventDefault();
 
 		  //Make sure no existing action is waiting
@@ -116,7 +116,7 @@ jQuery(function($) {
 	  });
   
   //favorite button if guest
-  $('.fav_action_button.fav_guest').on('click', function(evt) {
+  $('.fav_action_button.fav_guest').on('click touchstart', function(evt) {
     var projectId = $(this).closest('.project').data('id');
     var storeId = $(this).closest('.store').data('id');
     var guestUrlParams = '?ret='+encodeURIComponent(window.location.pathname);
