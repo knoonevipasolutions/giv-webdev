@@ -121,37 +121,45 @@
 }
 
 .howto {
+	text-align: center;
 	@include clearfix();
 
 	+ .howto {
 		margin-top: 30px;
 	}
 
-	&:nth-child(even) {
-		text-align: right;
-
-		.howto-image {
-			float: right;
-		}
-
-		.howto-content {
-			margin-left: 0;
-			margin-right: 150px + 40px;
-		}
-	}
-
-	&-image {
-		float: left;
-	}
-
 	&-content {
-		margin-left: 150px + 40px;
 		padding-top: 20px;
 	}
 
 	&-title {
 		font-size: 20px;
 		font-family: $font-robotoslab-bold;
+	}
+
+	@include breakpoint($bp-tablets-portrait) {
+		text-align: left;
+
+		&:nth-child(even) {
+			text-align: right;
+
+			.howto-image {
+				float: right;
+			}
+
+			.howto-content {
+				margin-left: 0;
+				margin-right: 150px + 40px;
+			}
+		}
+
+		&-image {
+			float: left;
+		}
+
+		&-content {
+			margin-left: 150px + 40px;
+		}
 	}
 }
 
