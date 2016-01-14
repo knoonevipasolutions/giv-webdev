@@ -43,7 +43,7 @@
 
 		.menuitemlabel {
 			line-height: 55px;
-			padding: 0 15px;
+			padding: 0 5px;
 			text-align: center;
 			transition: border 0.25s, background 0.5s;
 
@@ -56,6 +56,13 @@
 
 		.mil {
 			border-bottom: 2px solid transparent;
+		}
+	}
+
+
+	@include breakpoint($bp-tablets-landscape) {
+		.menuitemlabel {
+			padding: 0 15px;
 		}
 	}
 }
