@@ -1,5 +1,24 @@
 @import "../../config/base-import";
 
+.l-content1,
+.l-content2 {
+	@include clearfix(true);
+
+	> .box-wc {
+		max-width: $constraint-max-width;
+		margin: 0 auto;
+		padding: 20px $spacing-mobile-horizontal;
+	}
+}
+
+.l-content1 {
+	background-color: $color-white;
+}
+
+.l-content2 {
+	background-color: $color-grey-f2;
+}
+
 #featured {
 	position: relative;
 }
@@ -89,4 +108,54 @@
 			}
 		}
 	}
+}
+
+.howtos-header {
+	text-align: center;
+	margin-bottom: 40px;
+
+	h2 {
+		font-size: 36px;
+		font-family: $font-robotoslab-bold;
+	}
+}
+
+.howto {
+	@include clearfix();
+
+	+ .howto {
+		margin-top: 30px;
+	}
+
+	&:nth-child(even) {
+		text-align: right;
+
+		.howto-image {
+			float: right;
+		}
+
+		.howto-content {
+			margin-left: 0;
+			margin-right: 150px + 40px;
+		}
+	}
+
+	&-image {
+		float: left;
+	}
+
+	&-content {
+		margin-left: 150px + 40px;
+		padding-top: 20px;
+	}
+
+	&-title {
+		font-size: 20px;
+		font-family: $font-robotoslab-bold;
+	}
+}
+
+.howtos-actions {
+	text-align: center;
+	margin-top: 40px;
 }
