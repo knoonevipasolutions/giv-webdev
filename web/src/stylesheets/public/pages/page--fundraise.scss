@@ -1,0 +1,53 @@
+@import "../../config/base-import";
+
+
+.l-content1,
+.l-content2 {
+	@include clearfix(true);
+
+	> .box-wc {
+		max-width: $constraint-max-width;
+		margin: 0 auto;
+		padding: 20px $spacing-mobile-horizontal;
+	}
+}
+
+.l-content1 {
+	background-color: $color-grey-f2;
+}
+
+.l-content2 {
+	background-color: $color-white;
+}
+
+.raising-intro {
+	text-align: center;
+	margin-bottom: 40px;
+
+	h2 {
+		font-size: 36px;
+		font-family: $font-robotoslab-bold;
+		margin-top: 0;
+	}
+}
+
+
+.ctas {
+	padding: 40px 0;
+	text-align: center;
+}
+
+.cta {
+	max-width: 350px;
+	margin: 0 auto 45px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.cta-title {
+		font-size: 20px;
+		font-family: $font-robotoslab-bold;
+		color: $color-grey-4e;
+	}
+}
