@@ -1,6 +1,7 @@
 jQuery(function($) {
 
-	var API_URL = '/partial/ajax/add_to_favorites';
+	var REDIR_URL = '/ajax/add_to_favorites';
+	var API_URL = '/partial' + REDIR_URL;
 	var GUEST_URL = '/ws/popup/favorite-guest';
 
 	var CSS_CLASS_GUEST_BUTTON = 'fav_guest';
@@ -119,14 +120,14 @@ jQuery(function($) {
   $('.fav_action_button.fav_guest').on('click touchstart', function(evt) {
     var projectId = $(this).closest('.project').data('id');
     var storeId = $(this).closest('.store').data('id');
-    var guestUrlParams = '?ret='+encodeURIComponent(window.location.pathname);
+    var guestUrlParams = REDIR_URL + '?action=add&redir='+encodeURIComponent(window.location.href);
     if (projectId && !isNaN(projectId)) {
-      guestUrlParams += '&project_id=' + encodeURIComponent(projectId);
+      guestUrlParams += '&project=' + encodeURIComponent(projectId);
     }
     if (storeId && !isNaN(storeId)) {
-      guestUrlParams += '&store_id=' + encodeURIComponent(storeId);
+      guestUrlParams += '&store=' + encodeURIComponent(storeId);
     }
-	  var fullGuestUrl = GUEST_URL + guestUrlParams;
+	  var fullGuestUrl = GUEST_URL + '?ret=' + encodeURIComponent(guestUrlParams);
 
     evt.preventDefault();
 
